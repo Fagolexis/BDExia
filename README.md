@@ -14,5 +14,3 @@ Projet Web - Groupe 3
 - Alexis Lucas
 - François Caillat
 - Quentin Lebarillier
-
-TEST
