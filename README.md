@@ -10,6 +10,9 @@ Projet Web - Groupe 3
 - Modèles - Quentin
 - Data (Entities) - Alexis
 
+## Symfony bundle :
+MainBundle
+
 ## Contributeurs :
 - Alexis Lucas
 - François Caillat
