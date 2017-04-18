@@ -1,0 +1,109 @@
+<?php
+
+namespace MainBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Photos
+ *
+ * @ORM\Table(name="photos", indexes={@ORM\Index(name="FK_PHOTO_A_UNE_DATE_DE_PUBLICATION", columns={"DATE_IMG"}), @ORM\Index(name="FK_UNE_PHOTO_A_UN_TYPE", columns={"TYPE_IMG"}), @ORM\Index(name="FK_UNE_PHOTO_PEUT_AVOIR_UN_AUTEUR", columns={"AUTEUR_IMG"})})
+ * @ORM\Entity
+ */
+class Photos
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="CHEMIN", type="string", length=127, nullable=false)
+     */
+    private $chemin;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ID_IMG", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idImg;
+
+    /**
+     * @var \MainBundle\Entity\Dates
+     *
+     * @ORM\ManyToOne(targetEntity="MainBundle\Entity\Dates")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="DATE_IMG", referencedColumnName="ID_DATE")
+     * })
+     */
+    private $dateImg;
+
+    /**
+     * @var \MainBundle\Entity\Users
+     *
+     * @ORM\ManyToOne(targetEntity="MainBundle\Entity\Users")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="AUTEUR_IMG", referencedColumnName="ID_USER")
+     * })
+     */
+    private $auteurImg;
+
+    /**
+     * @var \MainBundle\Entity\Types
+     *
+     * @ORM\ManyToOne(targetEntity="MainBundle\Entity\Types")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="TYPE_IMG", referencedColumnName="ID_TYPE")
+     * })
+     */
+    private $typeImg;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Users", mappedBy="likesImg")
+     */
+    private $likesUser;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Activites", inversedBy="idImgAct")
+     * @ORM\JoinTable(name="im_act",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="ID_IMG_ACT", referencedColumnName="ID_IMG")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="IMG_ACT", referencedColumnName="ID_ACTIVITE")
+     *   }
+     * )
+     */
+    private $imgAct;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Boutique", inversedBy="idImgProd")
+     * @ORM\JoinTable(name="im_prod",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="ID_IMG_PROD", referencedColumnName="ID_IMG")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="IMG_PROD", referencedColumnName="ID_PRODUIT")
+     *   }
+     * )
+     */
+    private $imgProd;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->likesUser = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->imgAct = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->imgProd = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}
+

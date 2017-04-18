@@ -1,0 +1,120 @@
+<?php
+
+namespace MainBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Users
+ *
+ * @ORM\Table(name="users", indexes={@ORM\Index(name="FK_USER_A_UN_AVATAR", columns={"AVATAR_USER"}), @ORM\Index(name="FK_USER_A_UN_ROLE", columns={"ROLE_USER"}), @ORM\Index(name="FK_USER_PEUT_APPARTENIR_A_UNE_PROMOTION", columns={"PROMO_USER"})})
+ * @ORM\Entity
+ */
+class Users
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NOM", type="string", length=255, nullable=false)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="PRENOM", type="string", length=255, nullable=false)
+     */
+    private $prenom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MAIL", type="string", length=255, nullable=false)
+     */
+    private $mail;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MDP", type="text", length=65535, nullable=false)
+     */
+    private $mdp;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="NAISSANCE", type="date", nullable=false)
+     */
+    private $naissance;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="TELEPHONE", type="string", length=12, nullable=true)
+     */
+    private $telephone;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ID_USER", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idUser;
+
+    /**
+     * @var \MainBundle\Entity\Promotions
+     *
+     * @ORM\ManyToOne(targetEntity="MainBundle\Entity\Promotions")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="PROMO_USER", referencedColumnName="ID_PROMO")
+     * })
+     */
+    private $promoUser;
+
+    /**
+     * @var \MainBundle\Entity\RolesUsers
+     *
+     * @ORM\ManyToOne(targetEntity="MainBundle\Entity\RolesUsers")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="ROLE_USER", referencedColumnName="ID_ROLE")
+     * })
+     */
+    private $roleUser;
+
+    /**
+     * @var \MainBundle\Entity\Photos
+     *
+     * @ORM\ManyToOne(targetEntity="MainBundle\Entity\Photos")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="AVATAR_USER", referencedColumnName="ID_IMG")
+     * })
+     */
+    private $avatarUser;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Photos", inversedBy="likesUser")
+     * @ORM\JoinTable(name="likes",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="LIKES_USER", referencedColumnName="ID_USER")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="LIKES_IMG", referencedColumnName="ID_IMG")
+     *   }
+     * )
+     */
+    private $likesImg;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->likesImg = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}
+

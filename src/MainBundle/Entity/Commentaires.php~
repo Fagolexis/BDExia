@@ -1,0 +1,53 @@
+<?php
+
+namespace MainBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Commentaires
+ *
+ * @ORM\Table(name="commentaires", indexes={@ORM\Index(name="FK_UNE_PHOTO_PEUT_AVOIR_DES_COMMENTAIRES", columns={"IMG_COMM"}), @ORM\Index(name="FK_USER_PEUT_METTRE_PLUSIEURS_COMMENTAIRES", columns={"AUTEUR_COMM"})})
+ * @ORM\Entity
+ */
+class Commentaires
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="COMMENTAIRE", type="text", length=65535, nullable=false)
+     */
+    private $commentaire;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ID_COMMENTAIRE", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idCommentaire;
+
+    /**
+     * @var \MainBundle\Entity\Users
+     *
+     * @ORM\ManyToOne(targetEntity="MainBundle\Entity\Users")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="AUTEUR_COMM", referencedColumnName="ID_USER")
+     * })
+     */
+    private $auteurComm;
+
+    /**
+     * @var \MainBundle\Entity\Photos
+     *
+     * @ORM\ManyToOne(targetEntity="MainBundle\Entity\Photos")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="IMG_COMM", referencedColumnName="ID_IMG")
+     * })
+     */
+    private $imgComm;
+
+
+}
+

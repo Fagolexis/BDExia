@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MainBundle\Entity\Users" table="users">
+    <indexes>
+      <index name="FK_USER_A_UN_AVATAR" columns="AVATAR_USER"/>
+      <index name="FK_USER_A_UN_ROLE" columns="ROLE_USER"/>
+      <index name="FK_USER_PEUT_APPARTENIR_A_UNE_PROMOTION" columns="PROMO_USER"/>
+    </indexes>
+    <id name="idUser" type="integer" column="ID_USER">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nom" type="string" column="NOM" length="255" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="prenom" type="string" column="PRENOM" length="255" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="mail" type="string" column="MAIL" length="255" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="mdp" type="text" column="MDP" length="65535" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="naissance" type="date" column="NAISSANCE" nullable="false"/>
+    <field name="telephone" type="string" column="TELEPHONE" length="12" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <many-to-one field="promoUser" target-entity="Promotions" fetch="LAZY">
+      <join-columns>
+        <join-column name="PROMO_USER" referenced-column-name="ID_PROMO"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="roleUser" target-entity="RolesUsers" fetch="LAZY">
+      <join-columns>
+        <join-column name="ROLE_USER" referenced-column-name="ID_ROLE"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="avatarUser" target-entity="Photos" fetch="LAZY">
+      <join-columns>
+        <join-column name="AVATAR_USER" referenced-column-name="ID_IMG"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-many field="likesImg" target-entity="Photos" inversed-by="likesUser" fetch="LAZY">
+      <join-table name="likes">
+        <join-columns>
+          <join-column name="LIKES_USER" referenced-column-name="ID_USER"/>
+        </join-columns>
+        <inverse-join-columns>
+          <join-column name="LIKES_IMG" referenced-column-name="ID_IMG"/>
+        </inverse-join-columns>
+      </join-table>
+    </many-to-many>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,33 @@
+<?php
+
+namespace MainBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Promotions
+ *
+ * @ORM\Table(name="promotions")
+ * @ORM\Entity
+ */
+class Promotions
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="PROMO", type="string", length=2, nullable=false)
+     */
+    private $promo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ID_PROMO", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idPromo;
+
+
+}
+

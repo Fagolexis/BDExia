@@ -1,0 +1,33 @@
+<?php
+
+namespace MainBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Types
+ *
+ * @ORM\Table(name="types")
+ * @ORM\Entity
+ */
+class Types
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="TYPE", type="string", length=31, nullable=false)
+     */
+    private $type;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ID_TYPE", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idType;
+
+
+}
+

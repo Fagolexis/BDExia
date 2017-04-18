@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MainBundle\Entity\Inscrits" table="inscrits">
+    <indexes>
+      <index name="FK_USER_PEUT_PARTICIPER_A_UNE_OU_PLUSIEURS_ACTIVITES" columns="INSCRIT_CHOIX"/>
+      <index name="FK_USER_PEUT_PARTICIPER_A_UNE_OU_PLUSIEURS_ACTIVITES3" columns="INSCRIT_ACT"/>
+      <index name="IDX_2644257FBE0B757C" columns="ID_INSCRIT"/>
+    </indexes>
+    <id name="inscritChoix" association-key="true"/>
+    <id name="idInscrit" association-key="true"/>
+    <id name="inscritAct" association-key="true"/>
+    <one-to-one field="inscritAct" target-entity="Activites" fetch="LAZY">
+      <join-columns>
+        <join-column name="INSCRIT_ACT" referenced-column-name="ID_ACTIVITE"/>
+      </join-columns>
+    </one-to-one>
+    <one-to-one field="idInscrit" target-entity="Users" fetch="LAZY">
+      <join-columns>
+        <join-column name="ID_INSCRIT" referenced-column-name="ID_USER"/>
+      </join-columns>
+    </one-to-one>
+    <one-to-one field="inscritChoix" target-entity="ChoixVote" fetch="LAZY">
+      <join-columns>
+        <join-column name="INSCRIT_CHOIX" referenced-column-name="ID_CHOIX"/>
+      </join-columns>
+    </one-to-one>
+  </entity>
+</doctrine-mapping>

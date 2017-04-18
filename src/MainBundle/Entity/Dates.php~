@@ -1,0 +1,57 @@
+<?php
+
+namespace MainBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Dates
+ *
+ * @ORM\Table(name="dates", indexes={@ORM\Index(name="FK_UN_DATE_A_UN_TYPE", columns={"TYPE_DATE"})})
+ * @ORM\Entity
+ */
+class Dates
+{
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DATE", type="datetime", nullable=false)
+     */
+    private $date;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ID_DATE", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idDate;
+
+    /**
+     * @var \MainBundle\Entity\Types
+     *
+     * @ORM\ManyToOne(targetEntity="MainBundle\Entity\Types")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="TYPE_DATE", referencedColumnName="ID_TYPE")
+     * })
+     */
+    private $typeDate;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Activites", mappedBy="dateAct")
+     */
+    private $idDateAct;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->idDateAct = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}
+
