@@ -18,9 +18,9 @@ class BoutiqueController extends Controller
     }
 
     /**
-     * @Route("/boutique/{id}")
+     * @Route("/boutique/{idProduit}")
      */
-    public function produitAction($id)
+    public function produitAction($idProduit)
     {
         $idUser = $id;
         return $this->render('MainBundle:Boutique:produit.html.twig', array(
@@ -39,9 +39,9 @@ class BoutiqueController extends Controller
     }
 
     /**
-     * @Route("/boutique/{id}/modification")
+     * @Route("/boutique/{idProduit}/modification")
      */
-    public function modificationProduitAction($id)
+    public function modificationProduitAction($idProduit)
     {
         $idProduit = $id;
         return $this->render('MainBundle:Boutique:modification_produit.html.twig', array(
