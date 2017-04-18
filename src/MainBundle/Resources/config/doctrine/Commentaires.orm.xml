@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MainBundle\Entity\Commentaires" table="commentaires">
+    <indexes>
+      <index name="FK_UNE_PHOTO_PEUT_AVOIR_DES_COMMENTAIRES" columns="IMG_COMM"/>
+      <index name="FK_USER_PEUT_METTRE_PLUSIEURS_COMMENTAIRES" columns="AUTEUR_COMM"/>
+    </indexes>
+    <id name="idCommentaire" type="integer" column="ID_COMMENTAIRE">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="commentaire" type="text" column="COMMENTAIRE" length="65535" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <many-to-one field="auteurComm" target-entity="Users" fetch="LAZY">
+      <join-columns>
+        <join-column name="AUTEUR_COMM" referenced-column-name="ID_USER"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="imgComm" target-entity="Photos" fetch="LAZY">
+      <join-columns>
+        <join-column name="IMG_COMM" referenced-column-name="ID_IMG"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MainBundle\Entity\Dates" table="dates">
+    <indexes>
+      <index name="FK_UN_DATE_A_UN_TYPE" columns="TYPE_DATE"/>
+    </indexes>
+    <id name="idDate" type="integer" column="ID_DATE">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="date" type="datetime" column="DATE" nullable="false"/>
+    <many-to-one field="typeDate" target-entity="Types" fetch="LAZY">
+      <join-columns>
+        <join-column name="TYPE_DATE" referenced-column-name="ID_TYPE"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-many field="idDateAct" target-entity="Activites" mapped-by="dateAct" fetch="LAZY"/>
+  </entity>
+</doctrine-mapping>

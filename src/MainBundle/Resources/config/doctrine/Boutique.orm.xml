@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MainBundle\Entity\Boutique" table="boutique">
+    <indexes>
+      <index name="FK_UN_PRODUIT_A_UNE_DATE_DE_PARUTION" columns="DATE_PROD"/>
+    </indexes>
+    <id name="idProduit" type="integer" column="ID_PRODUIT">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="stock" type="integer" column="STOCK" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="nomProduit" type="string" column="NOM_PRODUIT" length="255" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="descriptionProduit" type="text" column="DESCRIPTION_PRODUIT" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="prixProduit" type="decimal" column="PRIX_PRODUIT" precision="10" scale="0" nullable="false"/>
+    <many-to-one field="dateProd" target-entity="Dates" fetch="LAZY">
+      <join-columns>
+        <join-column name="DATE_PROD" referenced-column-name="ID_DATE"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-many field="idImgProd" target-entity="Photos" mapped-by="imgProd" fetch="LAZY"/>
+  </entity>
+</doctrine-mapping>

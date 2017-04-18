@@ -1,0 +1,78 @@
+<?php
+
+namespace MainBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Boutique
+ *
+ * @ORM\Table(name="boutique", indexes={@ORM\Index(name="FK_UN_PRODUIT_A_UNE_DATE_DE_PARUTION", columns={"DATE_PROD"})})
+ * @ORM\Entity
+ */
+class Boutique
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="STOCK", type="integer", nullable=false)
+     */
+    private $stock;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NOM_PRODUIT", type="string", length=255, nullable=false)
+     */
+    private $nomProduit;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="DESCRIPTION_PRODUIT", type="text", length=65535, nullable=true)
+     */
+    private $descriptionProduit;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="PRIX_PRODUIT", type="decimal", precision=10, scale=0, nullable=false)
+     */
+    private $prixProduit;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ID_PRODUIT", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idProduit;
+
+    /**
+     * @var \MainBundle\Entity\Dates
+     *
+     * @ORM\ManyToOne(targetEntity="MainBundle\Entity\Dates")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="DATE_PROD", referencedColumnName="ID_DATE")
+     * })
+     */
+    private $dateProd;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Photos", mappedBy="imgProd")
+     */
+    private $idImgProd;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->idImgProd = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}
+

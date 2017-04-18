@@ -1,0 +1,118 @@
+<?php
+
+namespace MainBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Activites
+ *
+ * @ORM\Table(name="activites", indexes={@ORM\Index(name="FK_ACTIVITE_A_UN_AUTEUR", columns={"AUTEUR_ACT"}), @ORM\Index(name="FK_ACTIVITE_A_UN_ETAT", columns={"ETAT_ACT"})})
+ * @ORM\Entity
+ */
+class Activites
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NOM_ACTIVITE", type="string", length=255, nullable=false)
+     */
+    private $nomActivite;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="DESCRIPTION_ACTIVITE", type="text", length=65535, nullable=false)
+     */
+    private $descriptionActivite;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="PRIX_ACTIVITE", type="decimal", precision=10, scale=0, nullable=true)
+     */
+    private $prixActivite;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="LIEU", type="string", length=255, nullable=true)
+     */
+    private $lieu;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="INSCRITS_MAX", type="integer", nullable=true)
+     */
+    private $inscritsMax;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="AGE_MIN", type="integer", nullable=true)
+     */
+    private $ageMin;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="ID_ACTIVITE", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idActivite;
+
+    /**
+     * @var \MainBundle\Entity\Users
+     *
+     * @ORM\ManyToOne(targetEntity="MainBundle\Entity\Users")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="AUTEUR_ACT", referencedColumnName="ID_USER")
+     * })
+     */
+    private $auteurAct;
+
+    /**
+     * @var \MainBundle\Entity\EtatsActivites
+     *
+     * @ORM\ManyToOne(targetEntity="MainBundle\Entity\EtatsActivites")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="ETAT_ACT", referencedColumnName="ID_ETAT")
+     * })
+     */
+    private $etatAct;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Photos", mappedBy="imgAct")
+     */
+    private $idImgAct;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Dates", inversedBy="idDateAct")
+     * @ORM\JoinTable(name="date_act",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="ID_DATE_ACT", referencedColumnName="ID_ACTIVITE")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="DATE_ACT", referencedColumnName="ID_DATE")
+     *   }
+     * )
+     */
+    private $dateAct;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->idImgAct = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->dateAct = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}
+
