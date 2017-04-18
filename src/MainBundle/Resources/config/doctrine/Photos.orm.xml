@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="MainBundle\Entity\Photos" table="photos">
+    <indexes>
+      <index name="FK_PHOTO_A_UNE_DATE_DE_PUBLICATION" columns="DATE_IMG"/>
+      <index name="FK_UNE_PHOTO_A_UN_TYPE" columns="TYPE_IMG"/>
+      <index name="FK_UNE_PHOTO_PEUT_AVOIR_UN_AUTEUR" columns="AUTEUR_IMG"/>
+    </indexes>
+    <id name="idImg" type="integer" column="ID_IMG">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="chemin" type="string" column="CHEMIN" length="127" nullable="false">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <many-to-one field="dateImg" target-entity="Dates" fetch="LAZY">
+      <join-columns>
+        <join-column name="DATE_IMG" referenced-column-name="ID_DATE"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="auteurImg" target-entity="Users" fetch="LAZY">
+      <join-columns>
+        <join-column name="AUTEUR_IMG" referenced-column-name="ID_USER"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="typeImg" target-entity="Types" fetch="LAZY">
+      <join-columns>
+        <join-column name="TYPE_IMG" referenced-column-name="ID_TYPE"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-many field="likesUser" target-entity="Users" mapped-by="likesImg" fetch="LAZY"/>
+    <many-to-many field="imgAct" target-entity="Activites" inversed-by="idImgAct" fetch="LAZY">
+      <join-table name="im_act">
+        <join-columns>
+          <join-column name="ID_IMG_ACT" referenced-column-name="ID_IMG"/>
+        </join-columns>
+        <inverse-join-columns>
+          <join-column name="IMG_ACT" referenced-column-name="ID_ACTIVITE"/>
+        </inverse-join-columns>
+      </join-table>
+    </many-to-many>
+    <many-to-many field="imgProd" target-entity="Boutique" inversed-by="idImgProd" fetch="LAZY">
+      <join-table name="im_prod">
+        <join-columns>
+          <join-column name="ID_IMG_PROD" referenced-column-name="ID_IMG"/>
+        </join-columns>
+        <inverse-join-columns>
+          <join-column name="IMG_PROD" referenced-column-name="ID_PRODUIT"/>
+        </inverse-join-columns>
+      </join-table>
+    </many-to-many>
+  </entity>
+</doctrine-mapping>
