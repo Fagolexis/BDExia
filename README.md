@@ -6,9 +6,9 @@ Projet Web - Groupe 3
 
 ## Branches :
 - Vues (templates format twig)
-- Contrôleurs
-- Modèles
-- Data (Entities)
+- Contrôleurs - François
+- Modèles - Quentin
+- Data (Entities) - Alexis
 
 ## Contributeurs :
 - Alexis Lucas
