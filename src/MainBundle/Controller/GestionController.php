@@ -2,15 +2,14 @@
 
 namespace MainBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
-class GestionController extends Controller
+class GestionController extends DefaultController
 {
     /**
      * @Route("/utilisateurs")
      */
-    public function gestionUtilisateursAction()
+    public function indexAction()
     {
         return $this->render('MainBundle:Gestion:gestion_utilisateurs.html.twig', array(
             // ...
@@ -18,13 +17,12 @@ class GestionController extends Controller
     }
 
     /**
-     * @Route("/utilisateurs/{idUser}")
+     * @Route("/utilisateurs/{id}")
      */
-    public function profilAction($idUser)
+    public function showAction($id)
     {
-        $idUser = $idUser;
         return $this->render('MainBundle:Gestion:profil.html.twig', array(
-            'user'=> $idUser,
+            'user'=> $id,
         ));
     }
 

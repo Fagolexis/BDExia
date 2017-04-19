@@ -7,14 +7,14 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 abstract class DefaultController extends Controller
 {
-	$em = $this->getDoctrine()->getManager();
 
     protected function dbSave($method, $obj_record)
     {
+    	$em = $this->getDoctrine()->getManager();
     	if($method == "persist") {
-    		$this->em->persist($obj_record);
+    		$em->persist($obj_record);
     	} else if ($method == "merge") {
-    		$this->em->merge($obj_record);
+    		$em->merge($obj_record);
     	} else {
     		return "Error : unknown method";
     	}

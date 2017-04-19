@@ -2,15 +2,14 @@
 
 namespace MainBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
-class BoutiqueController extends Controller
+class BoutiqueController extends DefaultController
 {
     /**
      * @Route("/boutique")
      */
-    public function boutiqueAction()
+    public function indexAction()
     {
         return $this->render('MainBundle:Boutique:boutique.html.twig', array(
             // ...
@@ -18,9 +17,9 @@ class BoutiqueController extends Controller
     }
 
     /**
-     * @Route("/boutique/{idProduit}")
+     * @Route("/boutique/{id}")
      */
-    public function produitAction($idProduit)
+    public function showAction($id)
     {
         $idUser = $id;
         return $this->render('MainBundle:Boutique:produit.html.twig', array(
@@ -31,7 +30,7 @@ class BoutiqueController extends Controller
     /**
      * @Route("/boutique/panier")
      */
-    public function panierAction()
+    public function cartAction()
     {
         return $this->render('MainBundle:Boutique:panier.html.twig', array(
             // ...
@@ -39,13 +38,12 @@ class BoutiqueController extends Controller
     }
 
     /**
-     * @Route("/boutique/{idProduit}/modification")
+     * @Route("/boutique/{id}/modification")
      */
-    public function modificationProduitAction($idProduit)
+    public function modAction($id)
     {
-        $idProduit = $id;
         return $this->render('MainBundle:Boutique:modification_produit.html.twig', array(
-            'idProduit'=> $idProduit,
+            'id'=> $id,
         ));
     }
 

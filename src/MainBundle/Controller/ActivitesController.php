@@ -2,26 +2,25 @@
 
 namespace MainBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 
-class ActivitesController extends Controller
+class ActivitesController extends DefaultController
 {
     /**
      * @Route("/activites")
      */
-    public function listeActivitesAction()
+    public function indexAction()
     {
-        return $this->render('MainBundle:Activites:liste_activites.html.twig', array(
+        return parent::render('MainBundle:Activites:liste_activites.html.twig', array(
             // ...
         ));
     }
 
     /**
-     * @Route("/activites/{idActivite}")
+     * @Route("/activites/{id}", requirements={"id": "\d+"})
      */
-    public function detailsActivitesAction($idActivite)
+    public function showAction($id)
     {
         return $this->render('MainBundle:Activites:details_activites.html.twig', array(
             // ...
@@ -29,9 +28,9 @@ class ActivitesController extends Controller
     }
 
     /**
-     * @Route("/activites/{idActivite}/photo")
+     * @Route("/activites/{id}/photo")
      */
-    public function photoActivitesAction($idActivite)
+    public function photosAction($id)
     {
         return $this->render('MainBundle:Activites:photo_activites.html.twig', array(
             // ...
@@ -39,9 +38,9 @@ class ActivitesController extends Controller
     }
 
     /**
-     * @Route("/activites/{idActivite}/inscrits")
+     * @Route("/activites/{id}/inscrits")
      */
-    public function listeInscritsAction($id)
+    public function subsAction($id)
     {
         return $this->render('MainBundle:Activites:liste_inscrits.html.twig', array(
             "act"=>$id
@@ -49,9 +48,9 @@ class ActivitesController extends Controller
     }
 
     /**
-     * @Route("/activites/{idActivite}/modification")
+     * @Route("/activites/{id}/modification")
      */
-    public function modificationActivitesAction($idActivite)
+    public function modAction($id)
     {
         $users = $this->getDoctrine()
         ->getRepository('MainBundle:Users')
