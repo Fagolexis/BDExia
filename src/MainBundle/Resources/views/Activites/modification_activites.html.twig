@@ -1,0 +1,11 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}MainBundle:Activites:modificationActivites{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Activites:modificationActivites page</h1>
+<h2>Vous voulez modifier l'activitée dont l'ID est {{activite}}</h2>
+{% for user in users %}
+<h3>{{user.nom}}&nbsp;{{user.prenom}}&nbsp;{{user.roleUser.role}}</h3>
+{% endfor %}
+{% endblock %}

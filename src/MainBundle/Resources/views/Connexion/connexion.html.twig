@@ -1,0 +1,14 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}MainBundle:Connexion:Connexion{% endblock %}
+
+{% block body %}
+<h1>Page de connexion du site du BDE CESI eXia</h1>
+<form>
+	<span>mail</span>
+	<input type="input" name="mail" placeholder="mail">
+	<span>password</span>
+	<input type="password" name="password" placeholder="password">
+	<button type="submit">connexion</button>
+</form>
+{% endblock %}
