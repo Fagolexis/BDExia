@@ -4,6 +4,7 @@ namespace MainBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 class ActivitesController extends Controller
 {
@@ -38,23 +39,26 @@ class ActivitesController extends Controller
     }
 
     /**
-     * @Route("/activites/{id}/inscrits")
+     * @Route("/activites/{idActivite}/inscrits")
      */
-    public function listeInscritsAction($idActivite)
+    public function listeInscritsAction($id)
     {
         return $this->render('MainBundle:Activites:liste_inscrits.html.twig', array(
-            // ...
+            "act"=>$id
         ));
     }
 
     /**
-     * @Route("/activites/{id}/modification")
+     * @Route("/activites/{idActivite}/modification")
      */
     public function modificationActivitesAction($idActivite)
     {
+        $users = $this->getDoctrine()
+        ->getRepository('MainBundle:Users')
+        ->findAll();
+        // $users = var_dump($users);
         return $this->render('MainBundle:Activites:modification_activites.html.twig', array(
-            // ...
+            'users' => $users
         ));
     }
-
 }
