@@ -1,0 +1,48 @@
+{% extends "MainBundle::base.html.twig" %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="red"></div>
+	<div class="container header">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.html"><img src="logo-header.png" alt="Logo Exia"/></a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a class="active" href="#">Connexion</a></li>
+				<li><a class="" href="#">Inscrivez-vous !</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<main>
+	<h1 class="text-center">Formulaire d'inscription</h1>
+	<div class="container">
+		<div class="blank formulaire">
+			<div class="col-md-offset-4 col-md-8">
+			<form action="">
+				<dt><label for="Nom">Nom :</label></dt>
+				<dd><input type="text" name="Nom" placeholder="Entrer votre nom de famille" size="30" required></dd>
+				<dt><label for="Nom">Prénom :</label></dt>
+				<dd><input type="text" name="Prenom" placeholder="Entrer votre prénom" size="30" required></dd>
+				<dt><label for="Nom">Date de naissance :</label></dt>
+				<dd><input type="tel" name="Jour" placeholder="JJ" min="01" max="31" maxlength="2" size="2" required>
+					<input type="tel" name="Mois" placeholder="MM" min="01" max="12" maxlength="2" size="2" required>
+					<input type="tel" name="Année" placeholder="AAAA" min="1980" max="2017" maxlength="4" size="4" required></dd>
+				<dt><label for="Nom">Numéro de téléphone :</label></dt>
+				<dd><input type="tel" name="Telephone" maxlength="10" placeholder="Entrer votre numéro de téléphone" size="30"></dd>
+				<dt><label for="Nom">Mail :</label></dt>
+				<dd><input type="email" name="Mail" placeholder="Entrer votre adresse mail" size="30" required></dd>
+				<dt><label for="Nom">Mot de passe :</label></dt>
+				<dd><input type="password" name="Mdp" placeholder="Entrer un mot de passe sécurisé" size="30" required></dd>
+				<br/>
+				<input class="btn btn-default" type="submit" name="subIns" value="S'inscrire">
+			</form>
+			</div>
+		</div>
+	</div>
+	<div class="espaceBas"></div>
+</main>
+{% endblock %}
