@@ -11,6 +11,7 @@ class GestionController extends DefaultController
      */
     public function indexAction()
     {
+        $list = $this->getDoctrine()->getRepository("MainBundle:Users")->findAll();
         return $this->render('MainBundle:Gestion:gestion_utilisateurs.html.twig', array(
             // ...
         ));
@@ -21,8 +22,9 @@ class GestionController extends DefaultController
      */
     public function showAction($id)
     {
+        $user = $this->getDoctrine()->getRepository("MainBundle:Users")->findOneByIdUser($id);
         return $this->render('MainBundle:Gestion:profil.html.twig', array(
-            'user'=> $id,
+            'user'=> $user,
         ));
     }
 

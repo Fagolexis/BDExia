@@ -11,6 +11,7 @@ class BoutiqueController extends DefaultController
      */
     public function indexAction()
     {
+        $list = $this->getDoctrine()->getRepository("MainBundle:Boutique")->findAll();
         return $this->render('MainBundle:Boutique:boutique.html.twig', array(
             // ...
         ));
@@ -21,9 +22,9 @@ class BoutiqueController extends DefaultController
      */
     public function showAction($id)
     {
-        $idUser = $id;
+        $product = $this->getDoctrine()->getRepository("MainBundle:Boutique")->findOneByIdProduit($id);
         return $this->render('MainBundle:Boutique:produit.html.twig', array(
-            'user'=> $idUser,
+            'prod'=> $product,
         ));
     }
 
@@ -32,8 +33,12 @@ class BoutiqueController extends DefaultController
      */
     public function cartAction()
     {
+        //SESSION
+        $products = array();
+        //foreach elements in panier
+        $products[] = $this->getDoctrine()->getRepository("MainBundle:Activites")->findOneByIdActivite($id);
         return $this->render('MainBundle:Boutique:panier.html.twig', array(
-            // ...
+            "prod" => $products
         ));
     }
 
@@ -42,8 +47,9 @@ class BoutiqueController extends DefaultController
      */
     public function modAction($id)
     {
-        return $this->render('MainBundle:Boutique:modification_produit.html.twig', array(
-            'id'=> $id,
+        $product = $this->getDoctrine()->getRepository("MainBundle:Boutique")->findOneByIdProduit($id);
+        return $this->render('MainBundle:Boutique:creation_produit.html.twig', array(
+            "prod" => $product
         ));
     }
 
