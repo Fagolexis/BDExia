@@ -461,7 +461,11 @@
                 <tag name="cache.pool" clearer="cache.default_clearer"/>
                 <argument>HfEP6eOhyG</argument>
                 <argument>0</argument>
+<<<<<<< Updated upstream
                 <argument>HyBqTB-C3BmT9rw0wSdJN3</argument>
+=======
+                <argument>IPdp4uHT-wVsJaNvwd4jtd</argument>
+>>>>>>> Stashed changes
                 <argument>C:\wamp64\www\bdexia\var\cache\dev/pools</argument>
                 <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                 <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -644,7 +648,11 @@
       <tag name="cache.pool" clearer="cache.default_clearer"/>
       <argument>rAouZRHMgJ</argument>
       <argument>0</argument>
+<<<<<<< Updated upstream
       <argument>HyBqTB-C3BmT9rw0wSdJN3</argument>
+=======
+      <argument>IPdp4uHT-wVsJaNvwd4jtd</argument>
+>>>>>>> Stashed changes
       <argument>C:\wamp64\www\bdexia\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -654,7 +662,11 @@
       <tag name="cache.pool" clearer="cache.default_clearer"/>
       <argument>iF0-uQlmt1</argument>
       <argument>0</argument>
+<<<<<<< Updated upstream
       <argument>HyBqTB-C3BmT9rw0wSdJN3</argument>
+=======
+      <argument>IPdp4uHT-wVsJaNvwd4jtd</argument>
+>>>>>>> Stashed changes
       <argument>C:\wamp64\www\bdexia\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -1647,7 +1659,11 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
+<<<<<<< Updated upstream
             <argument>58f5c93071c4b8.49860725</argument>
+=======
+            <argument>58f71e023a0b05.64397441</argument>
+>>>>>>> Stashed changes
           </service>
         </argument>
       </argument>
@@ -1795,7 +1811,11 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
+<<<<<<< Updated upstream
             <argument>58f5c93071c4b8.49860725</argument>
+=======
+            <argument>58f71e023a0b05.64397441</argument>
+>>>>>>> Stashed changes
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>

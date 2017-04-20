@@ -4,11 +4,41 @@
 
 {% block body %}
 <h1>Page de connexion du site du BDE CESI eXia</h1>
-<form>
-	<span>mail</span>
-	<input type="input" name="mail" placeholder="mail">
-	<span>password</span>
-	<input type="password" name="password" placeholder="password">
-	<button type="submit">connexion</button>
+<form method="post" action="" id="connexion">
+	<span>Email</span>
+	<input type="Email" name="mail" placeholder="mail" required>
+	<span>Password</span>
+	<input type="password" name="password" placeholder="password" required>
+	<button type="submit" name="submitConnexion">connexion</button>
 </form>
+<<<<<<< Updated upstream
+=======
+<h3>{{errormessage}}</h3>
+<form method="post" action="" id="inscription">
+	<span>Nom</span>
+	<input type="input" name="Nom" placeholder="Nom" required>
+	<span>Prenom</span>
+	<input type="input" name="Prenom" placeholder="Prenom" required>
+	<span>Email</span>
+	<input type="Email" name="Email" placeholder="Email" required>
+	<span>Mot de passe</span>
+	<input type="password" name="Password" placeholder="Password" required>
+	<span>Date de naissance</span>
+	<input type="date" name="Naissance">
+	<span>Promotion</span>
+	<SELECT name="Promotion">
+		<option value="A1">A1</option>
+		<option value="A2">A2</option>
+		<option value="A3">A3</option>
+		<option value="A4">A4</option>
+		<option value="A5">A5</option>
+	</SELECT>
+	<span>Avatar</span>
+	<input type="file" name="Avatar">
+	<span>Numréo de telephone</span>
+	<input type="tel" name="Telephone" placeholder="Telephone">
+	<input type="reset" name="Reset">
+	<input type="submit" name="submitInscription" value="S'inscrire">
+</form>
+>>>>>>> Stashed changes
 {% endblock %}
