@@ -36,7 +36,7 @@ class Boutique
     /**
      * @var string
      *
-     * @ORM\Column(name="PRIX_PRODUIT", type="decimal", precision=10, scale=0, nullable=false)
+     * @ORM\Column(name="PRIX_PRODUIT", type="decimal", precision=6, scale=2, nullable=false)
      */
     private $prixProduit;
 
@@ -62,16 +62,24 @@ class Boutique
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Photos", mappedBy="imgProd")
+     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Photos", inversedBy="idImgProd")
+     * @ORM\JoinTable(name="im_prod",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="ID_IMG_PROD", referencedColumnName="ID_PRODUIT")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="IMG_PROD", referencedColumnName="ID_IMG")
+     *   }
+     * )
      */
-    private $idImgProd;
+    private $imgProd;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->idImgProd = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->imgProd = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
 
@@ -85,7 +93,7 @@ class Boutique
     public function setStock($stock)
     {
         $this->stock = $stock;
-
+    
         return $this;
     }
 
@@ -109,7 +117,7 @@ class Boutique
     public function setNomProduit($nomProduit)
     {
         $this->nomProduit = $nomProduit;
-
+    
         return $this;
     }
 
@@ -133,7 +141,7 @@ class Boutique
     public function setDescriptionProduit($descriptionProduit)
     {
         $this->descriptionProduit = $descriptionProduit;
-
+    
         return $this;
     }
 
@@ -157,7 +165,7 @@ class Boutique
     public function setPrixProduit($prixProduit)
     {
         $this->prixProduit = $prixProduit;
-
+    
         return $this;
     }
 
@@ -191,7 +199,7 @@ class Boutique
     public function setDateProd(\MainBundle\Entity\Dates $dateProd = null)
     {
         $this->dateProd = $dateProd;
-
+    
         return $this;
     }
 
@@ -206,36 +214,36 @@ class Boutique
     }
 
     /**
-     * Add idImgProd
+     * Add imgProd
      *
-     * @param \MainBundle\Entity\Photos $idImgProd
+     * @param \MainBundle\Entity\Photos $imgProd
      *
      * @return Boutique
      */
-    public function addIdImgProd(\MainBundle\Entity\Photos $idImgProd)
+    public function addImgProd(\MainBundle\Entity\Photos $imgProd)
     {
-        $this->idImgProd[] = $idImgProd;
-
+        $this->imgProd[] = $imgProd;
+    
         return $this;
     }
 
     /**
-     * Remove idImgProd
+     * Remove imgProd
      *
-     * @param \MainBundle\Entity\Photos $idImgProd
+     * @param \MainBundle\Entity\Photos $imgProd
      */
-    public function removeIdImgProd(\MainBundle\Entity\Photos $idImgProd)
+    public function removeImgProd(\MainBundle\Entity\Photos $imgProd)
     {
-        $this->idImgProd->removeElement($idImgProd);
+        $this->imgProd->removeElement($imgProd);
     }
 
     /**
-     * Get idImgProd
+     * Get imgProd
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getIdImgProd()
+    public function getImgProd()
     {
-        return $this->idImgProd;
+        return $this->imgProd;
     }
 }

@@ -68,32 +68,16 @@ class Photos
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Activites", inversedBy="idImgAct")
-     * @ORM\JoinTable(name="im_act",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="ID_IMG_ACT", referencedColumnName="ID_IMG")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="IMG_ACT", referencedColumnName="ID_ACTIVITE")
-     *   }
-     * )
+     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Activites", mappedBy="imgAct")
      */
-    private $imgAct;
+    private $idImgAct;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Boutique", inversedBy="idImgProd")
-     * @ORM\JoinTable(name="im_prod",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="ID_IMG_PROD", referencedColumnName="ID_IMG")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="IMG_PROD", referencedColumnName="ID_PRODUIT")
-     *   }
-     * )
+     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Boutique", mappedBy="imgProd")
      */
-    private $imgProd;
+    private $idImgProd;
 
     /**
      * Constructor
@@ -101,8 +85,8 @@ class Photos
     public function __construct()
     {
         $this->likesUser = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->imgAct = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->imgProd = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->idImgAct = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->idImgProd = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
 
@@ -116,7 +100,7 @@ class Photos
     public function setChemin($chemin)
     {
         $this->chemin = $chemin;
-
+    
         return $this;
     }
 
@@ -150,7 +134,7 @@ class Photos
     public function setDateImg(\MainBundle\Entity\Dates $dateImg = null)
     {
         $this->dateImg = $dateImg;
-
+    
         return $this;
     }
 
@@ -174,7 +158,7 @@ class Photos
     public function setAuteurImg(\MainBundle\Entity\Users $auteurImg = null)
     {
         $this->auteurImg = $auteurImg;
-
+    
         return $this;
     }
 
@@ -198,7 +182,7 @@ class Photos
     public function setTypeImg(\MainBundle\Entity\Types $typeImg = null)
     {
         $this->typeImg = $typeImg;
-
+    
         return $this;
     }
 
@@ -222,7 +206,7 @@ class Photos
     public function addLikesUser(\MainBundle\Entity\Users $likesUser)
     {
         $this->likesUser[] = $likesUser;
-
+    
         return $this;
     }
 
@@ -247,70 +231,70 @@ class Photos
     }
 
     /**
-     * Add imgAct
+     * Add idImgAct
      *
-     * @param \MainBundle\Entity\Activites $imgAct
+     * @param \MainBundle\Entity\Activites $idImgAct
      *
      * @return Photos
      */
-    public function addImgAct(\MainBundle\Entity\Activites $imgAct)
+    public function addIdImgAct(\MainBundle\Entity\Activites $idImgAct)
     {
-        $this->imgAct[] = $imgAct;
-
+        $this->idImgAct[] = $idImgAct;
+    
         return $this;
     }
 
     /**
-     * Remove imgAct
+     * Remove idImgAct
      *
-     * @param \MainBundle\Entity\Activites $imgAct
+     * @param \MainBundle\Entity\Activites $idImgAct
      */
-    public function removeImgAct(\MainBundle\Entity\Activites $imgAct)
+    public function removeIdImgAct(\MainBundle\Entity\Activites $idImgAct)
     {
-        $this->imgAct->removeElement($imgAct);
+        $this->idImgAct->removeElement($idImgAct);
     }
 
     /**
-     * Get imgAct
+     * Get idImgAct
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getImgAct()
+    public function getIdImgAct()
     {
-        return $this->imgAct;
+        return $this->idImgAct;
     }
 
     /**
-     * Add imgProd
+     * Add idImgProd
      *
-     * @param \MainBundle\Entity\Boutique $imgProd
+     * @param \MainBundle\Entity\Boutique $idImgProd
      *
      * @return Photos
      */
-    public function addImgProd(\MainBundle\Entity\Boutique $imgProd)
+    public function addIdImgProd(\MainBundle\Entity\Boutique $idImgProd)
     {
-        $this->imgProd[] = $imgProd;
-
+        $this->idImgProd[] = $idImgProd;
+    
         return $this;
     }
 
     /**
-     * Remove imgProd
+     * Remove idImgProd
      *
-     * @param \MainBundle\Entity\Boutique $imgProd
+     * @param \MainBundle\Entity\Boutique $idImgProd
      */
-    public function removeImgProd(\MainBundle\Entity\Boutique $imgProd)
+    public function removeIdImgProd(\MainBundle\Entity\Boutique $idImgProd)
     {
-        $this->imgProd->removeElement($imgProd);
+        $this->idImgProd->removeElement($idImgProd);
     }
 
     /**
-     * Get imgProd
+     * Get idImgProd
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getImgProd()
+    public function getIdImgProd()
     {
-        return $this->imgProd;
+        return $this->idImgProd;
     }
 }

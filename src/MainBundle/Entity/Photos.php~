@@ -68,32 +68,16 @@ class Photos
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Activites", inversedBy="idImgAct")
-     * @ORM\JoinTable(name="im_act",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="ID_IMG_ACT", referencedColumnName="ID_IMG")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="IMG_ACT", referencedColumnName="ID_ACTIVITE")
-     *   }
-     * )
+     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Activites", mappedBy="imgAct")
      */
-    private $imgAct;
+    private $idImgAct;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Boutique", inversedBy="idImgProd")
-     * @ORM\JoinTable(name="im_prod",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="ID_IMG_PROD", referencedColumnName="ID_IMG")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="IMG_PROD", referencedColumnName="ID_PRODUIT")
-     *   }
-     * )
+     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Boutique", mappedBy="imgProd")
      */
-    private $imgProd;
+    private $idImgProd;
 
     /**
      * Constructor
@@ -101,8 +85,8 @@ class Photos
     public function __construct()
     {
         $this->likesUser = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->imgAct = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->imgProd = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->idImgAct = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->idImgProd = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
 }

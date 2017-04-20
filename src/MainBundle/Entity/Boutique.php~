@@ -36,7 +36,7 @@ class Boutique
     /**
      * @var string
      *
-     * @ORM\Column(name="PRIX_PRODUIT", type="decimal", precision=10, scale=0, nullable=false)
+     * @ORM\Column(name="PRIX_PRODUIT", type="decimal", precision=6, scale=2, nullable=false)
      */
     private $prixProduit;
 
@@ -62,16 +62,24 @@ class Boutique
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Photos", mappedBy="imgProd")
+     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Photos", inversedBy="idImgProd")
+     * @ORM\JoinTable(name="im_prod",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="ID_IMG_PROD", referencedColumnName="ID_PRODUIT")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="IMG_PROD", referencedColumnName="ID_IMG")
+     *   }
+     * )
      */
-    private $idImgProd;
+    private $imgProd;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->idImgProd = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->imgProd = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
 }

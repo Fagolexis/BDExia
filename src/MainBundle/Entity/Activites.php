@@ -29,7 +29,7 @@ class Activites
     /**
      * @var string
      *
-     * @ORM\Column(name="PRIX_ACTIVITE", type="decimal", precision=10, scale=0, nullable=true)
+     * @ORM\Column(name="PRIX_ACTIVITE", type="decimal", precision=6, scale=2, nullable=true)
      */
     private $prixActivite;
 
@@ -86,32 +86,32 @@ class Activites
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Photos", mappedBy="imgAct")
+     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Photos", inversedBy="idImgAct")
+     * @ORM\JoinTable(name="im_act",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="ID_IMG_ACT", referencedColumnName="ID_ACTIVITE")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="IMG_ACT", referencedColumnName="ID_IMG")
+     *   }
+     * )
      */
-    private $idImgAct;
+    private $imgAct;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Dates", inversedBy="idDateAct")
-     * @ORM\JoinTable(name="date_act",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="ID_DATE_ACT", referencedColumnName="ID_ACTIVITE")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="DATE_ACT", referencedColumnName="ID_DATE")
-     *   }
-     * )
+     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Dates", mappedBy="dateAct")
      */
-    private $dateAct;
+    private $idDateAct;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->idImgAct = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->dateAct = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->imgAct = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->idDateAct = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
 
@@ -125,7 +125,7 @@ class Activites
     public function setNomActivite($nomActivite)
     {
         $this->nomActivite = $nomActivite;
-
+    
         return $this;
     }
 
@@ -149,7 +149,7 @@ class Activites
     public function setDescriptionActivite($descriptionActivite)
     {
         $this->descriptionActivite = $descriptionActivite;
-
+    
         return $this;
     }
 
@@ -173,7 +173,7 @@ class Activites
     public function setPrixActivite($prixActivite)
     {
         $this->prixActivite = $prixActivite;
-
+    
         return $this;
     }
 
@@ -197,7 +197,7 @@ class Activites
     public function setLieu($lieu)
     {
         $this->lieu = $lieu;
-
+    
         return $this;
     }
 
@@ -221,7 +221,7 @@ class Activites
     public function setInscritsMax($inscritsMax)
     {
         $this->inscritsMax = $inscritsMax;
-
+    
         return $this;
     }
 
@@ -245,7 +245,7 @@ class Activites
     public function setAgeMin($ageMin)
     {
         $this->ageMin = $ageMin;
-
+    
         return $this;
     }
 
@@ -279,7 +279,7 @@ class Activites
     public function setAuteurAct(\MainBundle\Entity\Users $auteurAct = null)
     {
         $this->auteurAct = $auteurAct;
-
+    
         return $this;
     }
 
@@ -303,7 +303,7 @@ class Activites
     public function setEtatAct(\MainBundle\Entity\EtatsActivites $etatAct = null)
     {
         $this->etatAct = $etatAct;
-
+    
         return $this;
     }
 
@@ -318,70 +318,70 @@ class Activites
     }
 
     /**
-     * Add idImgAct
+     * Add imgAct
      *
-     * @param \MainBundle\Entity\Photos $idImgAct
+     * @param \MainBundle\Entity\Photos $imgAct
      *
      * @return Activites
      */
-    public function addIdImgAct(\MainBundle\Entity\Photos $idImgAct)
+    public function addImgAct(\MainBundle\Entity\Photos $imgAct)
     {
-        $this->idImgAct[] = $idImgAct;
-
+        $this->imgAct[] = $imgAct;
+    
         return $this;
     }
 
     /**
-     * Remove idImgAct
+     * Remove imgAct
      *
-     * @param \MainBundle\Entity\Photos $idImgAct
+     * @param \MainBundle\Entity\Photos $imgAct
      */
-    public function removeIdImgAct(\MainBundle\Entity\Photos $idImgAct)
+    public function removeImgAct(\MainBundle\Entity\Photos $imgAct)
     {
-        $this->idImgAct->removeElement($idImgAct);
+        $this->imgAct->removeElement($imgAct);
     }
 
     /**
-     * Get idImgAct
+     * Get imgAct
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getIdImgAct()
+    public function getImgAct()
     {
-        return $this->idImgAct;
+        return $this->imgAct;
     }
 
     /**
-     * Add dateAct
+     * Add idDateAct
      *
-     * @param \MainBundle\Entity\Dates $dateAct
+     * @param \MainBundle\Entity\Dates $idDateAct
      *
      * @return Activites
      */
-    public function addDateAct(\MainBundle\Entity\Dates $dateAct)
+    public function addIdDateAct(\MainBundle\Entity\Dates $idDateAct)
     {
-        $this->dateAct[] = $dateAct;
-
+        $this->idDateAct[] = $idDateAct;
+    
         return $this;
     }
 
     /**
-     * Remove dateAct
+     * Remove idDateAct
      *
-     * @param \MainBundle\Entity\Dates $dateAct
+     * @param \MainBundle\Entity\Dates $idDateAct
      */
-    public function removeDateAct(\MainBundle\Entity\Dates $dateAct)
+    public function removeIdDateAct(\MainBundle\Entity\Dates $idDateAct)
     {
-        $this->dateAct->removeElement($dateAct);
+        $this->idDateAct->removeElement($idDateAct);
     }
 
     /**
-     * Get dateAct
+     * Get idDateAct
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getDateAct()
+    public function getIdDateAct()
     {
-        return $this->dateAct;
+        return $this->idDateAct;
     }
 }
