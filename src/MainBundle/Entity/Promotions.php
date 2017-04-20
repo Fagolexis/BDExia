@@ -40,7 +40,7 @@ class Promotions
     public function setPromo($promo)
     {
         $this->promo = $promo;
-
+    
         return $this;
     }
 

@@ -40,7 +40,7 @@ class RolesUsers
     public function setRole($role)
     {
         $this->role = $role;
-
+    
         return $this;
     }
 

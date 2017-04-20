@@ -13,6 +13,13 @@ use Doctrine\ORM\Mapping as ORM;
 class Inscrits
 {
     /**
+     * @var string
+     *
+     * @ORM\Column(name="INFORMATIONS", type="string", length=127, nullable=true)
+     */
+    private $informations;
+
+    /**
      * @var \MainBundle\Entity\Activites
      *
      * @ORM\Id

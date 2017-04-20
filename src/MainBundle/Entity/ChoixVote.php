@@ -40,7 +40,7 @@ class ChoixVote
     public function setChoix($choix)
     {
         $this->choix = $choix;
-
+    
         return $this;
     }
 

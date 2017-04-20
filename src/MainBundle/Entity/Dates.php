@@ -41,16 +41,24 @@ class Dates
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Activites", mappedBy="dateAct")
+     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Activites", inversedBy="idDateAct")
+     * @ORM\JoinTable(name="date_act",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="ID_DATE_ACT", referencedColumnName="ID_DATE")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="DATE_ACT", referencedColumnName="ID_ACTIVITE")
+     *   }
+     * )
      */
-    private $idDateAct;
+    private $dateAct;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->idDateAct = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->dateAct = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
 
@@ -64,7 +72,7 @@ class Dates
     public function setDate($date)
     {
         $this->date = $date;
-
+    
         return $this;
     }
 
@@ -98,7 +106,7 @@ class Dates
     public function setTypeDate(\MainBundle\Entity\Types $typeDate = null)
     {
         $this->typeDate = $typeDate;
-
+    
         return $this;
     }
 
@@ -113,36 +121,36 @@ class Dates
     }
 
     /**
-     * Add idDateAct
+     * Add dateAct
      *
-     * @param \MainBundle\Entity\Activites $idDateAct
+     * @param \MainBundle\Entity\Activites $dateAct
      *
      * @return Dates
      */
-    public function addIdDateAct(\MainBundle\Entity\Activites $idDateAct)
+    public function addDateAct(\MainBundle\Entity\Activites $dateAct)
     {
-        $this->idDateAct[] = $idDateAct;
-
+        $this->dateAct[] = $dateAct;
+    
         return $this;
     }
 
     /**
-     * Remove idDateAct
+     * Remove dateAct
      *
-     * @param \MainBundle\Entity\Activites $idDateAct
+     * @param \MainBundle\Entity\Activites $dateAct
      */
-    public function removeIdDateAct(\MainBundle\Entity\Activites $idDateAct)
+    public function removeDateAct(\MainBundle\Entity\Activites $dateAct)
     {
-        $this->idDateAct->removeElement($idDateAct);
+        $this->dateAct->removeElement($dateAct);
     }
 
     /**
-     * Get idDateAct
+     * Get dateAct
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getIdDateAct()
+    public function getDateAct()
     {
-        return $this->idDateAct;
+        return $this->dateAct;
     }
 }

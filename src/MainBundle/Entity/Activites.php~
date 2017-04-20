@@ -29,7 +29,7 @@ class Activites
     /**
      * @var string
      *
-     * @ORM\Column(name="PRIX_ACTIVITE", type="decimal", precision=10, scale=0, nullable=true)
+     * @ORM\Column(name="PRIX_ACTIVITE", type="decimal", precision=6, scale=2, nullable=true)
      */
     private $prixActivite;
 
@@ -86,32 +86,32 @@ class Activites
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Photos", mappedBy="imgAct")
+     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Photos", inversedBy="idImgAct")
+     * @ORM\JoinTable(name="im_act",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="ID_IMG_ACT", referencedColumnName="ID_ACTIVITE")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="IMG_ACT", referencedColumnName="ID_IMG")
+     *   }
+     * )
      */
-    private $idImgAct;
+    private $imgAct;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Dates", inversedBy="idDateAct")
-     * @ORM\JoinTable(name="date_act",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="ID_DATE_ACT", referencedColumnName="ID_ACTIVITE")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="DATE_ACT", referencedColumnName="ID_DATE")
-     *   }
-     * )
+     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Dates", mappedBy="dateAct")
      */
-    private $dateAct;
+    private $idDateAct;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->idImgAct = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->dateAct = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->imgAct = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->idDateAct = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
 }

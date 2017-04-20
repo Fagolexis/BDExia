@@ -9,6 +9,11 @@
     <id name="inscritChoix" association-key="true"/>
     <id name="idInscrit" association-key="true"/>
     <id name="inscritAct" association-key="true"/>
+    <field name="informations" type="string" column="INFORMATIONS" length="127" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
     <one-to-one field="inscritAct" target-entity="Activites" fetch="LAZY">
       <join-columns>
         <join-column name="INSCRIT_ACT" referenced-column-name="ID_ACTIVITE"/>

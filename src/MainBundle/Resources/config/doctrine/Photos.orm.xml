@@ -30,25 +30,7 @@
       </join-columns>
     </many-to-one>
     <many-to-many field="likesUser" target-entity="Users" mapped-by="likesImg" fetch="LAZY"/>
-    <many-to-many field="imgAct" target-entity="Activites" inversed-by="idImgAct" fetch="LAZY">
-      <join-table name="im_act">
-        <join-columns>
-          <join-column name="ID_IMG_ACT" referenced-column-name="ID_IMG"/>
-        </join-columns>
-        <inverse-join-columns>
-          <join-column name="IMG_ACT" referenced-column-name="ID_ACTIVITE"/>
-        </inverse-join-columns>
-      </join-table>
-    </many-to-many>
-    <many-to-many field="imgProd" target-entity="Boutique" inversed-by="idImgProd" fetch="LAZY">
-      <join-table name="im_prod">
-        <join-columns>
-          <join-column name="ID_IMG_PROD" referenced-column-name="ID_IMG"/>
-        </join-columns>
-        <inverse-join-columns>
-          <join-column name="IMG_PROD" referenced-column-name="ID_PRODUIT"/>
-        </inverse-join-columns>
-      </join-table>
-    </many-to-many>
+    <many-to-many field="idImgAct" target-entity="Activites" mapped-by="imgAct" fetch="LAZY"/>
+    <many-to-many field="idImgProd" target-entity="Boutique" mapped-by="imgProd" fetch="LAZY"/>
   </entity>
 </doctrine-mapping>
