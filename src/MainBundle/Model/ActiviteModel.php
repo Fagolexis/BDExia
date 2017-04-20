@@ -21,15 +21,9 @@ class ActiviteModel
 
     public function subAct($user,$activite,$choix,$info)
     {
-<<<<<<< Updated upstream
-        $vote = new Inscrits();
-        $vote->setInscritAct($activite)->setIdInscrit($user)->setInscritChoix($choix);
-        return $vote;
-=======
     	$vote = new Inscrits();
     	$vote->setInscritAct($activite)->setIdInscrit($user)->setInscritChoix($choix)->setInformations($info);
     	return $vote;
->>>>>>> Stashed changes
     }
 
     public function addImg($act, $img) {
