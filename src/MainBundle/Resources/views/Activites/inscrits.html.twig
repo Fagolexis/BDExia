@@ -1,0 +1,17 @@
+{% extends "MainBundle::base.html.twig" %}
+
+{% block title %}Liste des inscrits{% endblock %}
+
+{% block body %}
+<main>
+	<div class="container">
+		{% for sub in list %}
+		<div class="subs blank">
+			<h3>{{sub.idInscrit.prenom}} {{sub.idInscrit.nom}}</h3>
+			<p>{{sub.informations}}</p>
+		</div>
+		<hr>
+		{% endfor %}
+	</div>
+</main>
+{% endblock %}

@@ -22,47 +22,47 @@ class __TwigTemplate_862af69fd2452c326072c66e7810563a64fb6f0e1091718a26bf26228c0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_09e855811f3989bb9d8e4811735e8753c663d667fad3c6550e35902acdaf5652 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_09e855811f3989bb9d8e4811735e8753c663d667fad3c6550e35902acdaf5652->enter($__internal_09e855811f3989bb9d8e4811735e8753c663d667fad3c6550e35902acdaf5652_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Activites:photo_activite.html.twig"));
+        $__internal_a80e8f2765fe0222fe01001563049c7f5669ab6f915fe975a1dbd53104695c3c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_a80e8f2765fe0222fe01001563049c7f5669ab6f915fe975a1dbd53104695c3c->enter($__internal_a80e8f2765fe0222fe01001563049c7f5669ab6f915fe975a1dbd53104695c3c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Activites:photo_activite.html.twig"));
 
-        $__internal_7b64ca3183d06c75becaa2e6f03c4b2554c714de7eb73829c3b21248b1ee19ee = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7b64ca3183d06c75becaa2e6f03c4b2554c714de7eb73829c3b21248b1ee19ee->enter($__internal_7b64ca3183d06c75becaa2e6f03c4b2554c714de7eb73829c3b21248b1ee19ee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Activites:photo_activite.html.twig"));
+        $__internal_1974210addcb5c4288ac4e13d6595f7faf122dfaac2a53836280e8db7ca345f4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1974210addcb5c4288ac4e13d6595f7faf122dfaac2a53836280e8db7ca345f4->enter($__internal_1974210addcb5c4288ac4e13d6595f7faf122dfaac2a53836280e8db7ca345f4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Activites:photo_activite.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_09e855811f3989bb9d8e4811735e8753c663d667fad3c6550e35902acdaf5652->leave($__internal_09e855811f3989bb9d8e4811735e8753c663d667fad3c6550e35902acdaf5652_prof);
+        $__internal_a80e8f2765fe0222fe01001563049c7f5669ab6f915fe975a1dbd53104695c3c->leave($__internal_a80e8f2765fe0222fe01001563049c7f5669ab6f915fe975a1dbd53104695c3c_prof);
 
         
-        $__internal_7b64ca3183d06c75becaa2e6f03c4b2554c714de7eb73829c3b21248b1ee19ee->leave($__internal_7b64ca3183d06c75becaa2e6f03c4b2554c714de7eb73829c3b21248b1ee19ee_prof);
+        $__internal_1974210addcb5c4288ac4e13d6595f7faf122dfaac2a53836280e8db7ca345f4->leave($__internal_1974210addcb5c4288ac4e13d6595f7faf122dfaac2a53836280e8db7ca345f4_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_3f062136966a8a1cccf0f41d23818b5ab588e883eee2ae6937d6fed8aecb94e7 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_3f062136966a8a1cccf0f41d23818b5ab588e883eee2ae6937d6fed8aecb94e7->enter($__internal_3f062136966a8a1cccf0f41d23818b5ab588e883eee2ae6937d6fed8aecb94e7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_24a2ee3321bdb7bee397b6e10a064ba35443b8070831c5bab3ce46592751281c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_24a2ee3321bdb7bee397b6e10a064ba35443b8070831c5bab3ce46592751281c->enter($__internal_24a2ee3321bdb7bee397b6e10a064ba35443b8070831c5bab3ce46592751281c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_51f2f9bcc65d00831fcdddaf175eba19e9374855ed2ca7d54b2c44f2572ce8fc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_51f2f9bcc65d00831fcdddaf175eba19e9374855ed2ca7d54b2c44f2572ce8fc->enter($__internal_51f2f9bcc65d00831fcdddaf175eba19e9374855ed2ca7d54b2c44f2572ce8fc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_a71ff5c4298b5e6b0ac4cd89578f3169250e4104470c7d580e892f5f37edb843 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a71ff5c4298b5e6b0ac4cd89578f3169250e4104470c7d580e892f5f37edb843->enter($__internal_a71ff5c4298b5e6b0ac4cd89578f3169250e4104470c7d580e892f5f37edb843_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "MainBundle:Activites:photoActivites";
         
-        $__internal_51f2f9bcc65d00831fcdddaf175eba19e9374855ed2ca7d54b2c44f2572ce8fc->leave($__internal_51f2f9bcc65d00831fcdddaf175eba19e9374855ed2ca7d54b2c44f2572ce8fc_prof);
+        $__internal_a71ff5c4298b5e6b0ac4cd89578f3169250e4104470c7d580e892f5f37edb843->leave($__internal_a71ff5c4298b5e6b0ac4cd89578f3169250e4104470c7d580e892f5f37edb843_prof);
 
         
-        $__internal_3f062136966a8a1cccf0f41d23818b5ab588e883eee2ae6937d6fed8aecb94e7->leave($__internal_3f062136966a8a1cccf0f41d23818b5ab588e883eee2ae6937d6fed8aecb94e7_prof);
+        $__internal_24a2ee3321bdb7bee397b6e10a064ba35443b8070831c5bab3ce46592751281c->leave($__internal_24a2ee3321bdb7bee397b6e10a064ba35443b8070831c5bab3ce46592751281c_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_e076f85980a082e487d9aa4082d5003d3b988c27cd12d0cef89d47eb70f6273e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_e076f85980a082e487d9aa4082d5003d3b988c27cd12d0cef89d47eb70f6273e->enter($__internal_e076f85980a082e487d9aa4082d5003d3b988c27cd12d0cef89d47eb70f6273e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_afa4e62c14728795dd4fa9a4dcd2746055185d6125b8557f4d494ff67f04212f = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_afa4e62c14728795dd4fa9a4dcd2746055185d6125b8557f4d494ff67f04212f->enter($__internal_afa4e62c14728795dd4fa9a4dcd2746055185d6125b8557f4d494ff67f04212f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_745048d79f5b8a09f1fcef6d85baffa094450da73d1507974ea1049325dac41f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_745048d79f5b8a09f1fcef6d85baffa094450da73d1507974ea1049325dac41f->enter($__internal_745048d79f5b8a09f1fcef6d85baffa094450da73d1507974ea1049325dac41f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_8eae72f150433fccdda22228f0784e2f31dfe0809e3a583ee2619d83a6ad963c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8eae72f150433fccdda22228f0784e2f31dfe0809e3a583ee2619d83a6ad963c->enter($__internal_8eae72f150433fccdda22228f0784e2f31dfe0809e3a583ee2619d83a6ad963c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "<h1>Welcome to the Activites:photoActivites page</h1>
@@ -100,9 +100,11 @@ class __TwigTemplate_862af69fd2452c326072c66e7810563a64fb6f0e1091718a26bf26228c0
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($this->getAttribute($context["img"], "dateImg", array()), "date", array()), "m/d/Y"), "html", null, true);
             echo "</td>
 \t\t\t<form action=\"\" method=\"POST\">
-\t\t\t\t<td><input type=\"button\" name=\"like\" value=\"like\"></td>
+\t\t\t\t<td><input type=\"submit\" name=\"submitLite\" value=\"like\"></td>
+\t\t\t</form>
+\t\t\t<form action=\"\" method=\"POST\">
 \t\t\t\t<td><input type=\"text\" name=\"com\" placeholder=\"Comment\"></td>
-\t\t\t\t<td><input type=\"submit\" name=\"comLikeSubmit\" value=\"OK\"></td>
+\t\t\t\t<td><input type=\"submit\" name=\"submitComment\" value=\"OK\"></td>
 \t\t\t</form>
 \t\t</tr>
 \t";
@@ -110,14 +112,14 @@ class __TwigTemplate_862af69fd2452c326072c66e7810563a64fb6f0e1091718a26bf26228c0
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['img'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 33
+        // line 35
         echo "</table>
 ";
         
-        $__internal_745048d79f5b8a09f1fcef6d85baffa094450da73d1507974ea1049325dac41f->leave($__internal_745048d79f5b8a09f1fcef6d85baffa094450da73d1507974ea1049325dac41f_prof);
+        $__internal_8eae72f150433fccdda22228f0784e2f31dfe0809e3a583ee2619d83a6ad963c->leave($__internal_8eae72f150433fccdda22228f0784e2f31dfe0809e3a583ee2619d83a6ad963c_prof);
 
         
-        $__internal_e076f85980a082e487d9aa4082d5003d3b988c27cd12d0cef89d47eb70f6273e->leave($__internal_e076f85980a082e487d9aa4082d5003d3b988c27cd12d0cef89d47eb70f6273e_prof);
+        $__internal_afa4e62c14728795dd4fa9a4dcd2746055185d6125b8557f4d494ff67f04212f->leave($__internal_afa4e62c14728795dd4fa9a4dcd2746055185d6125b8557f4d494ff67f04212f_prof);
 
     }
 
@@ -133,7 +135,7 @@ class __TwigTemplate_862af69fd2452c326072c66e7810563a64fb6f0e1091718a26bf26228c0
 
     public function getDebugInfo()
     {
-        return array (  114 => 33,  100 => 25,  96 => 24,  92 => 23,  89 => 22,  85 => 21,  68 => 6,  59 => 5,  41 => 3,  11 => 1,);
+        return array (  116 => 35,  100 => 25,  96 => 24,  92 => 23,  89 => 22,  85 => 21,  68 => 6,  59 => 5,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -172,9 +174,11 @@ class __TwigTemplate_862af69fd2452c326072c66e7810563a64fb6f0e1091718a26bf26228c0
 \t\t\t<td>{{img.chemin}}</td>
 \t\t\t<td>{{img.dateImg.date|date(\"m/d/Y\")}}</td>
 \t\t\t<form action=\"\" method=\"POST\">
-\t\t\t\t<td><input type=\"button\" name=\"like\" value=\"like\"></td>
+\t\t\t\t<td><input type=\"submit\" name=\"submitLite\" value=\"like\"></td>
+\t\t\t</form>
+\t\t\t<form action=\"\" method=\"POST\">
 \t\t\t\t<td><input type=\"text\" name=\"com\" placeholder=\"Comment\"></td>
-\t\t\t\t<td><input type=\"submit\" name=\"comLikeSubmit\" value=\"OK\"></td>
+\t\t\t\t<td><input type=\"submit\" name=\"submitComment\" value=\"OK\"></td>
 \t\t\t</form>
 \t\t</tr>
 \t{% endfor %}

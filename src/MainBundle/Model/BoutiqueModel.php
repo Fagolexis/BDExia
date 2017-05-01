@@ -48,4 +48,10 @@ class BoutiqueModel
     	}
     	return $art;
     }
+
+    public function addImg($prod, $img) {
+        $sql="INSERT INTO im_prod (`ID_IMG_PROD`, `IMG_PROD`) VALUES (:idProd, :idImg)";
+        $param=array("idProd" => $prod->getIdProduit(), "idImg" => $img->getIdImg());
+        return array("sql" => $sql, "param" => $param);
+    }
 }

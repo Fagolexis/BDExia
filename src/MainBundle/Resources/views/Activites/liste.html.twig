@@ -1,0 +1,22 @@
+{% extends "MainBundle::base.html.twig" %}
+
+{% block title %}Activités{% endblock %}
+
+{% block body %}
+<main>
+    <div class="container text-center blank">
+        <div class="row">
+            <div class="col col-md-9 col-md-offset-1 ">
+                {% for act in list %}
+                    <a href={{path('showAct', {'id':act.idActivite})}}>
+                        <div class="{% if act.etatAct.idEtat == 1 %}submited{% elseif act.etatAct.idEtat == 2 %}proposed{% elseif act.etatAct.idEtat == 3 %}confirmed{% elseif act.etatAct.idEtat == 4 %}completed{% endif %} col col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-10 col-xs-offset-1 activity">
+                            <p>{{act.nomActivite}}</p>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="espaceBas"></div>
+</main>
+{% endblock %}

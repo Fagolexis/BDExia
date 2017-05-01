@@ -121,9 +121,9 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'showAct')), array (  '_controller' => 'MainBundle\\Controller\\ActivitesController::showAction',));
             }
 
-            // photostAct
+            // photosAct
             if (preg_match('#^/activites/(?P<id>[^/]++)/photos$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'photostAct')), array (  '_controller' => 'MainBundle\\Controller\\ActivitesController::photosAction',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'photosAct')), array (  '_controller' => 'MainBundle\\Controller\\ActivitesController::photosAction',));
             }
 
             // subAct
@@ -139,14 +139,19 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         if (0 === strpos($pathinfo, '/boutique')) {
-            // main_boutique_index
+            // boutique
             if ($pathinfo === '/boutique') {
-                return array (  '_controller' => 'MainBundle\\Controller\\BoutiqueController::indexAction',  '_route' => 'main_boutique_index',);
+                return array (  '_controller' => 'MainBundle\\Controller\\BoutiqueController::indexAction',  '_route' => 'boutique',);
             }
 
-            // main_boutique_show
+            // addProd
+            if ($pathinfo === '/boutique/creation') {
+                return array (  '_controller' => 'MainBundle\\Controller\\BoutiqueController::addAction',  '_route' => 'addProd',);
+            }
+
+            // produit
             if (preg_match('#^/boutique/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'main_boutique_show')), array (  '_controller' => 'MainBundle\\Controller\\BoutiqueController::showAction',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'produit')), array (  '_controller' => 'MainBundle\\Controller\\BoutiqueController::showAction',));
             }
 
             // main_boutique_cart
@@ -161,13 +166,23 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // main_connexion_connexion
+        // Accueil
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'main_connexion_connexion');
+                return $this->redirect($pathinfo.'/', 'Accueil');
             }
 
-            return array (  '_controller' => 'MainBundle\\Controller\\ConnexionController::ConnexionAction',  '_route' => 'main_connexion_connexion',);
+            return array (  '_controller' => 'MainBundle\\Controller\\ConnexionController::indexAction',  '_route' => 'Accueil',);
+        }
+
+        // cnx
+        if ($pathinfo === '/connexion') {
+            return array (  '_controller' => 'MainBundle\\Controller\\ConnexionController::connexionAction',  '_route' => 'cnx',);
+        }
+
+        // deco
+        if ($pathinfo === '/deconnexion') {
+            return array (  '_controller' => 'MainBundle\\Controller\\ConnexionController::deconnexionAction',  '_route' => 'deco',);
         }
 
         if (0 === strpos($pathinfo, '/utilisateurs')) {
@@ -176,9 +191,9 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'MainBundle\\Controller\\GestionController::indexAction',  '_route' => 'main_gestion_index',);
             }
 
-            // main_gestion_show
+            // profil
             if (preg_match('#^/utilisateurs/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'main_gestion_show')), array (  '_controller' => 'MainBundle\\Controller\\GestionController::showAction',));
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'profil')), array (  '_controller' => 'MainBundle\\Controller\\GestionController::showAction',));
             }
 
         }

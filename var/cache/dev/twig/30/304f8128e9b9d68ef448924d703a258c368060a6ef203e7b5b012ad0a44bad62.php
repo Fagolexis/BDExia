@@ -22,94 +22,56 @@ class __TwigTemplate_ef33f637e5f6e027a283ab85564ca77b12b3157218473a4d28b50cea640
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c2437eb85fe384622a474707bba6f20cb8f1531a136d0ad497889d603fa67064 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_c2437eb85fe384622a474707bba6f20cb8f1531a136d0ad497889d603fa67064->enter($__internal_c2437eb85fe384622a474707bba6f20cb8f1531a136d0ad497889d603fa67064_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Activites:liste_inscrits.html.twig"));
+        $__internal_f316cb912f764f533c282a04cd3c0a94f9223734d1873f16986e4f31bc68be54 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_f316cb912f764f533c282a04cd3c0a94f9223734d1873f16986e4f31bc68be54->enter($__internal_f316cb912f764f533c282a04cd3c0a94f9223734d1873f16986e4f31bc68be54_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Activites:liste_inscrits.html.twig"));
 
-        $__internal_750d94274f0d2b34d861a11fae882dee1a14019dafe8a4ea98a5ecb93932c921 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_750d94274f0d2b34d861a11fae882dee1a14019dafe8a4ea98a5ecb93932c921->enter($__internal_750d94274f0d2b34d861a11fae882dee1a14019dafe8a4ea98a5ecb93932c921_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Activites:liste_inscrits.html.twig"));
+        $__internal_15f0fe140d8c9094404b7cf6a29ea88702dd8ebecae1ee6675d2fc56de73465f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_15f0fe140d8c9094404b7cf6a29ea88702dd8ebecae1ee6675d2fc56de73465f->enter($__internal_15f0fe140d8c9094404b7cf6a29ea88702dd8ebecae1ee6675d2fc56de73465f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Activites:liste_inscrits.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c2437eb85fe384622a474707bba6f20cb8f1531a136d0ad497889d603fa67064->leave($__internal_c2437eb85fe384622a474707bba6f20cb8f1531a136d0ad497889d603fa67064_prof);
+        $__internal_f316cb912f764f533c282a04cd3c0a94f9223734d1873f16986e4f31bc68be54->leave($__internal_f316cb912f764f533c282a04cd3c0a94f9223734d1873f16986e4f31bc68be54_prof);
 
         
-        $__internal_750d94274f0d2b34d861a11fae882dee1a14019dafe8a4ea98a5ecb93932c921->leave($__internal_750d94274f0d2b34d861a11fae882dee1a14019dafe8a4ea98a5ecb93932c921_prof);
+        $__internal_15f0fe140d8c9094404b7cf6a29ea88702dd8ebecae1ee6675d2fc56de73465f->leave($__internal_15f0fe140d8c9094404b7cf6a29ea88702dd8ebecae1ee6675d2fc56de73465f_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_97221097be0a78ecc3bae1a30a990ef4cd7e34c5b0bc746ed9afdc2422f21ba2 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_97221097be0a78ecc3bae1a30a990ef4cd7e34c5b0bc746ed9afdc2422f21ba2->enter($__internal_97221097be0a78ecc3bae1a30a990ef4cd7e34c5b0bc746ed9afdc2422f21ba2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_72e887ee1f5522441e1737ef557d1795e5f7750c989044b76dfb25f139a84b74 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_72e887ee1f5522441e1737ef557d1795e5f7750c989044b76dfb25f139a84b74->enter($__internal_72e887ee1f5522441e1737ef557d1795e5f7750c989044b76dfb25f139a84b74_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_0fa0054dce9073c16966c38dec78bc00a1301f29adfff9ff8bc7a4d49e882a72 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0fa0054dce9073c16966c38dec78bc00a1301f29adfff9ff8bc7a4d49e882a72->enter($__internal_0fa0054dce9073c16966c38dec78bc00a1301f29adfff9ff8bc7a4d49e882a72_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_3118c90284e9f5b85a8c6ce5e1607e6b39b6f8f62c0ac5a7acbfe58b023fb2d2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3118c90284e9f5b85a8c6ce5e1607e6b39b6f8f62c0ac5a7acbfe58b023fb2d2->enter($__internal_3118c90284e9f5b85a8c6ce5e1607e6b39b6f8f62c0ac5a7acbfe58b023fb2d2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "MainBundle:Activites:listeInscrits";
         
-        $__internal_0fa0054dce9073c16966c38dec78bc00a1301f29adfff9ff8bc7a4d49e882a72->leave($__internal_0fa0054dce9073c16966c38dec78bc00a1301f29adfff9ff8bc7a4d49e882a72_prof);
+        $__internal_3118c90284e9f5b85a8c6ce5e1607e6b39b6f8f62c0ac5a7acbfe58b023fb2d2->leave($__internal_3118c90284e9f5b85a8c6ce5e1607e6b39b6f8f62c0ac5a7acbfe58b023fb2d2_prof);
 
         
-        $__internal_97221097be0a78ecc3bae1a30a990ef4cd7e34c5b0bc746ed9afdc2422f21ba2->leave($__internal_97221097be0a78ecc3bae1a30a990ef4cd7e34c5b0bc746ed9afdc2422f21ba2_prof);
+        $__internal_72e887ee1f5522441e1737ef557d1795e5f7750c989044b76dfb25f139a84b74->leave($__internal_72e887ee1f5522441e1737ef557d1795e5f7750c989044b76dfb25f139a84b74_prof);
 
     }
 
     // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_c203a3aa14c044b5a79077340686bf28e954fb100e17e9bb32422262bb09052d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_c203a3aa14c044b5a79077340686bf28e954fb100e17e9bb32422262bb09052d->enter($__internal_c203a3aa14c044b5a79077340686bf28e954fb100e17e9bb32422262bb09052d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_892bcc63a7fa92aa7b8030df13e76171cc764cbbd6e9f92551bb5b7d49a0eed5 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_892bcc63a7fa92aa7b8030df13e76171cc764cbbd6e9f92551bb5b7d49a0eed5->enter($__internal_892bcc63a7fa92aa7b8030df13e76171cc764cbbd6e9f92551bb5b7d49a0eed5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_c9baf2ad819400969153eafbe75244a19d07a39c481e8e440b4d9a8e636508e1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c9baf2ad819400969153eafbe75244a19d07a39c481e8e440b4d9a8e636508e1->enter($__internal_c9baf2ad819400969153eafbe75244a19d07a39c481e8e440b4d9a8e636508e1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_5911fe4794cbba274681d118c42f538f09c2aa517b9bf0350259b0ec9795f8fa = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5911fe4794cbba274681d118c42f538f09c2aa517b9bf0350259b0ec9795f8fa->enter($__internal_5911fe4794cbba274681d118c42f538f09c2aa517b9bf0350259b0ec9795f8fa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
         echo "<h1>Welcome to the Activites:listeInscrits page</h1>
-<table>
-\t<thead>
-\t\t<th>ID</th>
-\t\t<th>USER</th>
-\t\t<th>CHOIX</th>
-\t\t<th>COMMENTAIRE</th>
-\t</thead>
-\t";
-        // line 14
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["inscrits"]) ? $context["inscrits"] : $this->getContext($context, "inscrits")));
-        foreach ($context['_seq'] as $context["_key"] => $context["sub"]) {
-            // line 15
-            echo "\t\t<tr>
-\t\t\t<td>";
-            // line 16
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["sub"], "idInscrit", array()), "idUser", array()), "html", null, true);
-            echo "</td>
-\t\t\t<td>";
-            // line 17
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["sub"], "idInscrit", array()), "nom", array()), "html", null, true);
-            echo "</td>
-\t\t\t<td>";
-            // line 18
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["sub"], "inscritChoix", array()), "choix", array()), "html", null, true);
-            echo "</td>
-\t\t\t<td>";
-            // line 19
-            echo twig_escape_filter($this->env, $this->getAttribute($context["sub"], "informations", array()), "html", null, true);
-            echo "</td>
-\t\t</tr>
-\t";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['sub'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 22
-        echo "</table>
 ";
         
-        $__internal_c9baf2ad819400969153eafbe75244a19d07a39c481e8e440b4d9a8e636508e1->leave($__internal_c9baf2ad819400969153eafbe75244a19d07a39c481e8e440b4d9a8e636508e1_prof);
+        $__internal_5911fe4794cbba274681d118c42f538f09c2aa517b9bf0350259b0ec9795f8fa->leave($__internal_5911fe4794cbba274681d118c42f538f09c2aa517b9bf0350259b0ec9795f8fa_prof);
 
         
-        $__internal_c203a3aa14c044b5a79077340686bf28e954fb100e17e9bb32422262bb09052d->leave($__internal_c203a3aa14c044b5a79077340686bf28e954fb100e17e9bb32422262bb09052d_prof);
+        $__internal_892bcc63a7fa92aa7b8030df13e76171cc764cbbd6e9f92551bb5b7d49a0eed5->leave($__internal_892bcc63a7fa92aa7b8030df13e76171cc764cbbd6e9f92551bb5b7d49a0eed5_prof);
 
     }
 
@@ -125,7 +87,7 @@ class __TwigTemplate_ef33f637e5f6e027a283ab85564ca77b12b3157218473a4d28b50cea640
 
     public function getDebugInfo()
     {
-        return array (  106 => 22,  97 => 19,  93 => 18,  89 => 17,  85 => 16,  82 => 15,  78 => 14,  68 => 6,  59 => 5,  41 => 3,  11 => 1,);
+        return array (  68 => 6,  59 => 5,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -144,22 +106,6 @@ class __TwigTemplate_ef33f637e5f6e027a283ab85564ca77b12b3157218473a4d28b50cea640
 
 {% block body %}
 <h1>Welcome to the Activites:listeInscrits page</h1>
-<table>
-\t<thead>
-\t\t<th>ID</th>
-\t\t<th>USER</th>
-\t\t<th>CHOIX</th>
-\t\t<th>COMMENTAIRE</th>
-\t</thead>
-\t{% for sub in inscrits %}
-\t\t<tr>
-\t\t\t<td>{{sub.idInscrit.idUser}}</td>
-\t\t\t<td>{{sub.idInscrit.nom}}</td>
-\t\t\t<td>{{sub.inscritChoix.choix}}</td>
-\t\t\t<td>{{sub.informations}}</td>
-\t\t</tr>
-\t{% endfor %}
-</table>
 {% endblock %}
 ", "MainBundle:Activites:liste_inscrits.html.twig", "C:\\wamp64\\www\\bdexia\\src\\MainBundle/Resources/views/Activites/liste_inscrits.html.twig");
     }

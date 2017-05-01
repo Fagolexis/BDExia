@@ -64,10 +64,10 @@ class Dates extends \MainBundle\Entity\Dates implements \Doctrine\ORM\Proxy\Prox
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'MainBundle\\Entity\\Dates' . "\0" . 'date', '' . "\0" . 'MainBundle\\Entity\\Dates' . "\0" . 'idDate', '' . "\0" . 'MainBundle\\Entity\\Dates' . "\0" . 'typeDate', '' . "\0" . 'MainBundle\\Entity\\Dates' . "\0" . 'idDateAct'];
+            return ['__isInitialized__', '' . "\0" . 'MainBundle\\Entity\\Dates' . "\0" . 'date', '' . "\0" . 'MainBundle\\Entity\\Dates' . "\0" . 'idDate', '' . "\0" . 'MainBundle\\Entity\\Dates' . "\0" . 'typeDate', '' . "\0" . 'MainBundle\\Entity\\Dates' . "\0" . 'dateAct'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'MainBundle\\Entity\\Dates' . "\0" . 'date', '' . "\0" . 'MainBundle\\Entity\\Dates' . "\0" . 'idDate', '' . "\0" . 'MainBundle\\Entity\\Dates' . "\0" . 'typeDate', '' . "\0" . 'MainBundle\\Entity\\Dates' . "\0" . 'idDateAct'];
+        return ['__isInitialized__', '' . "\0" . 'MainBundle\\Entity\\Dates' . "\0" . 'date', '' . "\0" . 'MainBundle\\Entity\\Dates' . "\0" . 'idDate', '' . "\0" . 'MainBundle\\Entity\\Dates' . "\0" . 'typeDate', '' . "\0" . 'MainBundle\\Entity\\Dates' . "\0" . 'dateAct'];
     }
 
     /**
@@ -235,34 +235,34 @@ class Dates extends \MainBundle\Entity\Dates implements \Doctrine\ORM\Proxy\Prox
     /**
      * {@inheritDoc}
      */
-    public function addIdDateAct(\MainBundle\Entity\Activites $idDateAct)
+    public function addDateAct(\MainBundle\Entity\Activites $dateAct)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addIdDateAct', [$idDateAct]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addDateAct', [$dateAct]);
 
-        return parent::addIdDateAct($idDateAct);
+        return parent::addDateAct($dateAct);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function removeIdDateAct(\MainBundle\Entity\Activites $idDateAct)
+    public function removeDateAct(\MainBundle\Entity\Activites $dateAct)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeIdDateAct', [$idDateAct]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeDateAct', [$dateAct]);
 
-        return parent::removeIdDateAct($idDateAct);
+        return parent::removeDateAct($dateAct);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getIdDateAct()
+    public function getDateAct()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIdDateAct', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDateAct', []);
 
-        return parent::getIdDateAct();
+        return parent::getDateAct();
     }
 
 }

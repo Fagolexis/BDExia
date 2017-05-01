@@ -1,0 +1,39 @@
+{% extends "MainBundle::base.html.twig" %}
+
+{% block title %}Activité{% endblock %}
+
+{% block body %}
+
+<main>
+    <div clas="container text-center carrousel blank">
+        <div class="row">
+        {% for img in list %}
+            <div class="col col-md-8 col-md-offset-2 col col-sm-8 col-sm-offset-2 information">
+                <div class="row">
+                    <img class="col col-md-7 photo-act-sec" src="{{ asset('img/') ~ img.chemin}}" alt="photo_{{act.idActivite}}_{{img.auteurImg.prenom ~ img.auteurImg.nom}}">
+                    <span class="photo-details col-md-5">
+                        <div class="photo-information">
+                            <div class="description-photo">
+                                <img class="avatar-comm" src="{% if img.auteurImg.avatarUser != NULL %}{{ asset('img/') ~ img.auteurImg.avatarUser.chemin}}{% else %}{{asset('img/avatar.jpg')}}{% endif %}" alt="avatar_{{img.auteurImg.prenom ~ img.auteurImg.nom}}">
+                                {{img.auteurImg.prenom}} {{img.auteurImg.nom}}
+                            </div>
+                        </div>
+                        <div class="photo-commentaire pre-scrollable">
+                        {% for com in coms[img.idImg] %}
+                            <div>
+                                <img class="avatar-comm" src="{% if com.auteurComm.avatarUser != NULL %}{{ asset('img/') ~ com.auteurComm.avatarUser.chemin}}{% else %}{{asset('img/avatar.jpg')}}{% endif %}" alt="avatar_{{com.auteurComm.prenom ~ com.auteurComm.nom}}">
+                                {{com.auteurComm.prenom}} {{com.auteurComm.nom}}<br>
+                                {{com.commentaire}}
+                            </div>
+                            <hr>
+                        {% endfor %}
+                        </div>
+                    </span>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+    <div class="espaceBas"></div>
+</main>
+{% endblock %}
