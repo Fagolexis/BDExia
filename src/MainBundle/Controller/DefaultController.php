@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 abstract class DefaultController extends Controller
 {
+<<<<<<< HEAD
 
     protected function dbUpdate($method, $obj_record)
     {
@@ -70,5 +71,25 @@ abstract class DefaultController extends Controller
 
     protected function insert($array) {
         $this->getDoctrine()->getConnection()->executeUpdate($array['sql'], $array['param']);
+=======
+	$em = $this->getDoctrine()->getManager();
+
+    protected function dbSave($method, $obj_record)
+    {
+    	if($method == "persist") {
+    		$this->em->persist($obj_record);
+    	} else if ($method == "merge") {
+    		$this->em->merge($obj_record);
+    	} else {
+    		return "Error : unknown method";
+    	}
+    }
+
+    protected function checkRole($wanted, $cookie) {
+    	//if cookie role == wanted role
+    	//return true
+    	//else
+    	//return false
+>>>>>>> master
     }
 }
