@@ -38,7 +38,7 @@ abstract class DefaultController extends Controller
     }
 
     protected function saveImg($img) {
-        $dossier = '/web/img/';
+        $dossier = $this->get('kernel')->getRootDir() . '/../web/img/';
         $fichier = basename($img->getClientOriginalName());
         $taille_maxi = 10000000;
         $taille = $img->getClientSize();

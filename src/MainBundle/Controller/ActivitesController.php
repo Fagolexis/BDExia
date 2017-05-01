@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use MainBundle\Model\ActiviteModel;
 use MainBundle\Model\ImgModel;
 use MainBundle\Model\DateModel;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class ActivitesController extends DefaultController
 {
@@ -15,8 +16,14 @@ class ActivitesController extends DefaultController
      */
     public function indexAction()
     {
-        $list = $this->getDoctrine()->getRepository("MainBundle:Activites")->findAll(); //Need order by ASC
-        return $this->render('MainBundle:Activites:liste_activites.html.twig', array(
+        $Session = new Session();
+        if($this->checkRole(2,$Session->get('roleUser'))) {
+            $list = $this->getDoctrine()->getRepository("MainBundle:Activites")->findBy(array('etatAct' => array(1, 2, 3, 4)), array('etatAct' => 'ASC'));
+        }
+        else {
+            $list = $this->getDoctrine()->getRepository("MainBundle:Activites")->findBy(array('etatAct' => array(2, 3, 4)), array('etatAct' => 'ASC'));
+        }
+        return $this->render('MainBundle:Activites:liste.html.twig', array(
             "list" => $list
         ));
     }
@@ -26,7 +33,8 @@ class ActivitesController extends DefaultController
      */
     public function createAction(Request $request)
     {
-        if($this->checkRole(2,2)) {
+        $Session = new Session();
+        if($this->checkRole(2,$Session->get('roleUser'))) {
             $post = $request->request;
             if($post->get('addActForm')!=null) {
                 $am = new ActiviteModel();
@@ -83,39 +91,58 @@ class ActivitesController extends DefaultController
      */
     public function showAction($id, Request $request)
     {
+        $Session = new Session();
         $post = $request->request;
         //Cookie
-        $user = $this->getDoctrine()->getRepository("MainBundle:Users")->findOneByIdUser(4);
+        $user = $this->getDoctrine()->getRepository("MainBundle:Users")->findOneByIdUser($Session->get('idUser'));
         $act = $this->getDoctrine()->getRepository("MainBundle:Activites")->findOneByIdActivite($id);
         $subs = $this->getDoctrine()->getRepository("MainBundle:Inscrits")->findBy(array('inscritAct' => $act->getIdActivite(), 'inscritChoix' => $act->getEtatAct()->getIdEtat()-1));
+        $img_t = $act->getImgAct();
+        $date_t = $act->getIdDateAct();
+        foreach ($img_t as $img) {
+            if($img->getTypeImg()->getIdType() == 1) {
+                $couv = $img;
+            }
+        }
+        foreach ($date_t as $dat) {
+            if($dat->getTypeDate()->getIdType() == 2) {
+                $date = $dat;
+            }
+        }
         if($post->get('subAct')!=null) {
             $am = new ActiviteModel();
             $info = $post->get('info');
             $choix = $this->getDoctrine()->getRepository("MainBundle:ChoixVote")->findOneByIdChoix($act->getEtatAct()->getIdEtat()-1); //Vote = Proposée -1 = 2-1 //Inscription = Confirmée -1 = 3-1
             $vote = $am->subAct($user,$act,$choix,$info);
             $this->dbUpdate('persist', $vote);
-
         }
-        return $this->render('MainBundle:Activites:details_activite.html.twig', array(
+        return $this->render('MainBundle:Activites:details.html.twig', array(
             "act" => $act,
+            "couv" => $couv,
+            "date" => $date,
             "subs" => $subs,
             "user" => $user
         ));
     }
 
     /**
-     * @Route("/activites/{id}/photos", name="photostAct")
+     * @Route("/activites/{id}/photos", name="photosAct")
      */
     public function photosAction($id, Request $request)
     {
         $post = $request->request;
         $act = $this->getDoctrine()->getRepository("MainBundle:Activites")->findOneByIdActivite($id);
-        $photos = $act->getIdImgAct();
+        $photos = $act->getImgAct();
+        $comment = array();
         if($post->get('comAct')!=null) {
         }
-        return $this->render('MainBundle:Activites:photo_activite.html.twig', array(
+        foreach($photos as $img) {
+            $comment[$img->getIdImg()] = $this->getDoctrine()->getRepository("MainBundle:Commentaires")->findByImgComm($img);
+        }
+        return $this->render('MainBundle:Activites:photos.html.twig', array(
             "act" => $act,
-            "photos" => $photos
+            "list" => $photos,
+            "coms" => $comment
         ));
     }
 
@@ -124,11 +151,11 @@ class ActivitesController extends DefaultController
      */
     public function subsAction($id)
     {
-        if($this->checkRole(2,2)) {
+        $Session = new Session();
+        if($this->checkRole(2,$Session->get('roleUser'))) {
             $inscrits = $this->getDoctrine()->getRepository("MainBundle:Inscrits")->findByInscritAct($id);
-            var_dump($inscrits);
-            return $this->render('MainBundle:Activites:liste_inscrits.html.twig', array(
-                "inscrits"=>$inscrits
+            return $this->render('MainBundle:Activites:inscrits.html.twig', array(
+                "list"=>$inscrits
             ));
         }
         else {
@@ -141,7 +168,8 @@ class ActivitesController extends DefaultController
      */
     public function modAction($id, Request $request)
     {
-        if($this->checkRole(2,1)) {
+        $Session = new Session();
+        if($this->checkRole(2,$Session->get('roleUser'))) {
             $act = $this->getDoctrine()->getRepository('MainBundle:Users')->findOneByIdActivite($id);
             return $this->render('MainBundle:Activites:create_activite.html.twig', array(
                 'act' => $act

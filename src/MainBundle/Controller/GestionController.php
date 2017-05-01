@@ -13,12 +13,12 @@ class GestionController extends DefaultController
     {
         $list = $this->getDoctrine()->getRepository("MainBundle:Users")->findAll();
         return $this->render('MainBundle:Gestion:gestion_utilisateurs.html.twig', array(
-            // ...
+            "list" => $list
         ));
     }
 
     /**
-     * @Route("/utilisateurs/{id}")
+     * @Route("/utilisateurs/{id}", name="profil")
      */
     public function showAction($id)
     {
