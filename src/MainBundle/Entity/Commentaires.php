@@ -60,7 +60,7 @@ class Commentaires
     public function setCommentaire($commentaire)
     {
         $this->commentaire = $commentaire;
-
+    
         return $this;
     }
 
@@ -94,7 +94,7 @@ class Commentaires
     public function setAuteurComm(\MainBundle\Entity\Users $auteurComm = null)
     {
         $this->auteurComm = $auteurComm;
-
+    
         return $this;
     }
 
@@ -118,7 +118,7 @@ class Commentaires
     public function setImgComm(\MainBundle\Entity\Photos $imgComm = null)
     {
         $this->imgComm = $imgComm;
-
+    
         return $this;
     }
 

@@ -18,7 +18,7 @@
         <option name="fixed"/>
       </options>
     </field>
-    <field name="prixActivite" type="decimal" column="PRIX_ACTIVITE" precision="10" scale="0" nullable="true"/>
+    <field name="prixActivite" type="decimal" column="PRIX_ACTIVITE" precision="6" scale="2" nullable="true"/>
     <field name="lieu" type="string" column="LIEU" length="255" nullable="true">
       <options>
         <option name="fixed">1</option>
@@ -44,16 +44,16 @@
         <join-column name="ETAT_ACT" referenced-column-name="ID_ETAT"/>
       </join-columns>
     </many-to-one>
-    <many-to-many field="idImgAct" target-entity="Photos" mapped-by="imgAct" fetch="LAZY"/>
-    <many-to-many field="dateAct" target-entity="Dates" inversed-by="idDateAct" fetch="LAZY">
-      <join-table name="date_act">
+    <many-to-many field="imgAct" target-entity="Photos" inversed-by="idImgAct" fetch="LAZY">
+      <join-table name="im_act">
         <join-columns>
-          <join-column name="ID_DATE_ACT" referenced-column-name="ID_ACTIVITE"/>
+          <join-column name="ID_IMG_ACT" referenced-column-name="ID_ACTIVITE"/>
         </join-columns>
         <inverse-join-columns>
-          <join-column name="DATE_ACT" referenced-column-name="ID_DATE"/>
+          <join-column name="IMG_ACT" referenced-column-name="ID_IMG"/>
         </inverse-join-columns>
       </join-table>
     </many-to-many>
+    <many-to-many field="idDateAct" target-entity="Dates" mapped-by="dateAct" fetch="LAZY"/>
   </entity>
 </doctrine-mapping>

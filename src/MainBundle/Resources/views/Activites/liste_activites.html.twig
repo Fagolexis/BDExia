@@ -1,0 +1,27 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}MainBundle:Activites:listeActivites{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Activites:listeActivites page</h1>
+<<<<<<< Updated upstream
+{% endblock %}
+=======
+<table>
+	<thead>
+		<th>ID</th>
+		<th>NOM</th>
+		<th>ETAT</th>
+		<th>DETAILS</th>
+	</thead>
+	{% for act in list %}
+		<tr>
+			<td>{{act.idActivite}}</td>
+			<td>{{act.nomActivite}}</td>
+			<td>{{act.etatAct.etat}}</td>
+			<td><a href="{{path("showAct", {'id' : act.idActivite})}}">Voir</a></td>
+		</tr>
+	{% endfor %}
+</table>
+{% endblock %}
+>>>>>>> Stashed changes

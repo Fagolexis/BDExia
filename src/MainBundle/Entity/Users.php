@@ -127,7 +127,7 @@ class Users
     public function setNom($nom)
     {
         $this->nom = $nom;
-
+    
         return $this;
     }
 
@@ -151,7 +151,7 @@ class Users
     public function setPrenom($prenom)
     {
         $this->prenom = $prenom;
-
+    
         return $this;
     }
 
@@ -175,7 +175,7 @@ class Users
     public function setMail($mail)
     {
         $this->mail = $mail;
-
+    
         return $this;
     }
 
@@ -199,7 +199,7 @@ class Users
     public function setMdp($mdp)
     {
         $this->mdp = $mdp;
-
+    
         return $this;
     }
 
@@ -223,7 +223,7 @@ class Users
     public function setNaissance($naissance)
     {
         $this->naissance = $naissance;
-
+    
         return $this;
     }
 
@@ -247,7 +247,7 @@ class Users
     public function setTelephone($telephone)
     {
         $this->telephone = $telephone;
-
+    
         return $this;
     }
 
@@ -281,7 +281,7 @@ class Users
     public function setPromoUser(\MainBundle\Entity\Promotions $promoUser = null)
     {
         $this->promoUser = $promoUser;
-
+    
         return $this;
     }
 
@@ -305,7 +305,7 @@ class Users
     public function setRoleUser(\MainBundle\Entity\RolesUsers $roleUser = null)
     {
         $this->roleUser = $roleUser;
-
+    
         return $this;
     }
 
@@ -329,7 +329,7 @@ class Users
     public function setAvatarUser(\MainBundle\Entity\Photos $avatarUser = null)
     {
         $this->avatarUser = $avatarUser;
-
+    
         return $this;
     }
 
@@ -353,7 +353,7 @@ class Users
     public function addLikesImg(\MainBundle\Entity\Photos $likesImg)
     {
         $this->likesImg[] = $likesImg;
-
+    
         return $this;
     }
 

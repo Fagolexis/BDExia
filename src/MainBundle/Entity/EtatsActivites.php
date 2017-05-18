@@ -40,7 +40,7 @@ class EtatsActivites
     public function setEtat($etat)
     {
         $this->etat = $etat;
-
+    
         return $this;
     }
 

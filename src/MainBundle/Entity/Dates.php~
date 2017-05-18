@@ -41,16 +41,24 @@ class Dates
     /**
      * @var \Doctrine\Common\Collections\Collection
      *
-     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Activites", mappedBy="dateAct")
+     * @ORM\ManyToMany(targetEntity="MainBundle\Entity\Activites", inversedBy="idDateAct")
+     * @ORM\JoinTable(name="date_act",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="ID_DATE_ACT", referencedColumnName="ID_DATE")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="DATE_ACT", referencedColumnName="ID_ACTIVITE")
+     *   }
+     * )
      */
-    private $idDateAct;
+    private $dateAct;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->idDateAct = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->dateAct = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
 }

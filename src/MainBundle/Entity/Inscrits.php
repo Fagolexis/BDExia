@@ -13,6 +13,13 @@ use Doctrine\ORM\Mapping as ORM;
 class Inscrits
 {
     /**
+     * @var string
+     *
+     * @ORM\Column(name="INFORMATIONS", type="string", length=127, nullable=true)
+     */
+    private $informations;
+
+    /**
      * @var \MainBundle\Entity\Activites
      *
      * @ORM\Id
@@ -51,6 +58,30 @@ class Inscrits
 
 
     /**
+     * Set informations
+     *
+     * @param string $informations
+     *
+     * @return Inscrits
+     */
+    public function setInformations($informations)
+    {
+        $this->informations = $informations;
+    
+        return $this;
+    }
+
+    /**
+     * Get informations
+     *
+     * @return string
+     */
+    public function getInformations()
+    {
+        return $this->informations;
+    }
+
+    /**
      * Set inscritAct
      *
      * @param \MainBundle\Entity\Activites $inscritAct
@@ -60,7 +91,7 @@ class Inscrits
     public function setInscritAct(\MainBundle\Entity\Activites $inscritAct)
     {
         $this->inscritAct = $inscritAct;
-
+    
         return $this;
     }
 
@@ -84,7 +115,7 @@ class Inscrits
     public function setIdInscrit(\MainBundle\Entity\Users $idInscrit)
     {
         $this->idInscrit = $idInscrit;
-
+    
         return $this;
     }
 
@@ -108,7 +139,7 @@ class Inscrits
     public function setInscritChoix(\MainBundle\Entity\ChoixVote $inscritChoix)
     {
         $this->inscritChoix = $inscritChoix;
-
+    
         return $this;
     }
 
