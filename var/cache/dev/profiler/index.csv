@@ -1213,3 +1213,5 @@ f4fad1,::1,GET,http://localhost/bdexia/web/img/,1492770206,352fb2,200
 7ef7b2,::1,GET,http://localhost/bdexia/web/activites/2/photos,1492770247,,200
 7d022b,::1,GET,http://localhost/bdexia/web/img/path/to/img2,1492770248,66c0d5,200
 66c0d5,::1,GET,http://localhost/bdexia/web/img/path/to/img2,1492770248,,404
+5e0f46,::1,GET,http://localhost/bdexia/web/,1495135053,257ee7,200
+257ee7,::1,GET,http://localhost/bdexia/web/,1495135054,,500

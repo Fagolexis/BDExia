@@ -8,8 +8,6 @@ use Symfony\Component\HttpFoundation\Request;
 
 abstract class DefaultController extends Controller
 {
-<<<<<<< HEAD
-
     protected function dbUpdate($method, $obj_record)
     {
     	$em = $this->getDoctrine()->getManager();
@@ -90,6 +88,5 @@ abstract class DefaultController extends Controller
     	//return true
     	//else
     	//return false
->>>>>>> master
     }
 }
