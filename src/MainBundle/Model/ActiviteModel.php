@@ -20,12 +20,17 @@ class ActiviteModel
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function voteAndSubAct($user,$activite,$choix)
+=======
+    public function subAct($user,$activite,$choix,$info)
+>>>>>>> models
     {
     	$vote = new Inscrits();
-    	$vote->setInscritAct($activite)->setIdInscrit($user)->setInscritChoix($choix);
+    	$vote->setInscritAct($activite)->setIdInscrit($user)->setInscritChoix($choix)->setInformations($info);
     	return $vote;
     }
+<<<<<<< HEAD
 =======
     public function subAct($user,$activite,$choix,$info)
     {
@@ -33,6 +38,8 @@ class ActiviteModel
     	$vote->setInscritAct($activite)->setIdInscrit($user)->setInscritChoix($choix)->setInformations($info);
     	return $vote;
     }
+=======
+>>>>>>> models
 
     public function addImg($act, $img) {
         $sql="INSERT INTO im_act (`ID_IMG_ACT`, `IMG_ACT`) VALUES (:idAct, :idImg)";
@@ -45,5 +52,8 @@ class ActiviteModel
         $param=array("idAct" => $act->getIdActivite(), "idDate" => $date->getIdDate());
         return array("sql" => $sql, "param" => $param);
     }
+<<<<<<< HEAD
 >>>>>>> data
+=======
+>>>>>>> models
 }
