@@ -6,18 +6,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 
-<<<<<<< HEAD:src/MainBundle/Controller/ConnexionController.php
-class ConnexionController extends Controller
-{
-    /**
-     * @Route("/")
-     */
-    public function ConnexionAction()
-    {
-        return $this->render('MainBundle:Connexion:connexion.html.twig', array(
-            // ...
-        ));
-=======
 abstract class DefaultController extends Controller
 {
 
@@ -82,7 +70,5 @@ abstract class DefaultController extends Controller
 
     protected function insert($array) {
         $this->getDoctrine()->getConnection()->executeUpdate($array['sql'], $array['param']);
->>>>>>> models:src/MainBundle/Controller/DefaultController.php
     }
-
 }
