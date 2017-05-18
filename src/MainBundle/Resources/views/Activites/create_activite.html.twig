@@ -1,0 +1,26 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}MainBundle:Activites:modificationActivites{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Activites:modificationActivites page</h1>
+<form action="" method="post" enctype="multipart/form-data">
+	<label for="">Titre de l'activité :</label><br>
+	<input type="text" name="titre"><br><br>
+	<label for="">Description de l'activité :</label><br>
+	<input type="text" name="desc"><br><br>
+	<label for="">Image de couverture :</label><br>
+	<input type="file" name="imgActCouv"><br><br>
+	<label for="">Lieu de l'activité :</label><br>
+	<input type="text" name="lieu"><br><br>
+	<label for="">Date et horaire de l'activité :</label><br>
+	<input type="date" name="date"><input type="time" name="time"><br><br>
+	<label for="">Prix de l'activité :</label><br>
+	<input type="number" step="0.01" name"prix" size="4">€<br><br>
+	<label for="">Nombre de personnes maximum :</label><br>
+	<input type="number" name"sub"><br><br>
+	<label for="">Age minimum :</label><br>
+	<input type="number" name="age"><br><br>
+	<input type="submit" name="addActForm" value="Créer l'activité">
+</form>
+{% endblock %}

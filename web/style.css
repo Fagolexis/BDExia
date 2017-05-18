@@ -1,0 +1,325 @@
+html, body {
+	font-family: "Roboto";
+	color: #222;
+	background-color: #F2F2F2;
+	overflow-x:hidden;
+}
+
+.blank {
+	background-color: #fff;
+	padding: 20px;
+	overflow: hidden;
+}
+
+a:hover {
+	color: #db1119;
+}
+
+main {
+	margin-top: 200px;
+}
+
+nav {
+	box-shadow: 0px 2px 10px #888888;
+}
+
+hr {
+	border: none;
+	height: 1px;
+	color: #bbb;
+	background-color: #bbb;
+	margin-left: 150px;
+	margin-right: 150px;
+	box-shadow: 0px 2px 20px #888888;
+}
+
+.activite {
+	padding: 20px;
+	overflow: hidden;
+}
+
+.formulaire {
+	overflow: hidden;
+	padding: 40px 0px;
+}
+
+.formulaire dd {
+	padding-left: 20px;
+}
+
+.formulaire .btn {
+	text-align: center;
+}
+
+.imgAct {
+	max-width: 100%;
+	height: auto;
+	border: solid 2px rgba(230, 230, 230, 0.5);
+	border-radius: 2px;
+}
+
+.description {
+	font-size: 18px;
+}
+
+#myNavbar {
+	padding-top: 80px;
+}
+
+.red {
+	height: 2vh;
+	background-color: #C2242A;
+}
+
+.navbar {
+	margin-bottom: 0;
+	background-color: #fff;
+	z-index: 9999;
+	border: 0;
+	border-radius: 0;
+	font-size: 20px;
+}
+.navbar-default .navbar-nav>li>a{
+	color: #222;
+}
+
+.navbar-brand {
+	margin: 5px;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+	background-color: #eee;
+}
+
+.navbar-default .navbar-nav>li>a.active{
+	color: #fff;
+	background-color: #C2242A;
+}
+
+.navbar-nav>li>a.active:hover {
+	color: #fff;
+	background-color: #C2242A;
+}
+
+/*footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #bbb;
+	text-align: center;
+}
+
+footer .container {
+	width: auto;
+	max-width: 680px;
+	padding: 0 15px;
+	}*/
+
+footer {
+	width: 100%;
+	height: 30px;
+	background-color: #bbb;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+}
+
+footer p {
+	margin-top: 7px;
+	text-align: center;
+}
+
+.submited{
+	background-color: #EEE;
+	color: #222;
+}
+
+.proposed{
+	background-color: #A2479B;
+	color: #A2479B;
+}
+
+.confirmed{
+	background-color: #C2242A;
+	color: #C2242A;
+}
+
+.completed{
+	background-color: #666;
+	color: #fff;
+}
+
+.activity{
+	height: 120px;
+	margin-top: 40px;
+
+}
+
+.activity > p{
+	height: 25px;
+	width: 80%;
+	margin: auto;
+	background-color: white;
+	text-align: center;
+	margin-top: 70px;
+	font-family:Arial;
+}
+
+.info{
+	background-color: white;
+	margin-top: 20px;
+	padding: 20px;
+}
+
+.info > div{
+	margin-top:10px;
+}
+
+span{
+	padding: 10px;
+}
+
+.nomActivity{
+	background-color: #C2242A;
+	border-color: #A10509;
+	color: white;
+}
+.inscription{ 
+	padding-top: 5px;
+	padding-right: 30px; 
+	padding-bottom :5px;
+	padding-left:30px;
+	background-color: #C2242A;
+	border: none;
+	color: white;
+	text-align: center;
+}
+
+
+h2{
+	font-size: 10px;
+	line-height: 10px;
+}
+
+#corpsMargin,
+.corpsMargin {
+	margin-top: 200px;
+}
+
+.contenuCorps {
+	background-color: #fff;
+	padding: 10px 5px;
+	margin-top: 20px;
+}
+
+#imgProduit img, 
+.imgProduit img{
+	height: 150px;
+	width:130px;
+}
+
+.imgProduit img{
+	margin-top: 7px;
+}
+
+.alignRight {
+	text-align: right;
+}
+
+.panel-danger {
+	padding: 7px;
+}
+
+tr {
+	padding: 5px;
+}
+
+th {
+	text-align: right;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+table > thead > tr > th,
+table > tbody > tr > th,
+table > tfoot > tr > th,
+table > thead > tr > td,
+table > tbody > tr > td,
+table > tfoot > tr > td {
+  padding: 8px;
+  vertical-align: top;
+}
+table > thead > tr > th {
+	vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
+}
+
+table > tbody > tr > th {
+	max-width: 20px;
+}
+
+.none-width table > tbody > tr > th {
+	max-width: none;
+}
+
+p {
+	text-align: justify;
+}
+
+.information{
+	min-height: 380px;
+	max-height: 450px;
+}
+
+.photo-act-sec{
+	max-height: 430px;
+}
+
+.photo-details{
+	background-color: #F2F2F2;
+	width: 40%;
+	min-height: 360px;
+	max-height: 1%;
+	
+}
+
+.photo-information{
+	background-color: #FFF;
+	padding: 4px;
+	height: 80px;
+	position: relative;
+	padding-left: 15px;
+}
+
+.photo-commentaire{
+	background-color: #FFF;
+	max-height: 300px;
+	margin-top: 8px;
+	height: auto;
+	padding: 4px;
+	overflow-y:scroll;
+}
+
+.avatar-comm{
+	width: 30px;
+	height: 30px;
+}
+
+.description-photo{
+	position: absolute;
+  	top: 50%; /* poussé de la moitié de hauteur du référent */
+  	transform: translateY(-50%);
+}
+
+.espaceBas{
+	background-color: #F2F2F2;
+	height: 80px;
+}
+.avatar-profil{
+	width: 400px;
+	height: 400px;
+}

@@ -4,12 +4,14 @@
 
 {% block body %}
 <h1>Page de connexion du site du BDE CESI eXia</h1>
+<p>Id : {{app.session.get('idUser')}}</p>
+<p>Role : {{app.session.get('roleUser')}}</p>
 <form method="post" action="" id="connexion">
 	<span>Email</span>
 	<input type="Email" name="mail" placeholder="mail" required>
 	<span>Password</span>
 	<input type="password" name="password" placeholder="password" required>
-	<button type="submit" name="submitConnexion">connexion</button>
+	<input type="submit" name="submitConnexion" value="Connexion">
 </form>
 <h3>{{errormessage}}</h3>
 <form method="post" action="" id="inscription">
@@ -22,14 +24,14 @@
 	<span>Mot de passe</span>
 	<input type="password" name="Password" placeholder="Password" required>
 	<span>Date de naissance</span>
-	<input type="date" name="Naissance">
+	<input type="date" name="Naissance" required>
 	<span>Promotion</span>
 	<SELECT name="Promotion">
-		<option value="A1">A1</option>
-		<option value="A2">A2</option>
-		<option value="A3">A3</option>
-		<option value="A4">A4</option>
-		<option value="A5">A5</option>
+		<option value="1">A1</option>
+		<option value="2">A2</option>
+		<option value="3">A3</option>
+		<option value="4">A4</option>
+		<option value="5">A5</option>
 	</SELECT>
 	<span>Avatar</span>
 	<input type="file" name="Avatar">

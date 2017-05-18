@@ -1,0 +1,35 @@
+{% extends "MainBundle::base.html.twig" %}
+
+{% block title %}PAnier{% endblock %}
+
+{% block body %}
+<main>
+    <div clas="container text-center carrousel blank">
+		<div class="col-md-8 col-md-offset-2">
+				<p>Nombre d'article <span>3</span></p>&nbsp;<!-- nombre de produits dans le panier -->
+		</div>
+		<div class="col-sm-10 col-md-8 col-lg-8 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 contenuCorps">
+			<div class="row">
+				{% for produit in produits %}
+			  	<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+			    	<div class="thumbnail imgProduit">
+			      		<img src="{{asset('img/lunettes_150x130.png')}}" alt="image produit">
+			      		<div class="caption">
+			        		<h4>{{produit.nomProduit}}</h4>
+			        		<span>{{produit.prixProduit}}&nbsp;€</span>
+			        		<a href={{path('produit')}} class="btn btn-defualt" role="button">Voir le produit</a>
+			      		</div>
+			    	</div>
+			  	</div>
+			  	{% endfor %}
+			</div>
+			<div class="row">
+					<div class="col-md-2 col-md-offset-9">
+						<button class="inscription"><h4>acheter</h4></button>
+					</div>
+				</div>
+		</div>
+	</div>
+	<div class="espaceBas"></div>
+</main>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "MainBundle::base.html.twig" %}
+
+{% block title %}Produit{% endblock %}
+
+{% block body %}
+<main>
+	<div class="col-md-8 col-md-offset-2 corpsMargin">
+		<h3>Modification de Produit</h3>
+		<div class="col-md-12 contenuCorps">				
+			<form method="post" action="" id="modifProduit">
+				<div class="panel">
+					<div class="col-md-12" >
+						<span class="col-xs-5 col-sm-5 col-md-5">Référence</span>
+						<span class="col-xs-5 col-sm-5 col-md-5">Nom</span>
+						<span class="col-xs-2 col-sm-2 col-md-2">Prix</span>
+					</div>
+					<div class="col-md-12">
+						<input type="text" name="reference" placeholder="référence" class="col-xs-4 col-sm-4 col-md-4" value="">
+						<input type="text" name="nom" placeholder="nom"  class="col-xs-4 col-sm-4 col-md-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+						<input type="number" name="prix" placeholder="prix"  class="col-xs-2 col-sm-2 col-md-2 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+					</div>
+				</div>
+				<div class="panel">
+					<div class="col-sm-6 col-md-5 panel">
+						<div class="col-md-12">
+							<span>Description</span>
+						</div>
+						<div class="col-sm-12">
+							<textarea type="text" name="decription" id="textModif" placeholder="texte de déscription" rows="5" class="col-xs-4 col-sm-4 col-md-10"></textarea>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-6 panel">
+						<img src="img/lunettes_150x130.png" alt="image produit" title="nom du produit" style="border: 1px solid #ddd;">
+						<input type="file" name="downloadImg">
+					</div>
+				</div>
+								
+				<div class="col-sm-6 col-md-12 panel">
+					<button class="btn btn-default" name="modifier">Ajouter</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="espaceBas"></div>
+</main>
+{% endblock %}

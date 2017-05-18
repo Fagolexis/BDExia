@@ -20,15 +20,15 @@
             <div class="red"></div>
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html"><img src="{{ asset('logo-header.png') }}" alt="Logo Exia"/></a>
+                    <a class="navbar-brand" href="index.html"><img src="{{ asset('img/logo-header.png') }}" alt="Logo Exia"/></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="active" href={{path('accueil')}}>Accueil</a></li>
-                        <li><a href="{{path('activities')}}">Activités</a></li>
+                        <li><a class="active" href={{path('Accueil')}}>Accueil</a></li>
+                        <li><a href="{{path('listAct')}}">Activités</a></li>
                         <li><a href="{{path('boutique')}}">Boutique</a></li>
-                        <li><a href="{{path('profil')}}">"Etudiant"</a></li>
-                        <li><a href="{{path('inscription')}}">Déconnexion</a></li>
+                        <li><a href="{{path('profil', {'id':app.session.get('idUser')})}}">Profil</a></li>
+                        <li><a href="{{path('deco')}}">Déconnexion</a></li>
                     </ul>
                 </div>
             </div>
@@ -38,7 +38,7 @@
         {% block javascripts %}{% endblock %}
     <footer>
         <div class="container">
-            <p>&copy; Groupe 3 | <a href="#">Mentions légales</a></p>
+            <p>&copy; Groupe 3 | <a href="{{asset('mention.html.twig')}}">Mentions légales</a></p>
         </div>
     </footer>
     </body>

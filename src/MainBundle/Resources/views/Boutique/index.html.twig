@@ -10,60 +10,22 @@
 				<i class="fa fa-search" aria-hidden="true"></i>
 				<i class="fa fa-cart-arrow-down col-xs-offset-4 col-sm-offset-4 col-md-offset-4 col-lg-offset-7" aria-hidden="true"></i>&nbsp;
 				<a href="#">Votre panier</a>&nbsp;
-				<span>3</span><!-- nombre de produits dans le panier -->
+				<span>0</span><!-- nombre de produits dans le panier -->
 		</div>
 		<div class="col-sm-10 col-md-8 col-lg-8 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 contenuCorps">
 			<div class="row">
+				{% for prod in list %}
 			  	<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
 			    	<div class="thumbnail imgProduit">
 			      		<img src="img/lunettes_150x130.png" alt="image produit">
 			      		<div class="caption">
-			        		<h4>Lunettes CESI</h4>
-			        		<span>12.49&nbsp;€</span>
-			        		<a href={{path('produit')}} class="btn btn-defualt" role="button">Voir le produit</a>
+			        		<h4>{{prod.nomProduit}}</h4>
+			        		<span>{{prod.prixProduit}}€</span>
+			        		<a href={{path('produit', {'id':prod.idProduit})}} class="btn btn-defualt" role="button">Voir le produit</a>
 			      		</div>
 			    	</div>
 			  	</div>
-			  	<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-			    	<div class="thumbnail imgProduit">
-			      		<img src="img/lunettes_150x130.png" alt="image produit">
-			      		<div class="caption">
-			        		<h4>Lunettes CESI</h4>
-			        		<span>12.49&nbsp;€</span>
-			        		<a href={{path('produit')}} class="btn btn-defualt" role="button">Voir le produit</a>
-			      		</div>
-			    	</div>
-			  	</div>
-			  	<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-			    	<div class="thumbnail imgProduit">
-			      		<img src="img/lunettes_150x130.png" alt="image produit">
-			      		<div class="caption">
-			       			<h4>Lunettes CESI</h4>
-			        		<span>12.49&nbsp;€</span>
-			        		<a href={{path('produit')}} class="btn btn-defualt" role="button">Voir le produit</a>
-			      		</div>
-			    	</div>
-			  	</div>
-			  	<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-			    	<div class="thumbnail imgProduit">
-			      		<img src="img/lunettes_150x130.png" alt="image produit">
-			      		<div class="caption">
-			        		<h4>Lunettes CESI</h4>
-			        		<span>12.49&nbsp;€</span>
-			        		<a href={{path('produit')}} class="btn btn-defualt" role="button">Voir le produit</a>
-			      		</div>
-			    	</div>
-			  	</div>
-			  	<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-			    	<div class="thumbnail imgProduit">
-			      		<img src="img/lunettes_150x130.png" alt="image produit">
-			      		<div class="caption">
-			        		<h4>Lunettes CESI</h4>
-			        		<span>12.49&nbsp;€</span>
-			        		<a href={{path('produit')}} class="btn btn-defualt" role="button">Voir le produit</a>
-			      		</div>
-			    	</div>
-			  	</div>
+			  {% endfor %}
 			</div>
 		</div>
 	</div>

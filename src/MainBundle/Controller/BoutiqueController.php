@@ -2,50 +2,95 @@
 
 namespace MainBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
+use MainBundle\Model\BoutiqueModel;
+use MainBundle\Model\ImgModel;
+use MainBundle\Model\DateModel;
+use Symfony\Component\HttpFoundation\Session\Session;
 
-class BoutiqueController extends Controller
+class BoutiqueController extends DefaultController
 {
     /**
-     * @Route("/boutique")
+     * @Route("/boutique", name="boutique")
      */
-    public function boutiqueAction()
+    public function indexAction()
     {
-        return $this->render('MainBundle:Boutique:boutique.html.twig', array(
-            // ...
+        $list = $this->getDoctrine()->getRepository("MainBundle:Boutique")->findAll();
+        return $this->render('MainBundle:Boutique:index.html.twig', array(
+            "list" => $list
         ));
     }
 
     /**
-     * @Route("/boutique/{idProduit}")
+     * @Route("/boutique/creation", name="addProd")
      */
-    public function produitAction($idProduit)
+    public function addAction(Request $request)
     {
-        $idUser = $id;
-        return $this->render('MainBundle:Boutique:produit.html.twig', array(
-            'user'=> $idUser,
+        $Session = new Session();
+        if($this->checkRole(3,$Session->get('roleUser'))) {
+            $post = $request->request;
+            if($post->get('addProd')!=null) {
+                $bm = new BoutiqueModel();
+                $im = new ImgModel();
+                $dm = new DateModel();
+
+                $titre = $post->get('titre');
+                $desc = $post->get('desc');
+                $img = $request->files->get('prodImg');
+                $prix = $post->get('prix');
+                $chemin = $this->saveImg($img);
+                $date = $dm->currentDate($type = $this->getDoctrine()->getRepository("MainBundle:Types")->findOneByIdType(1));
+                $this->dbUpdate('persist', $currdate);
+                $prod = $bm->createArticle($date,$stock,$nom,$description,$prix);
+                $img = $im->createImg($type,$chemin,$currdate,$user);
+
+                $this->dbUpdate('persist', $prod);
+                $this->dbUpdate('persist', $date);
+                $this->dbUpdate('persist', $img);
+                $this->insert($am->addImg($prod, $img));
+                return $this->forward("MainBundle:Activites:show", array(
+                    "id" => $idAct));
+            }
+            return $this->render('MainBundle:Boutique:modif_produit.html.twig');
+        }
+        else {
+            return $this->forward("MainBundle:Boutique:index");
+        }
+        return $this->render('MainBundle:Boutique:index.html.twig', array());
+    }
+        
+
+    /**
+     * @Route("/boutique/{id}", name="produit")
+     */
+    public function showAction($id)
+    {
+        $product = $this->getDoctrine()->getRepository("MainBundle:Boutique")->findOneByIdProduit($id);
+        return $this->render('MainBundle:Boutique:show.html.twig', array(
+            'prod'=> $product,
         ));
     }
 
     /**
      * @Route("/boutique/panier")
      */
-    public function panierAction()
+    public function cartAction()
     {
+        $products[] = $this->getDoctrine()->getRepository("MainBundle:Activites")->findOneByIdActivite($id);
         return $this->render('MainBundle:Boutique:panier.html.twig', array(
-            // ...
+            "produits" => $produits
         ));
     }
 
     /**
-     * @Route("/boutique/{idProduit}/modification")
+     * @Route("/boutique/{id}/modification")
      */
-    public function modificationProduitAction($idProduit)
+    public function modAction($id)
     {
-        $idProduit = $id;
-        return $this->render('MainBundle:Boutique:modification_produit.html.twig', array(
-            'idProduit'=> $idProduit,
+        $product = $this->getDoctrine()->getRepository("MainBundle:Boutique")->findOneByIdProduit($id);
+        return $this->render('MainBundle:Boutique:modif_produit.html.twig', array(
+            "produit" => $product
         ));
     }
 

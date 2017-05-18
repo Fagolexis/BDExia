@@ -1,0 +1,81 @@
+{% extends "MainBundle::base.html.twig" %}
+
+{% block title %}Activité{% endblock %}
+
+{% block body %}
+
+<main>
+    <div clas="container text-center carrousel blank">
+		<div class="row">
+			<div class="col col-md-8 col-md-offset-2 info">
+				<div class="col-md-5">
+					<h3><span class="nomActivity col-md-12">
+						{{act.nomActivite}}
+					</span></h3>
+				</div>
+				<div class="col-md-12">
+					<div class="col-md-12">
+						<img class="imgAct" src="{{asset('img/')}}{{couv.chemin}}" alt="">
+					</div>
+				</div>
+				<div class="col-md-12">
+					<span class="description col-md-12">
+						<br><p>{{act.descriptionActivite}}</p>
+					</span>
+				</div>
+				<div class="col-md-3">
+					<span class="lieu col-md-12"><h3>Lieu :</h3><br>
+						<p>{{act.lieu}}</p>
+					</span>
+				</div>
+				<div class="col-md-6 ">
+					<span class="lieu col-md-12"><h3>Horaire :</h3><br>
+						<p>{{date.date|date("d/m/Y")}}</p>
+					</span>
+				</div>
+				<div class="col-md-3 ">
+					<span class="lieu col-md-12"><h3>Prix :</h3><br>
+						<p>{{act.prixActivite}}€</p>
+					</span>
+				</div>
+				<div class="col-md-12">
+					<div class="col-md-2">
+						<a href={{path('photosAct', {'id':act.idActivite})}}><div class="inscription"><h4>Photos</h4></div></a>
+					</div>
+					<div class="col-md-2 col-md-offset-8 text-center">
+						{% if app.session.get('roleUser') == 1 %}
+							{% for sub in subs %}
+								{% if sub.idInscrit.idUser == app.session.get('idUser') %}
+									{% if act.etatAct.idEtat == 2 %}
+										<button class="inscription">Voté</button>
+									{% elseif act.etatAct.idEtat == 3 %}
+										<button class="inscription">Inscrit</button>
+									{% endif %}
+								{% endif %}
+							{% endfor %}
+							{% if act.etatAct.idEtat == 2 %}{# 
+							<form action="" method="POST">
+								<input class="inscription" type="submit" name="subAct" value="Voter">
+								<input type="text" name="info" placeholder="Informations supplémentaires" size="25">
+							</form> #}
+							{% elseif act.etatAct.idEtat == 3 %}
+							<form action="" method="POST">
+								<input class="inscription" type="submit" name="subAct" value="S'inscrire">
+								<input type="text" name="info" placeholder="Informations supplémentaires" size="25">
+							</form>
+							{% endif %}
+						{% elseif app.session.get('roleUser') == 2 %}
+							{% if act.etatAct.idEtat == 2 %}
+								<a href="{{path('subAct', {'id' : act.idActivite})}}"><button class="inscription">Votes</button></a>
+							{% elseif act.etatAct.idEtat == 3 %}
+								<a href="{{path('subAct', {'id' : act.idActivite})}}"><button class="inscription">Inscrits</button></a>
+							{% endif %}
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="espaceBas"></div>
+</main>
+{% endblock %}
