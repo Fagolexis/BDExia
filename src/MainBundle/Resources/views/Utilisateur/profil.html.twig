@@ -1,0 +1,37 @@
+{% extends 'MainBundle::base.html.twig' %}
+
+{% block title %}Profil{% endblock %}
+
+{% block body %}
+<main>
+    <div clas="container text-center carrousel blank">
+    	<div class="col col-md-8 col-md-offset-2 info">
+			<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 imgProduit">
+				<img class="avatar-profil" src="{{ asset('img/avatar1.png') }}" alt="img Produit" title="Produit">
+			</div>
+			<table class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+				<tbody>
+					<tr>
+						<th>Prénom :</th>
+						<td>Alexis</td>
+					</tr>
+					<tr>
+						<th>Nom :</th>
+						<td>Lucas</td>
+					</tr>
+					<tr>
+						<th>Promo :</th>
+						<td>A2</td>
+					</tr>
+					<tr>
+						<th>Rôle :</th>
+						<td>Cesi</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	<div class="espaceBas"></div>
+</div>
+</main>
+
+{% endblock %}
