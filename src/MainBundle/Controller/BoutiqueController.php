@@ -16,6 +16,11 @@ class BoutiqueController extends DefaultController
      */
     public function indexAction()
     {
+        $Session = new Session();
+        if($Session->get('idUser') == null) {
+            return $this->forward('MainBundle:Connexion:connexion');
+        }
+        
         $list = $this->getDoctrine()->getRepository("MainBundle:Boutique")->findAll();
         return $this->render('MainBundle:Boutique:index.html.twig', array(
             "list" => $list
@@ -28,7 +33,11 @@ class BoutiqueController extends DefaultController
     public function addAction(Request $request)
     {
         $Session = new Session();
-        if($this->checkRole(3,$Session->get('roleUser'))) {
+        if($Session->get('idUser') == null) {
+            return $this->forward('MainBundle:Connexion:connexion');
+        }
+        
+        if(3 == $Session->get('roleUser')) {
             $post = $request->request;
             if($post->get('addProd')!=null) {
                 $bm = new BoutiqueModel();
@@ -38,6 +47,7 @@ class BoutiqueController extends DefaultController
                 $titre = $post->get('titre');
                 $desc = $post->get('desc');
                 $img = $request->files->get('prodImg');
+                var_dump($img);
                 $prix = $post->get('prix');
                 $chemin = $this->saveImg($img);
                 $date = $dm->currentDate($type = $this->getDoctrine()->getRepository("MainBundle:Types")->findOneByIdType(1));
@@ -66,6 +76,11 @@ class BoutiqueController extends DefaultController
      */
     public function showAction($id)
     {
+        $Session = new Session();
+        if($Session->get('idUser') == null) {
+            return $this->forward('MainBundle:Connexion:connexion');
+        }
+        
         $product = $this->getDoctrine()->getRepository("MainBundle:Boutique")->findOneByIdProduit($id);
         return $this->render('MainBundle:Boutique:show.html.twig', array(
             'prod'=> $product,
@@ -77,6 +92,11 @@ class BoutiqueController extends DefaultController
      */
     public function cartAction()
     {
+        $Session = new Session();
+        if($Session->get('idUser') == null) {
+            return $this->forward('MainBundle:Connexion:connexion');
+        }
+        
         $products[] = $this->getDoctrine()->getRepository("MainBundle:Activites")->findOneByIdActivite($id);
         return $this->render('MainBundle:Boutique:panier.html.twig', array(
             "produits" => $produits
@@ -88,6 +108,11 @@ class BoutiqueController extends DefaultController
      */
     public function modAction($id)
     {
+        $Session = new Session();
+        if($Session->get('idUser') == null) {
+            return $this->forward('MainBundle:Connexion:connexion');
+        }
+        
         $product = $this->getDoctrine()->getRepository("MainBundle:Boutique")->findOneByIdProduit($id);
         return $this->render('MainBundle:Boutique:modif_produit.html.twig', array(
             "produit" => $product

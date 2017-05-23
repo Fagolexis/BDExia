@@ -1,43 +1,64 @@
-{% extends "::base.html.twig" %}
+{% extends "MainBundle::base.html.twig" %}
 
-{% block title %}MainBundle:Connexion:Connexion{% endblock %}
+{% block title %}Inscription/Connexion{% endblock %}
+
+{% block navCnx %}class="active"{% endblock %}
 
 {% block body %}
-<h1>Page de connexion du site du BDE CESI eXia</h1>
-<p>Id : {{app.session.get('idUser')}}</p>
-<p>Role : {{app.session.get('roleUser')}}</p>
-<form method="post" action="" id="connexion">
-	<span>Email</span>
-	<input type="Email" name="mail" placeholder="mail" required>
-	<span>Password</span>
-	<input type="password" name="password" placeholder="password" required>
-	<input type="submit" name="submitConnexion" value="Connexion">
-</form>
-<h3>{{errormessage}}</h3>
-<form method="post" action="" id="inscription">
-	<span>Nom</span>
-	<input type="input" name="Nom" placeholder="Nom" required>
-	<span>Prenom</span>
-	<input type="input" name="Prenom" placeholder="Prenom" required>
-	<span>Email</span>
-	<input type="Email" name="Email" placeholder="Email" required>
-	<span>Mot de passe</span>
-	<input type="password" name="Password" placeholder="Password" required>
-	<span>Date de naissance</span>
-	<input type="date" name="Naissance" required>
-	<span>Promotion</span>
-	<SELECT name="Promotion">
-		<option value="1">A1</option>
-		<option value="2">A2</option>
-		<option value="3">A3</option>
-		<option value="4">A4</option>
-		<option value="5">A5</option>
-	</SELECT>
-	<span>Avatar</span>
-	<input type="file" name="Avatar">
-	<span>Numréo de telephone</span>
-	<input type="tel" name="Telephone" placeholder="Telephone">
-	<input type="reset" name="Reset">
-	<input type="submit" name="submitInscription" value="S'inscrire">
-</form>
+<main>
+	<div class="container">
+		<center>
+		<h1>Page de connexion du site du BDE CESI eXia</h1>
+		<h3>{{errormessage}}</h3>
+		</center>
+		<ul class="nav nav-pills">
+			<li class="active"><a href="#cnxTab" data-toggle="tab">Connexion</a></li>
+			<li><a href="#insTab" data-toggle="tab">Inscription</a></li>
+		</ul>
+		<div class="blank formulaire">
+			<div class="col-md-offset-4 col-md-8">
+				<div class="tab-content clearfix">
+					<div class="tab-pane" id="insTab">
+						<form class="cnxForm" action="" method="post">
+							<label for="Nom">Nom :</label>
+							<input type="text" name="Nom" placeholder="Entrer votre nom de famille" size="30" required>
+							<label for="Prenom">Prénom :</label>
+							<input type="text" name="Prenom" placeholder="Entrer votre prénom" size="30" required>
+							<fieldset>
+								<label for="Date">Date de naissance :</label>
+								<input type="date" name="Naissance" placeholder="JJ" required>
+							</fieldset>
+							<label for="Promo">Promotion :</label>
+							<select name="Promo">
+								<option value="1">A1</option>
+								<option value="2">A2</option>
+								<option value="3">A3</option>
+								<option value="4">A4</option>
+								<option value="5">A5</option>
+							</select>
+							<label for="Avatar">Avatar :</label>
+							<input type="file" name="Avatar">
+							<label for="Telephone">Numéro de téléphone :</label>
+							<input type="tel" name="Telephone" maxlength="10" placeholder="Entrer votre numéro de téléphone" size="30">
+							<label for="Email">Mail :</label>
+							<input type="email" name="Email" placeholder="Entrer votre adresse mail" size="30" required>
+							<label for="Mdp">Mot de passe :</label>
+							<input type="password" name="Mdp" placeholder="Entrer un mot de passe sécurisé" size="30" required>
+							<input class="btn btn-default" type="submit" name="submitInscription" value="S'inscrire">
+						</form>
+					</div>
+					<div class="tab-pane active" id="cnxTab">
+						<form class="cnxForm" action="" method="post">
+							<label for="Email">Mail : </label>
+							<input name= "Email" type="email" placeholder="Entrer votre adresse mail" size="30" required>
+							<label for="Mdp">Mot de passe : </label>
+							<input name= "Mdp" type="password" placeholder="Entrer votre mot de passe" size="30" required>
+							<input class="btn btn-default" type="submit" name="submitConnexion" value="Se connecter">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+</main>
 {% endblock %}

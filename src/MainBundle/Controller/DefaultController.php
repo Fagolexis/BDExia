@@ -27,15 +27,6 @@ abstract class DefaultController extends Controller
     	$em->flush();
     }
 
-    protected function checkRole($wanted, $current) {
-    	if($current == $wanted) {
-    		return true;
-    	}
-    	else {
-    		return false;
-    	}
-    }
-
     protected function saveImg($img) {
         $dossier = $this->get('kernel')->getRootDir() . '/../web/img/';
         $fichier = basename($img->getClientOriginalName());

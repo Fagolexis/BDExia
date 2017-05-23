@@ -2,15 +2,21 @@
 
 {% block title %}Liste des inscrits{% endblock %}
 
+{% block navActivites %}class="active"{% endblock %}
+
 {% block body %}
 <main>
 	<div class="container">
+		{% set i = 0 %}
 		{% for sub in list %}
 		<div class="subs blank">
 			<h3>{{sub.idInscrit.prenom}} {{sub.idInscrit.nom}}</h3>
 			<p>{{sub.informations}}</p>
 		</div>
+		{% if i < list|length -1 %}
 		<hr>
+		{% endif %}
+		{% set i = i + 1 %}
 		{% endfor %}
 	</div>
 </main>

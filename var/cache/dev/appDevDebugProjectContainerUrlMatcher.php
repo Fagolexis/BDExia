@@ -192,7 +192,7 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
 
             // profil
-            if (preg_match('#^/utilisateurs/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            if (preg_match('#^/utilisateurs/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'profil')), array (  '_controller' => 'MainBundle\\Controller\\GestionController::showAction',));
             }
 

@@ -26,13 +26,6 @@ class ActiviteModel
     	return $vote;
     }
 
-    public function subAct($user,$activite,$choix,$info)
-    {
-    	$vote = new Inscrits();
-    	$vote->setInscritAct($activite)->setIdInscrit($user)->setInscritChoix($choix)->setInformations($info);
-    	return $vote;
-    }
-
     public function addImg($act, $img) {
         $sql="INSERT INTO im_act (`ID_IMG_ACT`, `IMG_ACT`) VALUES (:idAct, :idImg)";
         $param=array("idAct" => $act->getIdActivite(), "idImg" => $img->getIdImg());

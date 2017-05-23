@@ -1,14 +1,8 @@
 html, body {
-	font-family: "Roboto";
+	font-family: "Roboto", sans-serif;
 	color: #222;
 	background-color: #F2F2F2;
 	overflow-x:hidden;
-}
-
-.blank {
-	background-color: #fff;
-	padding: 20px;
-	overflow: hidden;
 }
 
 a:hover {
@@ -31,6 +25,12 @@ hr {
 	margin-left: 150px;
 	margin-right: 150px;
 	box-shadow: 0px 2px 20px #888888;
+}
+
+.blank {
+	background-color: #fff;
+	padding: 20px;
+	overflow: hidden;
 }
 
 .activite {
@@ -87,6 +87,10 @@ hr {
 	margin: 5px;
 }
 
+.navbar-brand > img {
+	width: 150px;
+}
+
 .navbar-default .navbar-nav>li>a:hover {
 	background-color: #eee;
 }
@@ -118,15 +122,14 @@ footer .container {
 
 footer {
 	width: 100%;
-	height: 30px;
-	background-color: #bbb;
+	background-color: #fff;
 	text-align: center;
 	position: fixed;
 	bottom: 0;
 }
 
 footer p {
-	margin-top: 7px;
+	margin: 20px 0;
 	text-align: center;
 }
 
@@ -194,12 +197,6 @@ span{
 	border: none;
 	color: white;
 	text-align: center;
-}
-
-
-h2{
-	font-size: 10px;
-	line-height: 10px;
 }
 
 #corpsMargin,
@@ -270,38 +267,38 @@ p {
 	text-align: justify;
 }
 
-.information{
+.photos{
 	min-height: 380px;
 	max-height: 450px;
+	margin-bottom: 20px;
 }
 
-.photo-act-sec{
-	max-height: 430px;
+.auteur-photo {
+	margin: 15px 0 20px 0;
+}
+
+.auteur-photo * {
+	display: inline;
+	vertical-align: middle;
 }
 
 .photo-details{
-	background-color: #F2F2F2;
-	width: 40%;
-	min-height: 360px;
-	max-height: 1%;
-	
+	background-color: #FFF;
 }
 
 .photo-information{
-	background-color: #FFF;
-	padding: 4px;
 	height: 80px;
 	position: relative;
-	padding-left: 15px;
 }
 
 .photo-commentaire{
-	background-color: #FFF;
-	max-height: 300px;
 	margin-top: 8px;
 	height: auto;
-	padding: 4px;
-	overflow-y:scroll;
+}
+
+.text-comm {
+	overflow-y: auto;
+	max-height: 300px;
 }
 
 .avatar-comm{
@@ -322,4 +319,41 @@ p {
 .avatar-profil{
 	width: 400px;
 	height: 400px;
+}
+
+.cnxForm input {
+	margin-bottom : 10px;
+	display: block;
+}
+
+.cnxForm label {
+	margin-bottom: 5px;
+	display: block;
+}
+
+.cnxForm fieldset input {
+	display: inline-block;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover {
+	color: #fff;
+	background-color: #C2242A;
+}
+
+.nav-pills>li>a {
+	color: #C2242A;
+	font-size: 20px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.carousel-caption>a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.carousel-caption>a:hover {
+	color: #C2242A;
 }

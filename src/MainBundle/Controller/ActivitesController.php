@@ -17,7 +17,11 @@ class ActivitesController extends DefaultController
     public function indexAction()
     {
         $Session = new Session();
-        if($this->checkRole(2,$Session->get('roleUser'))) {
+        if($Session->get('idUser') == null) {
+            return $this->forward('MainBundle:Connexion:connexion');
+        }
+
+        if(2 == $Session->get('roleUser')) {
             $list = $this->getDoctrine()->getRepository("MainBundle:Activites")->findBy(array('etatAct' => array(1, 2, 3, 4)), array('etatAct' => 'ASC'));
         }
         else {
@@ -34,7 +38,11 @@ class ActivitesController extends DefaultController
     public function createAction(Request $request)
     {
         $Session = new Session();
-        if($this->checkRole(2,$Session->get('roleUser'))) {
+        if($Session->get('idUser') == null) {
+            return $this->forward('MainBundle:Connexion:connexion');
+        }
+
+        if(2 == $Session->get('roleUser')) {
             $post = $request->request;
             if($post->get('addActForm')!=null) {
                 $am = new ActiviteModel();
@@ -54,7 +62,7 @@ class ActivitesController extends DefaultController
                 $chemin = $this->saveImg($img);
                 //Cookie
                 $user = $this->getDoctrine()->getRepository("MainBundle:Users")->findOneByIdUser(4);
-                if($this->checkRole(1, $user->getRoleUser()->getIdRole())) {
+                if(1 == $user->getRoleUser()->getIdRole()) {
                     $etat = $this->getDoctrine()->getRepository("MainBundle:EtatsActivites")->findOneByIdEtat(1);
                 }else {
                     $etat = $this->getDoctrine()->getRepository("MainBundle:EtatsActivites")->findOneByIdEtat(2);
@@ -92,18 +100,23 @@ class ActivitesController extends DefaultController
     public function showAction($id, Request $request)
     {
         $Session = new Session();
+        if($Session->get('idUser') == null) {
+            return $this->forward('MainBundle:Connexion:connexion');
+        }
+
         $post = $request->request;
-        //Cookie
         $user = $this->getDoctrine()->getRepository("MainBundle:Users")->findOneByIdUser($Session->get('idUser'));
         $act = $this->getDoctrine()->getRepository("MainBundle:Activites")->findOneByIdActivite($id);
         $subs = $this->getDoctrine()->getRepository("MainBundle:Inscrits")->findBy(array('inscritAct' => $act->getIdActivite(), 'inscritChoix' => $act->getEtatAct()->getIdEtat()-1));
         $img_t = $act->getImgAct();
         $date_t = $act->getIdDateAct();
+        $couv;
         foreach ($img_t as $img) {
             if($img->getTypeImg()->getIdType() == 1) {
                 $couv = $img;
             }
         }
+        $date;
         foreach ($date_t as $dat) {
             if($dat->getTypeDate()->getIdType() == 2) {
                 $date = $dat;
@@ -130,6 +143,11 @@ class ActivitesController extends DefaultController
      */
     public function photosAction($id, Request $request)
     {
+        $Session = new Session();
+        if($Session->get('idUser') == null) {
+            return $this->forward('MainBundle:Connexion:connexion');
+        }
+
         $post = $request->request;
         $act = $this->getDoctrine()->getRepository("MainBundle:Activites")->findOneByIdActivite($id);
         $photos = $act->getImgAct();
@@ -152,7 +170,11 @@ class ActivitesController extends DefaultController
     public function subsAction($id)
     {
         $Session = new Session();
-        if($this->checkRole(2,$Session->get('roleUser'))) {
+        if($Session->get('idUser') == null) {
+            return $this->forward('MainBundle:Connexion:connexion');
+        }
+        
+        if(2 == $Session->get('roleUser')) {
             $inscrits = $this->getDoctrine()->getRepository("MainBundle:Inscrits")->findByInscritAct($id);
             return $this->render('MainBundle:Activites:inscrits.html.twig', array(
                 "list"=>$inscrits
@@ -169,7 +191,11 @@ class ActivitesController extends DefaultController
     public function modAction($id, Request $request)
     {
         $Session = new Session();
-        if($this->checkRole(2,$Session->get('roleUser'))) {
+        if($Session->get('idUser') == null) {
+            return $this->forward('MainBundle:Connexion:connexion');
+        }
+        
+        if(2 == $Session->get('roleUser')) {
             $act = $this->getDoctrine()->getRepository('MainBundle:Users')->findOneByIdActivite($id);
             return $this->render('MainBundle:Activites:create_activite.html.twig', array(
                 'act' => $act
