@@ -1,25 +1,27 @@
 {% extends "MainBundle::base.html.twig" %}
 
-{% block title %}PAnier{% endblock %}
+{% block title %}Panier{% endblock %}
 
 {% block navBoutique %}class="active"{% endblock %}
 
 {% block body %}
 <main>
-    <div clas="container text-center carrousel blank">
-		<div class="col-md-8 col-md-offset-2">
-				<p>Nombre d'article <span>3</span></p>&nbsp;<!-- nombre de produits dans le panier -->
-		</div>
-		<div class="col-sm-10 col-md-8 col-lg-8 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 contenuCorps">
+    <div class="container text-center carrousel blank">
 			<div class="row">
-				{% for produit in produits %}
+				{% for prod in produits %}
+					{% set produit = prod.prod %}
+					{% set quantite = prod.qt %}
 			  	<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
 			    	<div class="thumbnail imgProduit">
-			      		<img src="{{asset('img/lunettes_150x130.png')}}" alt="image produit">
+			      		<img src="
+				      	{% for img in produit.imgProd if img.typeImg.idType == 1 %}
+				    		{{asset('img/')}}{{img.chemin}}
+				    	{% endfor %}
+				    	" alt="image produit" title="{{produit.nomProduit}}">
 			      		<div class="caption">
 			        		<h4>{{produit.nomProduit}}</h4>
-			        		<span>{{produit.prixProduit}}&nbsp;€</span>
-			        		<a href={{path('produit')}} class="btn btn-defualt" role="button">Voir le produit</a>
+			        		<span>{{produit.prixProduit}}&nbsp;€ - {{quantite}}</span>
+			        		<a href="{{path('produit', {'id': produit.idProduit})}}" class="btn btn-defualt" role="button">Voir le produit</a>
 			      		</div>
 			    	</div>
 			  	</div>
@@ -27,11 +29,10 @@
 			</div>
 			<div class="row">
 					<div class="col-md-2 col-md-offset-9">
-						<button class="inscription"><h4>acheter</h4></button>
+						<button class="inscription"><h4>Acheter</h4></button>
 					</div>
 				</div>
 		</div>
-	</div>
 	<div class="espaceBas"></div>
 </main>
 {% endblock %}

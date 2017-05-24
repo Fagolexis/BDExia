@@ -55,6 +55,7 @@ class ConnexionController extends DefaultController
 		    		$Session->start();
 		    		$Session->set('idUser', $user->getIdUser());
 		    		$Session->set('roleUser', $user->getRoleUser()->getIdRole());
+	    			$Session->set('cart', array());
 				    return $this->forward("MainBundle:Connexion:index");
 		    	}   
 		    	else {
@@ -93,6 +94,7 @@ class ConnexionController extends DefaultController
 	    			$Session->start();
 	    			$Session->set('idUser', $newUser->getIdUser());
 	    			$Session->set('roleUser', $newUser->getRoleUser()->getIdRole());
+	    			$Session->set('cart', array());
 				    return $this->forward("MainBundle:Connexion:index");
 		    	} 
 				else {

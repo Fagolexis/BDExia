@@ -6,47 +6,50 @@
 
 {% block body %}
 <main>
-	<div class="col-md-offset-9 corpsMargin">
-		<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>&nbsp;
-		<a href="#">Votre panier</a>&nbsp;
-		<span>3</span><!-- nombre de produits dans le panier -->
-	</div>
-	<div class="col-md-8 col-md-offset-2 contenuCorps">
-		<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 imgProduit">
-			<img src="{{ asset('img/lunettes_150x130.png') }}" alt="img Produit" title="Produit">
+	<div class="container">
+		<div class="col-md-2 col-md-offset-10 cart">
+		    <a href="{{path('cart')}}">
+		        <i class="fa fa-cart-arrow-down"></i>
+		        <p>Panier : {{app.session.get('cart')|length}}</p>
+		    </a>
 		</div>
-		<table class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-			<tbody>
-				<tr>
-					<th>Référence</th>
-					<td>56csdger86vd</td><!-- Référence du produit -->
-				</tr>
-				<tr>
-					<th>Nom</th>
-					<td>Lunettes CESI</td><!-- Nom du produit -->
-				</tr>
-				<tr>
-					<th>Prix</th>
-					<td>12.49&nbsp;€</td><!-- Référence du produit -->
-				</tr>
-				<tr>
-					<th>Quantitée</th>
-					<td><input type="input" name="qttProduct" value="1"></input></td><!-- Référence du produit -->
-				</tr>
-			</tbody>
-		</table>
-		<div class="row">
-			<div class="col-md-2 col-md-offset-1">
-				<button class="inscription"><h4>acheter</h4></button>
+		<div class="blank">
+			<div class="row">
+				<div class="col-md-3 imgProduit">
+			      	<img src="
+			      	{% for img in prod.imgProd if img.typeImg.idType == 1 %}
+			    		{{asset('img/')}}{{img.chemin}}
+			    	{% endfor %}
+			    	" alt="image produit" title="{{prod.nomProduit}}">
+				</div>
+				<div class="col-md-3">
+					<div class="infoProd">
+						<p>Référence</p>
+						<p>Nom</p>
+						<p>Prix</p>
+					</div>
+					<div class="caracProd">
+						<p>{{prod.idProduit}}</p>
+						<p>{{prod.nomProduit}}</p>
+						<p>{{prod.prixProduit}}&nbsp;€</p>
+					</div>
+				</div>			
+				<div class="col-md-6 description">
+					<!-- texte de description du produit -->
+					<p>
+						{{prod.descriptionProduit}}
+					</p>				
+				</div>
 			</div>
-		</div>
-		
-		<div class="col-md-12 description">
-			<span>Descritpion</span>
-			<!-- texte de description du produit -->
-			<p>
-				nteger gravida consectetur elit, nec imperdiet ante malesuada vel. Duis sagittis velit non enim tincidunt sagittis a eu ex. In at rhoncus sem. Fusce velit diam, aliquet at nulla vitae, lacinia posuere lorem. Proin malesuada mi quis nunc lobortis commodo. Phasellus nec volutpat magna. Quisque suscipit ex in metus consequat, sit amet ullamcorper arcu laoreet. Fusce consectetur, ligula nec volutpat aliquam, sem metus feugiat justo, eget iaculis felis nibh rhoncus lectus. Mauris mattis massa at pretium mollis. Donec elementum vel orci eget sollicitudin. Nullam faucibus nibh sed posuere mollis. Duis ex erat, porttitor et venenatis sed, fringilla aliquam neque. Integer at varius magna. Aenean scelerisque ornare luctus.
-			</p>				
+			<div class="row">
+				<div class="col-md-2 col-md-offset-10">
+					<form id="buyForm" action="" method="post" enctype="multipart/form-data">
+						<input type="number" name="Quantite" min="1" value="1" size="4" required>
+						<input type="hidden" name="id" value="{{prod.idProduit}}">
+						<input class="btn btn-default" type="submit" name="buyProd" value="Acheter">
+					</form>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="espaceBas"></div>

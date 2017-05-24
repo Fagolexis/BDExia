@@ -25,11 +25,8 @@
 						<div class="carousel-caption">
 							<a href="{{path('showAct', {'id': act.idActivite})}}">
 								{{act.nomActivite}} <br>
-								{{act.descriptionActivite}} <br>
-								{% for date in act.idDateAct %}
-									{% if date.typeDate.idType == 1 %}
-										{{date.date|date("d/m/Y")}}
-									{% endif %}
+								{% for date in act.idDateAct if date.typeDate.idType == 1 %}
+									{{date.date|date("d/m/Y")}}
 								{% endfor %}
 							</a>
 						</div>
@@ -56,7 +53,11 @@
 				</div>
 				<div class="col-md-8">
 					<h2>{{act.nomActivite}}</h2>
-					<p>{{act.descriptionActivite}}</p>
+					{% for date in act.idDateAct if date.typeDate.idType == 1 %}
+						<p>{{date.date|date("d/m/Y")}}</p>
+					{% else %}
+						<p>{{act.descriptionActivite}}</p>
+					{% endfor %}
 				</div>
 			{% endfor %}
 		</div>

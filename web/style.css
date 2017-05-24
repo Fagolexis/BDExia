@@ -267,6 +267,10 @@ p {
 	text-align: justify;
 }
 
+.text-center p {
+	text-align: center;
+}
+
 .photos{
 	min-height: 380px;
 	max-height: 450px;
@@ -356,4 +360,62 @@ p {
 
 .carousel-caption>a:hover {
 	color: #C2242A;
+}
+
+.barshop {
+	display: flex;
+}
+
+.cart, .cart p, .cart i {
+	text-align: center;
+	font-size: 24px;
+}
+
+.cart a {
+	float: right;
+}
+
+.cart i, .searchProd i {
+	font-size: 32px;
+}
+
+.cart a:hover {
+	text-decoration: none;
+}
+
+.searchProd, .searchProd p, .searchProd i {
+	text-align: center;
+}
+
+.infoProd {
+	text-align: right;
+	float: left;
+	width: 50%;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.infoProd p {
+	text-align: right
+}
+
+.caracProd {
+	text-align: left;
+	float: right;
+	width: 50%;
+	padding: 5px;
+}
+
+.caracProd p {
+	text-align: left;
+}
+
+#buyForm, #buyForm * {
+	text-align: right;
+	margin: 5px;
+}
+
+.cnxForm img {
+	width: 150px;
+	height: auto;
 }

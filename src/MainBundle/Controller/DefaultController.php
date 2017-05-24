@@ -15,19 +15,21 @@ abstract class DefaultController extends Controller
     		case 'persist':
     			$em->persist($obj_record);
     			break;
-    		case 'merge';
+    		case 'merge':
     			$em->merge($obj_record);
     			break;
     		case 'remove':
     			$em->remove($obj_record);
     			break;
+            case 'up':
+                break;
     		default:
     			return false;
     	}
     	$em->flush();
     }
 
-    protected function saveImg($img) {
+    protected function saveImg($img, $name="") {
         $dossier = $this->get('kernel')->getRootDir() . '/../web/img/';
         $fichier = basename($img->getClientOriginalName());
         $taille_maxi = 10000000;
@@ -41,16 +43,20 @@ abstract class DefaultController extends Controller
             $erreur = 'Le fichier est trop volumineux.';
         }
         if(!isset($erreur)) {
-            $fichier = strtr($fichier, 
-                'ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ', 
-                'AAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy');
-            $fichier = preg_replace('/([^.a-z0-9]+)/i', '-', $fichier);
-
+            if($name == "") {
+                $fichier = strtr($fichier, 
+                    'ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ', 
+                    'AAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy');
+                $fichier = preg_replace('/([^.a-z0-9]+)/i', '-', $fichier);
+            }
             $img->move($dossier, $fichier);
             if(file_exists($dossier.$fichier)) {
                 $erreur = 'Echec de l\'upload !';
             }
-
+            if($name != "") {
+                rename($dossier.$fichier, $dossier.$name);
+                $fichier = $name;
+            }
             return $fichier;
         }
         else {

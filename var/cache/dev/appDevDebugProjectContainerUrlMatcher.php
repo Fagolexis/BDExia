@@ -150,13 +150,13 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
 
             // produit
-            if (preg_match('#^/boutique/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            if (preg_match('#^/boutique/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'produit')), array (  '_controller' => 'MainBundle\\Controller\\BoutiqueController::showAction',));
             }
 
-            // main_boutique_cart
+            // cart
             if ($pathinfo === '/boutique/panier') {
-                return array (  '_controller' => 'MainBundle\\Controller\\BoutiqueController::cartAction',  '_route' => 'main_boutique_cart',);
+                return array (  '_controller' => 'MainBundle\\Controller\\BoutiqueController::cartAction',  '_route' => 'cart',);
             }
 
             // main_boutique_mod

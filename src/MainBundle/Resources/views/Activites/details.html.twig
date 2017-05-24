@@ -7,37 +7,31 @@
 {% block body %}
 
 <main>
-    <div clas="container text-center carrousel blank">
+    <div class="container blank">
 		<div class="row">
-			<div class="col col-md-8 col-md-offset-2 info">
-				<div class="col-md-5">
-					<h3><span class="nomActivity col-md-12">
-						{{act.nomActivite}}
-					</span></h3>
+				<div class="col-md-5 col-md-offset-2">
+					<h2>{{act.nomActivite}}</h2>
 				</div>
-				<div class="col-md-12">
-					<img class="imgAct" src="{{asset('img/')}}{{couv.chemin}}" alt="">
+				<img class="imgAct" src="{{asset('img/')}}{{couv.chemin}}" alt="">
+				<div class="col-md-8 col-md-offset-2">
+					<h4>{{act.descriptionActivite}}</h4>
 				</div>
-				<div class="col-md-12">
-					<h3>{{act.descriptionActivite}}</h3>
-				</div>
-				<div class="col-md-3">
-					<h4>Lieu :</h4>
+				<div class="col-md-4 text-center">
+					<h4>Où ?</h4>
 					<p>{{act.lieu}}</p>
 				</div>
-				<div class="col-md-6 ">
-					<h4>Horaire :</h4>
+				<div class="col-md-4 text-center">
+					<h4>Quand ?</h4>
 					<p>{{date.date|date("d/m/Y")}}</p>
 				</div>
-				<div class="col-md-3 ">
-					<h4>Prix :</h4>
+				<div class="col-md-4 text-center">
+					<h4>Combien ?</h4>
 					<p>{{act.prixActivite}}€</p>
 				</div>
-				<div class="col-md-12">
-					<div class="col-md-2">
+					<div class="col-md-2 col-md-offset-4 text-center">
 						<a href={{path('photosAct', {'id':act.idActivite})}}><div class="inscription"><h4>Photos</h4></div></a>
 					</div>
-					<div class="col-md-2 col-md-offset-8 text-center">
+					<div class="col-md-2 text-center">
 						{% if app.session.get('roleUser') == 1 %}
 							{% for sub in subs if sub.idInscrit.idUser == app.session.get('idUser') %}
 									{% if act.etatAct.idEtat == 2 %}
@@ -66,8 +60,6 @@
 							{% endif %}
 						{% endif %}
 					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 	<div class="espaceBas"></div>
