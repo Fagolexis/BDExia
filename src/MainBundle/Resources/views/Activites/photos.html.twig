@@ -8,7 +8,7 @@
 
 <main>
     <div class="container">
-        {% for img in list %}
+        {% for img in list  %}
             <div class="row photos">
                     <img class="col col-md-7" src="{{ asset('img/') ~ img.chemin}}" alt="photo_{{act.idActivite}}_{{img.auteurImg.prenom ~ img.auteurImg.nom}}">
                     <div class="photo-details col-md-5">
@@ -33,9 +33,17 @@
                                             <button class="btn btn-default" type="submit" name="submitComm" value="Envoyer">
                                                 <i class="fa fa-paper-plane"></i>
                                             </button>
-                                            <button class="btn btn-default" type="submit" name="likePhoto" value="Envoyer">
+                                            {% for like in img.likesUser %}
+                                                {% if like.idUser == app.session.get('idUser') %}
+                                                <button class="btn btn-default" data-toggle="tooltip" title="Aimée" type="submit" name="likePhoto" value="Envoyer">
+                                                    <i class="fa fa-heart-o"></i>
+                                                </button>
+                                                {% endif %}
+                                            {% else %}
+                                                <button class="btn btn-default" data-toggle="tooltip" title="Aimer" type="submit" name="likePhoto" value="Envoyer">
                                                 <i class="fa fa-heart"></i>
-                                            </button>
+                                                </button>
+                                            {% endfor %}
                                         </div>
                                     </div>
                                 </form>

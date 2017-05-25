@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 abstract class DefaultController extends Controller
 {
-    protected function dbUpdate($method, $obj_record)
+    protected function dbUpdate($method, $obj_record="")
     {
     	$em = $this->getDoctrine()->getManager();
     	switch($method) {

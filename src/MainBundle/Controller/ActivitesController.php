@@ -165,7 +165,21 @@ class ActivitesController extends DefaultController
             $idImg = $post->get('idImg');
             $img = $this->getDoctrine()->getRepository('MainBundle:Photos')->findOneByIdImg($idImg);
             $likes = $img->getLikesUser();
-            var_dump($likes);
+            $user = $this->getDoctrine()->getRepository('MainBundle:Users')->findOneByIdUser($Session->get('idUser'));
+            if($likes->isEmpty()) {
+                $img->addLikesUser($user);
+                $user->addLikesImg($img);
+                $this->dbUpdate('up');
+            }
+            else {
+                foreach ($likes as $like) {
+                    if($Session->get('idUser') == $like->getIdUser()) {
+                        $img->removeLikesUser($user);
+                        $user->removeLikesImg($img);
+                        $this->dbUpdate('up');
+                    }
+                }
+            }
         }
         $comment = $this->getDoctrine()->getRepository('MainBundle:Commentaires')->findAll();
         return $this->render('MainBundle:Activites:photos.html.twig', array(
