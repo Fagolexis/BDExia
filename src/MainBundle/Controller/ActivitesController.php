@@ -87,7 +87,7 @@ class ActivitesController extends DefaultController
                 return $this->forward("MainBundle:Activites:show", array(
                     "id" => $idAct));
             }
-            return $this->render('MainBundle:Activites:create_activite.html.twig');
+            return $this->render('MainBundle:Activites:modification_activites.html.twig');
         }
         else {
             return $this->forward("MainBundle:Activites:index");
@@ -175,7 +175,8 @@ class ActivitesController extends DefaultController
         }
         
         if(2 == $Session->get('roleUser')) {
-            $inscrits = $this->getDoctrine()->getRepository("MainBundle:Inscrits")->findByInscritAct($id);
+            $act = $act = $this->getDoctrine()->getRepository("MainBundle:Activites")->findOneByIdActivite($id);
+            $inscrits = $this->getDoctrine()->getRepository("MainBundle:Inscrits")->findBy(array('inscritAct' => $id, 'inscritChoix' => $act->getIdActivite()));
             return $this->render('MainBundle:Activites:inscrits.html.twig', array(
                 "list"=>$inscrits
             ));
@@ -196,8 +197,8 @@ class ActivitesController extends DefaultController
         }
         
         if(2 == $Session->get('roleUser')) {
-            $act = $this->getDoctrine()->getRepository('MainBundle:Users')->findOneByIdActivite($id);
-            return $this->render('MainBundle:Activites:create_activite.html.twig', array(
+            $act = $this->getDoctrine()->getRepository('MainBundle:Activites')->findOneByIdActivite($id);
+            return $this->render('MainBundle:Activites:modification_activites.html.twig', array(
                 'act' => $act
         ));
         }

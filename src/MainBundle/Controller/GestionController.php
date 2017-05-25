@@ -3,11 +3,13 @@
 namespace MainBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class GestionController extends DefaultController
 {
     /**
-     * @Route("/utilisateurs")
+     * @Route("/utilisateurs", name="admin")
      */
     public function indexAction()
     {

@@ -14,7 +14,7 @@ main {
 }
 
 nav {
-	box-shadow: 0px 2px 10px #888888;
+	box-shadow: 0px 0px 10px #888888;
 }
 
 hr {
@@ -126,6 +126,7 @@ footer {
 	text-align: center;
 	position: fixed;
 	bottom: 0;
+	box-shadow: 0px 0px 10px #888888;
 }
 
 footer p {
@@ -325,18 +326,14 @@ p {
 	height: 400px;
 }
 
-.cnxForm input {
+.usefulForm input, .usefulForm select, .usefulForm textarea {
 	margin-bottom : 10px;
 	display: block;
 }
 
-.cnxForm label {
+.usefulForm label {
 	margin-bottom: 5px;
 	display: block;
-}
-
-.cnxForm fieldset input {
-	display: inline-block;
 }
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover {
@@ -415,7 +412,22 @@ p {
 	margin: 5px;
 }
 
-.cnxForm img {
-	width: 150px;
+.usefulForm img {
+	margin: 5px 0;
+	width: 100%;
 	height: auto;
+}
+
+.admin .user {
+	margin: 10px 0;
+	vertical-align: middle;
+}
+
+.admin .user h4, .admin .user h3, .admin .user p {
+	display: inline;
+}
+
+.user-img {
+	height: 30px;
+	width: 30px;
 }

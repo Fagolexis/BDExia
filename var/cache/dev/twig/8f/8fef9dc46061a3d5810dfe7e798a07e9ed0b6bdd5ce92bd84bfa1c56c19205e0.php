@@ -23,73 +23,72 @@ class __TwigTemplate_202f42df0507e7cc0f8ce26b0d2039ed857e632de189d881fd8ad4f5251
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b705f66bcc2ff12adaa6251d1b2582106ab7ad0be2eefb1d385038ab24a11fe9 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_b705f66bcc2ff12adaa6251d1b2582106ab7ad0be2eefb1d385038ab24a11fe9->enter($__internal_b705f66bcc2ff12adaa6251d1b2582106ab7ad0be2eefb1d385038ab24a11fe9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Connexion:connexion.html.twig"));
+        $__internal_f65d5912f5a410be8557263cbedc0a9b0969b6ba240dca4ebd6e3457b2d1ceff = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_f65d5912f5a410be8557263cbedc0a9b0969b6ba240dca4ebd6e3457b2d1ceff->enter($__internal_f65d5912f5a410be8557263cbedc0a9b0969b6ba240dca4ebd6e3457b2d1ceff_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Connexion:connexion.html.twig"));
 
-        $__internal_ffb5a2ad360fe0e46eac24a5b0ede927fbc380b2d9f776420daaf6d57a03d029 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ffb5a2ad360fe0e46eac24a5b0ede927fbc380b2d9f776420daaf6d57a03d029->enter($__internal_ffb5a2ad360fe0e46eac24a5b0ede927fbc380b2d9f776420daaf6d57a03d029_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Connexion:connexion.html.twig"));
+        $__internal_11cd2234ec5751a1255de7a4c2ce0a134236ef96d23572174a4b9dfe1691bbd3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_11cd2234ec5751a1255de7a4c2ce0a134236ef96d23572174a4b9dfe1691bbd3->enter($__internal_11cd2234ec5751a1255de7a4c2ce0a134236ef96d23572174a4b9dfe1691bbd3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Connexion:connexion.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_b705f66bcc2ff12adaa6251d1b2582106ab7ad0be2eefb1d385038ab24a11fe9->leave($__internal_b705f66bcc2ff12adaa6251d1b2582106ab7ad0be2eefb1d385038ab24a11fe9_prof);
+        $__internal_f65d5912f5a410be8557263cbedc0a9b0969b6ba240dca4ebd6e3457b2d1ceff->leave($__internal_f65d5912f5a410be8557263cbedc0a9b0969b6ba240dca4ebd6e3457b2d1ceff_prof);
 
         
-        $__internal_ffb5a2ad360fe0e46eac24a5b0ede927fbc380b2d9f776420daaf6d57a03d029->leave($__internal_ffb5a2ad360fe0e46eac24a5b0ede927fbc380b2d9f776420daaf6d57a03d029_prof);
+        $__internal_11cd2234ec5751a1255de7a4c2ce0a134236ef96d23572174a4b9dfe1691bbd3->leave($__internal_11cd2234ec5751a1255de7a4c2ce0a134236ef96d23572174a4b9dfe1691bbd3_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_436d418fe66181e34410b427183fe53032e4acf88997a4ca5a16a97a8a4047f6 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_436d418fe66181e34410b427183fe53032e4acf88997a4ca5a16a97a8a4047f6->enter($__internal_436d418fe66181e34410b427183fe53032e4acf88997a4ca5a16a97a8a4047f6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_6e1119dc58e0b6039bf16998e467734bd1ed6186e5d31b08ea5c1fd02b395c1e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_6e1119dc58e0b6039bf16998e467734bd1ed6186e5d31b08ea5c1fd02b395c1e->enter($__internal_6e1119dc58e0b6039bf16998e467734bd1ed6186e5d31b08ea5c1fd02b395c1e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_968724a5093007c98d08ce470bc8bf09cc472e360e6ef324432b3069577aa0ad = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_968724a5093007c98d08ce470bc8bf09cc472e360e6ef324432b3069577aa0ad->enter($__internal_968724a5093007c98d08ce470bc8bf09cc472e360e6ef324432b3069577aa0ad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_0662979dc273af00b0e7133e7fed00deeaf5d7468be42a3041b4d0e2389cf18c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_0662979dc273af00b0e7133e7fed00deeaf5d7468be42a3041b4d0e2389cf18c->enter($__internal_0662979dc273af00b0e7133e7fed00deeaf5d7468be42a3041b4d0e2389cf18c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Inscription/Connexion";
         
-        $__internal_968724a5093007c98d08ce470bc8bf09cc472e360e6ef324432b3069577aa0ad->leave($__internal_968724a5093007c98d08ce470bc8bf09cc472e360e6ef324432b3069577aa0ad_prof);
+        $__internal_0662979dc273af00b0e7133e7fed00deeaf5d7468be42a3041b4d0e2389cf18c->leave($__internal_0662979dc273af00b0e7133e7fed00deeaf5d7468be42a3041b4d0e2389cf18c_prof);
 
         
-        $__internal_436d418fe66181e34410b427183fe53032e4acf88997a4ca5a16a97a8a4047f6->leave($__internal_436d418fe66181e34410b427183fe53032e4acf88997a4ca5a16a97a8a4047f6_prof);
+        $__internal_6e1119dc58e0b6039bf16998e467734bd1ed6186e5d31b08ea5c1fd02b395c1e->leave($__internal_6e1119dc58e0b6039bf16998e467734bd1ed6186e5d31b08ea5c1fd02b395c1e_prof);
 
     }
 
     // line 5
     public function block_navCnx($context, array $blocks = array())
     {
-        $__internal_86d8a23d99b1184e807fc0aac31e7fdffee0a7d25a92a2183e579d1266c5d48b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_86d8a23d99b1184e807fc0aac31e7fdffee0a7d25a92a2183e579d1266c5d48b->enter($__internal_86d8a23d99b1184e807fc0aac31e7fdffee0a7d25a92a2183e579d1266c5d48b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navCnx"));
+        $__internal_480ff2985fbb1caf5a071a2332a6bea6dbb29623aa3be30ac7db81181e7e4338 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_480ff2985fbb1caf5a071a2332a6bea6dbb29623aa3be30ac7db81181e7e4338->enter($__internal_480ff2985fbb1caf5a071a2332a6bea6dbb29623aa3be30ac7db81181e7e4338_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navCnx"));
 
-        $__internal_d3264940a629d2000919ab9a15a5f75f4be8a1e05e098fd8e17fc0c764697833 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d3264940a629d2000919ab9a15a5f75f4be8a1e05e098fd8e17fc0c764697833->enter($__internal_d3264940a629d2000919ab9a15a5f75f4be8a1e05e098fd8e17fc0c764697833_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navCnx"));
+        $__internal_5817a23810230fc1fb11b5a1970ea3aa31dfe08d2a08b5d83fb245b5dd0e500b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5817a23810230fc1fb11b5a1970ea3aa31dfe08d2a08b5d83fb245b5dd0e500b->enter($__internal_5817a23810230fc1fb11b5a1970ea3aa31dfe08d2a08b5d83fb245b5dd0e500b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navCnx"));
 
         echo "class=\"active\"";
         
-        $__internal_d3264940a629d2000919ab9a15a5f75f4be8a1e05e098fd8e17fc0c764697833->leave($__internal_d3264940a629d2000919ab9a15a5f75f4be8a1e05e098fd8e17fc0c764697833_prof);
+        $__internal_5817a23810230fc1fb11b5a1970ea3aa31dfe08d2a08b5d83fb245b5dd0e500b->leave($__internal_5817a23810230fc1fb11b5a1970ea3aa31dfe08d2a08b5d83fb245b5dd0e500b_prof);
 
         
-        $__internal_86d8a23d99b1184e807fc0aac31e7fdffee0a7d25a92a2183e579d1266c5d48b->leave($__internal_86d8a23d99b1184e807fc0aac31e7fdffee0a7d25a92a2183e579d1266c5d48b_prof);
+        $__internal_480ff2985fbb1caf5a071a2332a6bea6dbb29623aa3be30ac7db81181e7e4338->leave($__internal_480ff2985fbb1caf5a071a2332a6bea6dbb29623aa3be30ac7db81181e7e4338_prof);
 
     }
 
     // line 7
     public function block_body($context, array $blocks = array())
     {
-        $__internal_cdad2a664852b5b9c01f36b73ff3c4db1c624783de54b5f73770f7de07f9ff0e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_cdad2a664852b5b9c01f36b73ff3c4db1c624783de54b5f73770f7de07f9ff0e->enter($__internal_cdad2a664852b5b9c01f36b73ff3c4db1c624783de54b5f73770f7de07f9ff0e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_c550d9e0d64ef5147d243f24f708d74d390f107d1573fea716e0f901dc37d5e3 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_c550d9e0d64ef5147d243f24f708d74d390f107d1573fea716e0f901dc37d5e3->enter($__internal_c550d9e0d64ef5147d243f24f708d74d390f107d1573fea716e0f901dc37d5e3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_adb49037bf258baf3090ce7a4d9902f281883aad6d43aaa794b93e11463b6294 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_adb49037bf258baf3090ce7a4d9902f281883aad6d43aaa794b93e11463b6294->enter($__internal_adb49037bf258baf3090ce7a4d9902f281883aad6d43aaa794b93e11463b6294_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_61f37b63bfe89021004659586d162b8c20de99582e947217b78c5955b6edd3db = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_61f37b63bfe89021004659586d162b8c20de99582e947217b78c5955b6edd3db->enter($__internal_61f37b63bfe89021004659586d162b8c20de99582e947217b78c5955b6edd3db_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 8
         echo "<main>
 \t<div class=\"container\">
 \t\t<center>
-\t\t<h1>Page de connexion du site du BDE CESI eXia</h1>
 \t\t<h3>";
-        // line 12
+        // line 11
         echo twig_escape_filter($this->env, (isset($context["errormessage"]) ? $context["errormessage"] : $this->getContext($context, "errormessage")), "html", null, true);
         echo "</h3>
 \t\t</center>
@@ -98,57 +97,62 @@ class __TwigTemplate_202f42df0507e7cc0f8ce26b0d2039ed857e632de189d881fd8ad4f5251
 \t\t\t<li><a href=\"#insTab\" data-toggle=\"tab\">Inscription</a></li>
 \t\t</ul>
 \t\t<div class=\"blank formulaire\">
-\t\t\t<div class=\"col-md-offset-4 col-md-8\">
+\t\t\t<div class=\"col-md-offset-3 col-md-6\">
 \t\t\t\t<div class=\"tab-content clearfix\">
 \t\t\t\t\t<div class=\"tab-pane\" id=\"insTab\">
-\t\t\t\t\t\t<form class=\"cnxForm\" action=\"\" method=\"post\">
-\t\t\t\t\t\t\t<label for=\"Nom\">Nom :</label>
-\t\t\t\t\t\t\t<input type=\"text\" name=\"Nom\" placeholder=\"Entrer votre nom de famille\" size=\"30\" required>
-\t\t\t\t\t\t\t<label for=\"Prenom\">Prénom :</label>
-\t\t\t\t\t\t\t<input type=\"text\" name=\"Prenom\" placeholder=\"Entrer votre prénom\" size=\"30\" required>
-\t\t\t\t\t\t\t<fieldset>
-\t\t\t\t\t\t\t\t<label for=\"Date\">Date de naissance :</label>
-\t\t\t\t\t\t\t\t<input type=\"date\" name=\"Naissance\" placeholder=\"JJ\" required>
-\t\t\t\t\t\t\t</fieldset>
-\t\t\t\t\t\t\t<label for=\"Promo\">Promotion :</label>
-\t\t\t\t\t\t\t<select name=\"Promo\">
-\t\t\t\t\t\t\t\t<option value=\"1\">A1</option>
-\t\t\t\t\t\t\t\t<option value=\"2\">A2</option>
-\t\t\t\t\t\t\t\t<option value=\"3\">A3</option>
-\t\t\t\t\t\t\t\t<option value=\"4\">A4</option>
-\t\t\t\t\t\t\t\t<option value=\"5\">A5</option>
-\t\t\t\t\t\t\t</select>
-\t\t\t\t\t\t\t<label for=\"Avatar\">Avatar :</label>
-\t\t\t\t\t\t\t<input type=\"file\" name=\"Avatar\">
-\t\t\t\t\t\t\t<label for=\"Telephone\">Numéro de téléphone :</label>
-\t\t\t\t\t\t\t<input type=\"tel\" name=\"Telephone\" maxlength=\"10\" placeholder=\"Entrer votre numéro de téléphone\" size=\"30\">
-\t\t\t\t\t\t\t<label for=\"Email\">Mail :</label>
-\t\t\t\t\t\t\t<input type=\"email\" name=\"Email\" placeholder=\"Entrer votre adresse mail\" size=\"30\" required>
-\t\t\t\t\t\t\t<label for=\"Mdp\">Mot de passe :</label>
-\t\t\t\t\t\t\t<input type=\"password\" name=\"Mdp\" placeholder=\"Entrer un mot de passe sécurisé\" size=\"30\" required>
-\t\t\t\t\t\t\t<input class=\"btn btn-default\" type=\"submit\" name=\"submitInscription\" value=\"S'inscrire\">
+\t\t\t\t\t\t<form id=\"insForm\" class=\"usefulForm\" action=\"\" method=\"post\">
+\t\t\t\t\t\t\t<div class=\"form-group\">
+\t\t\t\t\t\t\t\t<label class=\"control-label\" for=\"Nom\">Nom :</label>
+\t\t\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" name=\"Nom\" placeholder=\"Entrer votre nom de famille\" size=\"30\" required>
+\t\t\t\t\t\t\t\t<label class=\"control-label\" for=\"Prenom\">Prénom :</label>
+\t\t\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" name=\"Prenom\" placeholder=\"Entrer votre prénom\" size=\"30\" required>
+\t\t\t\t\t\t\t\t<label class=\"control-label\" for=\"Date\">Date de naissance :</label>
+\t\t\t\t\t\t\t\t<input class=\"form-control\" type=\"date\" name=\"Naissance\" required>
+\t\t\t\t\t\t\t\t<label class=\"control-label\" for=\"Promo\">Promotion :</label>
+\t\t\t\t\t\t\t\t<select class=\"form-control\" name=\"Promo\">
+\t\t\t\t\t\t\t\t\t<option value=\"1\">A1</option>
+\t\t\t\t\t\t\t\t\t<option value=\"2\">A2</option>
+\t\t\t\t\t\t\t\t\t<option value=\"3\">A3</option>
+\t\t\t\t\t\t\t\t\t<option value=\"4\">A4</option>
+\t\t\t\t\t\t\t\t\t<option value=\"5\">A5</option>
+\t\t\t\t\t\t\t\t</select>
+\t\t\t\t\t\t\t\t<label class=\"control-label\" for=\"Avatar\">Avatar :</label>
+\t\t\t\t\t\t\t\t<input class=\"form-control\" type=\"file\" name=\"Avatar\">
+\t\t\t\t\t\t\t\t<label class=\"control-label\" for=\"Telephone\">Numéro de téléphone :</label>
+\t\t\t\t\t\t\t\t<input class=\"form-control\" type=\"tel\" name=\"Telephone\" maxlength=\"10\" placeholder=\"Entrer votre numéro de téléphone\" size=\"30\">
+\t\t\t\t\t\t\t\t<label class=\"control-label\" for=\"Email\">Mail :</label>
+\t\t\t\t\t\t\t\t<input class=\"form-control\" type=\"email\" name=\"Email\" placeholder=\"Entrer votre adresse mail\" size=\"30\" required>
+\t\t\t\t\t\t\t\t<label class=\"control-label\" for=\"Mdp\">Mot de passe :</label>
+\t\t\t\t\t\t\t\t<input class=\"form-control\" type=\"password\" name=\"Mdp\" placeholder=\"Entrer un mot de passe sécurisé\" size=\"30\" required>
+\t\t\t\t\t\t\t\t<div class=\"btn-group col-md-6 col-md-offset-4\">
+\t\t\t\t\t\t\t\t\t<input class=\"btn btn-primary\" type=\"submit\" name=\"submitInscription\" value=\"S'inscrire\">
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</form>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"tab-pane active\" id=\"cnxTab\">
-\t\t\t\t\t\t<form class=\"cnxForm\" action=\"\" method=\"post\">
-\t\t\t\t\t\t\t<label for=\"Email\">Mail : </label>
-\t\t\t\t\t\t\t<input name= \"Email\" type=\"email\" placeholder=\"Entrer votre adresse mail\" size=\"30\" required>
-\t\t\t\t\t\t\t<label for=\"Mdp\">Mot de passe : </label>
-\t\t\t\t\t\t\t<input name= \"Mdp\" type=\"password\" placeholder=\"Entrer votre mot de passe\" size=\"30\" required>
-\t\t\t\t\t\t\t<input class=\"btn btn-default\" type=\"submit\" name=\"submitConnexion\" value=\"Se connecter\">
+\t\t\t\t\t\t<form id=\"cnxForm\" class=\"usefulForm\" action=\"\" method=\"post\">
+\t\t\t\t\t\t\t<label class=\"control-label\" for=\"Email\">Mail : </label>
+\t\t\t\t\t\t\t<input class=\"form-control\" name= \"Email\" type=\"email\" placeholder=\"Entrer votre adresse mail\" size=\"30\" required>
+\t\t\t\t\t\t\t<label class=\"control-label\" for=\"Mdp\">Mot de passe : </label>
+\t\t\t\t\t\t\t<input class=\"form-control\" name= \"Mdp\" type=\"password\" placeholder=\"Entrer votre mot de passe\" size=\"30\" required>
+\t\t\t\t\t\t\t<div class=\"btn-group col-md-6 col-md-offset-4\">
+\t\t\t\t\t\t\t\t<input class=\"btn btn-primary\" type=\"submit\" name=\"submitConnexion\" value=\"Se connecter\">
+\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</form>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
   </div>
+  <div class=\"espaceBas\"></div>
 </main>
 ";
         
-        $__internal_adb49037bf258baf3090ce7a4d9902f281883aad6d43aaa794b93e11463b6294->leave($__internal_adb49037bf258baf3090ce7a4d9902f281883aad6d43aaa794b93e11463b6294_prof);
+        $__internal_61f37b63bfe89021004659586d162b8c20de99582e947217b78c5955b6edd3db->leave($__internal_61f37b63bfe89021004659586d162b8c20de99582e947217b78c5955b6edd3db_prof);
 
         
-        $__internal_cdad2a664852b5b9c01f36b73ff3c4db1c624783de54b5f73770f7de07f9ff0e->leave($__internal_cdad2a664852b5b9c01f36b73ff3c4db1c624783de54b5f73770f7de07f9ff0e_prof);
+        $__internal_c550d9e0d64ef5147d243f24f708d74d390f107d1573fea716e0f901dc37d5e3->leave($__internal_c550d9e0d64ef5147d243f24f708d74d390f107d1573fea716e0f901dc37d5e3_prof);
 
     }
 
@@ -164,7 +168,7 @@ class __TwigTemplate_202f42df0507e7cc0f8ce26b0d2039ed857e632de189d881fd8ad4f5251
 
     public function getDebugInfo()
     {
-        return array (  93 => 12,  87 => 8,  78 => 7,  60 => 5,  42 => 3,  11 => 1,);
+        return array (  92 => 11,  87 => 8,  78 => 7,  60 => 5,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -187,7 +191,6 @@ class __TwigTemplate_202f42df0507e7cc0f8ce26b0d2039ed857e632de189d881fd8ad4f5251
 <main>
 \t<div class=\"container\">
 \t\t<center>
-\t\t<h1>Page de connexion du site du BDE CESI eXia</h1>
 \t\t<h3>{{errormessage}}</h3>
 \t\t</center>
 \t\t<ul class=\"nav nav-pills\">
@@ -195,50 +198,55 @@ class __TwigTemplate_202f42df0507e7cc0f8ce26b0d2039ed857e632de189d881fd8ad4f5251
 \t\t\t<li><a href=\"#insTab\" data-toggle=\"tab\">Inscription</a></li>
 \t\t</ul>
 \t\t<div class=\"blank formulaire\">
-\t\t\t<div class=\"col-md-offset-4 col-md-8\">
+\t\t\t<div class=\"col-md-offset-3 col-md-6\">
 \t\t\t\t<div class=\"tab-content clearfix\">
 \t\t\t\t\t<div class=\"tab-pane\" id=\"insTab\">
-\t\t\t\t\t\t<form class=\"cnxForm\" action=\"\" method=\"post\">
-\t\t\t\t\t\t\t<label for=\"Nom\">Nom :</label>
-\t\t\t\t\t\t\t<input type=\"text\" name=\"Nom\" placeholder=\"Entrer votre nom de famille\" size=\"30\" required>
-\t\t\t\t\t\t\t<label for=\"Prenom\">Prénom :</label>
-\t\t\t\t\t\t\t<input type=\"text\" name=\"Prenom\" placeholder=\"Entrer votre prénom\" size=\"30\" required>
-\t\t\t\t\t\t\t<fieldset>
-\t\t\t\t\t\t\t\t<label for=\"Date\">Date de naissance :</label>
-\t\t\t\t\t\t\t\t<input type=\"date\" name=\"Naissance\" placeholder=\"JJ\" required>
-\t\t\t\t\t\t\t</fieldset>
-\t\t\t\t\t\t\t<label for=\"Promo\">Promotion :</label>
-\t\t\t\t\t\t\t<select name=\"Promo\">
-\t\t\t\t\t\t\t\t<option value=\"1\">A1</option>
-\t\t\t\t\t\t\t\t<option value=\"2\">A2</option>
-\t\t\t\t\t\t\t\t<option value=\"3\">A3</option>
-\t\t\t\t\t\t\t\t<option value=\"4\">A4</option>
-\t\t\t\t\t\t\t\t<option value=\"5\">A5</option>
-\t\t\t\t\t\t\t</select>
-\t\t\t\t\t\t\t<label for=\"Avatar\">Avatar :</label>
-\t\t\t\t\t\t\t<input type=\"file\" name=\"Avatar\">
-\t\t\t\t\t\t\t<label for=\"Telephone\">Numéro de téléphone :</label>
-\t\t\t\t\t\t\t<input type=\"tel\" name=\"Telephone\" maxlength=\"10\" placeholder=\"Entrer votre numéro de téléphone\" size=\"30\">
-\t\t\t\t\t\t\t<label for=\"Email\">Mail :</label>
-\t\t\t\t\t\t\t<input type=\"email\" name=\"Email\" placeholder=\"Entrer votre adresse mail\" size=\"30\" required>
-\t\t\t\t\t\t\t<label for=\"Mdp\">Mot de passe :</label>
-\t\t\t\t\t\t\t<input type=\"password\" name=\"Mdp\" placeholder=\"Entrer un mot de passe sécurisé\" size=\"30\" required>
-\t\t\t\t\t\t\t<input class=\"btn btn-default\" type=\"submit\" name=\"submitInscription\" value=\"S'inscrire\">
+\t\t\t\t\t\t<form id=\"insForm\" class=\"usefulForm\" action=\"\" method=\"post\">
+\t\t\t\t\t\t\t<div class=\"form-group\">
+\t\t\t\t\t\t\t\t<label class=\"control-label\" for=\"Nom\">Nom :</label>
+\t\t\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" name=\"Nom\" placeholder=\"Entrer votre nom de famille\" size=\"30\" required>
+\t\t\t\t\t\t\t\t<label class=\"control-label\" for=\"Prenom\">Prénom :</label>
+\t\t\t\t\t\t\t\t<input class=\"form-control\" type=\"text\" name=\"Prenom\" placeholder=\"Entrer votre prénom\" size=\"30\" required>
+\t\t\t\t\t\t\t\t<label class=\"control-label\" for=\"Date\">Date de naissance :</label>
+\t\t\t\t\t\t\t\t<input class=\"form-control\" type=\"date\" name=\"Naissance\" required>
+\t\t\t\t\t\t\t\t<label class=\"control-label\" for=\"Promo\">Promotion :</label>
+\t\t\t\t\t\t\t\t<select class=\"form-control\" name=\"Promo\">
+\t\t\t\t\t\t\t\t\t<option value=\"1\">A1</option>
+\t\t\t\t\t\t\t\t\t<option value=\"2\">A2</option>
+\t\t\t\t\t\t\t\t\t<option value=\"3\">A3</option>
+\t\t\t\t\t\t\t\t\t<option value=\"4\">A4</option>
+\t\t\t\t\t\t\t\t\t<option value=\"5\">A5</option>
+\t\t\t\t\t\t\t\t</select>
+\t\t\t\t\t\t\t\t<label class=\"control-label\" for=\"Avatar\">Avatar :</label>
+\t\t\t\t\t\t\t\t<input class=\"form-control\" type=\"file\" name=\"Avatar\">
+\t\t\t\t\t\t\t\t<label class=\"control-label\" for=\"Telephone\">Numéro de téléphone :</label>
+\t\t\t\t\t\t\t\t<input class=\"form-control\" type=\"tel\" name=\"Telephone\" maxlength=\"10\" placeholder=\"Entrer votre numéro de téléphone\" size=\"30\">
+\t\t\t\t\t\t\t\t<label class=\"control-label\" for=\"Email\">Mail :</label>
+\t\t\t\t\t\t\t\t<input class=\"form-control\" type=\"email\" name=\"Email\" placeholder=\"Entrer votre adresse mail\" size=\"30\" required>
+\t\t\t\t\t\t\t\t<label class=\"control-label\" for=\"Mdp\">Mot de passe :</label>
+\t\t\t\t\t\t\t\t<input class=\"form-control\" type=\"password\" name=\"Mdp\" placeholder=\"Entrer un mot de passe sécurisé\" size=\"30\" required>
+\t\t\t\t\t\t\t\t<div class=\"btn-group col-md-6 col-md-offset-4\">
+\t\t\t\t\t\t\t\t\t<input class=\"btn btn-primary\" type=\"submit\" name=\"submitInscription\" value=\"S'inscrire\">
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</form>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"tab-pane active\" id=\"cnxTab\">
-\t\t\t\t\t\t<form class=\"cnxForm\" action=\"\" method=\"post\">
-\t\t\t\t\t\t\t<label for=\"Email\">Mail : </label>
-\t\t\t\t\t\t\t<input name= \"Email\" type=\"email\" placeholder=\"Entrer votre adresse mail\" size=\"30\" required>
-\t\t\t\t\t\t\t<label for=\"Mdp\">Mot de passe : </label>
-\t\t\t\t\t\t\t<input name= \"Mdp\" type=\"password\" placeholder=\"Entrer votre mot de passe\" size=\"30\" required>
-\t\t\t\t\t\t\t<input class=\"btn btn-default\" type=\"submit\" name=\"submitConnexion\" value=\"Se connecter\">
+\t\t\t\t\t\t<form id=\"cnxForm\" class=\"usefulForm\" action=\"\" method=\"post\">
+\t\t\t\t\t\t\t<label class=\"control-label\" for=\"Email\">Mail : </label>
+\t\t\t\t\t\t\t<input class=\"form-control\" name= \"Email\" type=\"email\" placeholder=\"Entrer votre adresse mail\" size=\"30\" required>
+\t\t\t\t\t\t\t<label class=\"control-label\" for=\"Mdp\">Mot de passe : </label>
+\t\t\t\t\t\t\t<input class=\"form-control\" name= \"Mdp\" type=\"password\" placeholder=\"Entrer votre mot de passe\" size=\"30\" required>
+\t\t\t\t\t\t\t<div class=\"btn-group col-md-6 col-md-offset-4\">
+\t\t\t\t\t\t\t\t<input class=\"btn btn-primary\" type=\"submit\" name=\"submitConnexion\" value=\"Se connecter\">
+\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</form>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
   </div>
+  <div class=\"espaceBas\"></div>
 </main>
 {% endblock %}
 ", "MainBundle:Connexion:connexion.html.twig", "C:\\wamp64\\www\\bdexia\\src\\MainBundle/Resources/views/Connexion/connexion.html.twig");

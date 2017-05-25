@@ -186,9 +186,9 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         if (0 === strpos($pathinfo, '/utilisateurs')) {
-            // main_gestion_index
+            // admin
             if ($pathinfo === '/utilisateurs') {
-                return array (  '_controller' => 'MainBundle\\Controller\\GestionController::indexAction',  '_route' => 'main_gestion_index',);
+                return array (  '_controller' => 'MainBundle\\Controller\\GestionController::indexAction',  '_route' => 'admin',);
             }
 
             // profil

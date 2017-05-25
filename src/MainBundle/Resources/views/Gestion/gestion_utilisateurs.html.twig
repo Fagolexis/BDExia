@@ -1,7 +1,23 @@
-{% extends "::base.html.twig" %}
+{% extends "MainBundle::base.html.twig" %}
 
 {% block title %}MainBundle:Gestion:gestionUtilisateurs{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Gestion:gestionUtilisateurs page</h1>
+<main>
+	<div class="container blank admin">
+		<div class="col-md-8">
+			{% for user in list %}
+				<div class="user">
+					<p>{{user.idUser}} - </p>
+					<img class="user-img" src="{{asset('img/')}}
+					{% if user.avatarUser != "" %}{{user.avatarUser}}{% else %}avatar.jpg{% endif %}" alt="avatar utilisateur" title="{{user.nom ~ user.prenom}}">
+					<p>{{user.nom}}</p>
+					<p>{{user.prenom}}</p>
+					<p> - </p>
+					<p>{{user.roleUser.role}}</p>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</main>
 {% endblock %}

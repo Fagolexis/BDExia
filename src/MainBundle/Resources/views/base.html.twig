@@ -29,6 +29,9 @@
                         <li><a {% block navBoutique %}{% endblock %} href="{{path('boutique')}}">Boutique</a></li>
                         {% if app.session.get('idUser') %}
                             <li><a {% block navProfil %}{% endblock %} href="{{path('profil', {'id':app.session.get('idUser')})}}">Profil</a></li>
+                            {% if app.session.get('roleUser') == 3 %}
+                                <li><a {% block navAdmin %}{% endblock %} href="{{path('admin')}}">Administration</a></li>
+                            {% endif %}
                             <li><a {% block navDeco %}{% endblock %} href="{{path('deco')}}">Déconnexion</a></li>
                         {% else %}
                             <li><a {% block navCnx %}{% endblock %} href="{{path('cnx')}}">Connexion</a></li>

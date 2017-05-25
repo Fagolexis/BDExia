@@ -23,65 +23,65 @@ class __TwigTemplate_813b907beeca6e3685f29ff13b9b2a883aecb1e3991f5735b65afe0db89
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_feaf9526f2081ce548bb63f112e820f1274a5e98eced2d4c369f3c4dda89309c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_feaf9526f2081ce548bb63f112e820f1274a5e98eced2d4c369f3c4dda89309c->enter($__internal_feaf9526f2081ce548bb63f112e820f1274a5e98eced2d4c369f3c4dda89309c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Activites:details.html.twig"));
+        $__internal_78041a6b15fcd98f05c822a897402d0089f09a0f6a4acb5fbfac67858d5c7ba9 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_78041a6b15fcd98f05c822a897402d0089f09a0f6a4acb5fbfac67858d5c7ba9->enter($__internal_78041a6b15fcd98f05c822a897402d0089f09a0f6a4acb5fbfac67858d5c7ba9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Activites:details.html.twig"));
 
-        $__internal_fda34452d08d89a8ce9dad49c28ce2a614741bd50ee4c6b007e5b2d799af538b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_fda34452d08d89a8ce9dad49c28ce2a614741bd50ee4c6b007e5b2d799af538b->enter($__internal_fda34452d08d89a8ce9dad49c28ce2a614741bd50ee4c6b007e5b2d799af538b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Activites:details.html.twig"));
+        $__internal_c7202d03a2f1389a422b4a856f2f169389720024358cae91573b3955e6f505d4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c7202d03a2f1389a422b4a856f2f169389720024358cae91573b3955e6f505d4->enter($__internal_c7202d03a2f1389a422b4a856f2f169389720024358cae91573b3955e6f505d4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Activites:details.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_feaf9526f2081ce548bb63f112e820f1274a5e98eced2d4c369f3c4dda89309c->leave($__internal_feaf9526f2081ce548bb63f112e820f1274a5e98eced2d4c369f3c4dda89309c_prof);
+        $__internal_78041a6b15fcd98f05c822a897402d0089f09a0f6a4acb5fbfac67858d5c7ba9->leave($__internal_78041a6b15fcd98f05c822a897402d0089f09a0f6a4acb5fbfac67858d5c7ba9_prof);
 
         
-        $__internal_fda34452d08d89a8ce9dad49c28ce2a614741bd50ee4c6b007e5b2d799af538b->leave($__internal_fda34452d08d89a8ce9dad49c28ce2a614741bd50ee4c6b007e5b2d799af538b_prof);
+        $__internal_c7202d03a2f1389a422b4a856f2f169389720024358cae91573b3955e6f505d4->leave($__internal_c7202d03a2f1389a422b4a856f2f169389720024358cae91573b3955e6f505d4_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_b4b019350c8443e5ec4fdb6b48b97c8d46c42c652abaac647561c221fa4bab43 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_b4b019350c8443e5ec4fdb6b48b97c8d46c42c652abaac647561c221fa4bab43->enter($__internal_b4b019350c8443e5ec4fdb6b48b97c8d46c42c652abaac647561c221fa4bab43_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_e0127e1dcddef7531059434be8b85441874d8ffaaca829586ff50d0f029467b2 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_e0127e1dcddef7531059434be8b85441874d8ffaaca829586ff50d0f029467b2->enter($__internal_e0127e1dcddef7531059434be8b85441874d8ffaaca829586ff50d0f029467b2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_4902d88278155e87521a15926b93667b1293f722bfcba5cdd2d8d68f4698aead = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4902d88278155e87521a15926b93667b1293f722bfcba5cdd2d8d68f4698aead->enter($__internal_4902d88278155e87521a15926b93667b1293f722bfcba5cdd2d8d68f4698aead_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_a41789b110a28da726a6f535d937ead43c786dc6e16ab4eb609ca75e154a3a1d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a41789b110a28da726a6f535d937ead43c786dc6e16ab4eb609ca75e154a3a1d->enter($__internal_a41789b110a28da726a6f535d937ead43c786dc6e16ab4eb609ca75e154a3a1d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Activité";
         
-        $__internal_4902d88278155e87521a15926b93667b1293f722bfcba5cdd2d8d68f4698aead->leave($__internal_4902d88278155e87521a15926b93667b1293f722bfcba5cdd2d8d68f4698aead_prof);
+        $__internal_a41789b110a28da726a6f535d937ead43c786dc6e16ab4eb609ca75e154a3a1d->leave($__internal_a41789b110a28da726a6f535d937ead43c786dc6e16ab4eb609ca75e154a3a1d_prof);
 
         
-        $__internal_b4b019350c8443e5ec4fdb6b48b97c8d46c42c652abaac647561c221fa4bab43->leave($__internal_b4b019350c8443e5ec4fdb6b48b97c8d46c42c652abaac647561c221fa4bab43_prof);
+        $__internal_e0127e1dcddef7531059434be8b85441874d8ffaaca829586ff50d0f029467b2->leave($__internal_e0127e1dcddef7531059434be8b85441874d8ffaaca829586ff50d0f029467b2_prof);
 
     }
 
     // line 5
     public function block_navActivites($context, array $blocks = array())
     {
-        $__internal_7cd9e470c5604d1b2b2070d1b42b3b4f700fd9db5a510adb886fbd713a8cf59b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_7cd9e470c5604d1b2b2070d1b42b3b4f700fd9db5a510adb886fbd713a8cf59b->enter($__internal_7cd9e470c5604d1b2b2070d1b42b3b4f700fd9db5a510adb886fbd713a8cf59b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navActivites"));
+        $__internal_e2b4f021a2ec215afdb8acf7eaf0cd331b86208815edc061f075201bbd8f85e9 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_e2b4f021a2ec215afdb8acf7eaf0cd331b86208815edc061f075201bbd8f85e9->enter($__internal_e2b4f021a2ec215afdb8acf7eaf0cd331b86208815edc061f075201bbd8f85e9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navActivites"));
 
-        $__internal_feeeabec025edbf3fb4d66abc7b5f79655cc5e936253c95df1c65ab36dc66efb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_feeeabec025edbf3fb4d66abc7b5f79655cc5e936253c95df1c65ab36dc66efb->enter($__internal_feeeabec025edbf3fb4d66abc7b5f79655cc5e936253c95df1c65ab36dc66efb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navActivites"));
+        $__internal_f98f8434f150d4cf1d0007633e9d2a3f5679eea7d96d7638ef8df378a9054eff = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f98f8434f150d4cf1d0007633e9d2a3f5679eea7d96d7638ef8df378a9054eff->enter($__internal_f98f8434f150d4cf1d0007633e9d2a3f5679eea7d96d7638ef8df378a9054eff_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navActivites"));
 
         echo "class=\"active\"";
         
-        $__internal_feeeabec025edbf3fb4d66abc7b5f79655cc5e936253c95df1c65ab36dc66efb->leave($__internal_feeeabec025edbf3fb4d66abc7b5f79655cc5e936253c95df1c65ab36dc66efb_prof);
+        $__internal_f98f8434f150d4cf1d0007633e9d2a3f5679eea7d96d7638ef8df378a9054eff->leave($__internal_f98f8434f150d4cf1d0007633e9d2a3f5679eea7d96d7638ef8df378a9054eff_prof);
 
         
-        $__internal_7cd9e470c5604d1b2b2070d1b42b3b4f700fd9db5a510adb886fbd713a8cf59b->leave($__internal_7cd9e470c5604d1b2b2070d1b42b3b4f700fd9db5a510adb886fbd713a8cf59b_prof);
+        $__internal_e2b4f021a2ec215afdb8acf7eaf0cd331b86208815edc061f075201bbd8f85e9->leave($__internal_e2b4f021a2ec215afdb8acf7eaf0cd331b86208815edc061f075201bbd8f85e9_prof);
 
     }
 
     // line 7
     public function block_body($context, array $blocks = array())
     {
-        $__internal_b60c8908507a4f7886bbe04cd23e8aa6e5590edf9645fa73461fde75517558cb = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_b60c8908507a4f7886bbe04cd23e8aa6e5590edf9645fa73461fde75517558cb->enter($__internal_b60c8908507a4f7886bbe04cd23e8aa6e5590edf9645fa73461fde75517558cb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_ee3055cc2f463c48f434f1a75dae575ba2f9bb964de2e392ab98d671b153fb08 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_ee3055cc2f463c48f434f1a75dae575ba2f9bb964de2e392ab98d671b153fb08->enter($__internal_ee3055cc2f463c48f434f1a75dae575ba2f9bb964de2e392ab98d671b153fb08_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_ac98ea43cc404f2dfc2b71c32b2f927f28b6d0a81342d214ae9f6faf95492812 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ac98ea43cc404f2dfc2b71c32b2f927f28b6d0a81342d214ae9f6faf95492812->enter($__internal_ac98ea43cc404f2dfc2b71c32b2f927f28b6d0a81342d214ae9f6faf95492812_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_5e669d8dd881f4ee71bce39b2306ca088246dc456d0df276262eacec256ba631 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5e669d8dd881f4ee71bce39b2306ca088246dc456d0df276262eacec256ba631->enter($__internal_5e669d8dd881f4ee71bce39b2306ca088246dc456d0df276262eacec256ba631_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 8
         echo "
@@ -99,126 +99,155 @@ class __TwigTemplate_813b907beeca6e3685f29ff13b9b2a883aecb1e3991f5735b65afe0db89
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/"), "html", null, true);
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["couv"]) ? $context["couv"] : $this->getContext($context, "couv")), "chemin", array()), "html", null, true);
         echo "\" alt=\"\">
-\t\t\t\t<div class=\"col-md-8 col-md-offset-2\">
-\t\t\t\t\t<h4>";
-        // line 17
+\t\t\t\t<div class=\"row\">
+\t\t\t\t\t<div class=\"col-md-8 col-md-offset-2\">
+\t\t\t\t\t\t<h4>";
+        // line 18
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["act"]) ? $context["act"] : $this->getContext($context, "act")), "descriptionActivite", array()), "html", null, true);
         echo "</h4>
+\t\t\t\t\t</div>
 \t\t\t\t</div>
-\t\t\t\t<div class=\"col-md-4 text-center\">
-\t\t\t\t\t<h4>Où ?</h4>
-\t\t\t\t\t<p>";
-        // line 21
+\t\t\t\t<hr>
+\t\t\t\t<div class=\"text-center\">
+\t\t\t\t\t<div class=\"row\">
+\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t<h4>Où ?</h4>
+\t\t\t\t\t\t\t<p>";
+        // line 26
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["act"]) ? $context["act"] : $this->getContext($context, "act")), "lieu", array()), "html", null, true);
         echo "</p>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col-md-4 text-center\">
-\t\t\t\t\t<h4>Quand ?</h4>
-\t\t\t\t\t<p>";
-        // line 25
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t<h4>Quand ?</h4>
+\t\t\t\t\t\t\t<p>";
+        // line 30
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["date"]) ? $context["date"] : $this->getContext($context, "date")), "date", array()), "d/m/Y"), "html", null, true);
         echo "</p>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col-md-4 text-center\">
-\t\t\t\t\t<h4>Combien ?</h4>
-\t\t\t\t\t<p>";
-        // line 29
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t<h4>Combien ?</h4>
+\t\t\t\t\t\t\t<p>";
+        // line 34
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["act"]) ? $context["act"] : $this->getContext($context, "act")), "prixActivite", array()), "html", null, true);
         echo "€</p>
-\t\t\t\t</div>
-\t\t\t\t\t<div class=\"col-md-2 col-md-offset-4 text-center\">
-\t\t\t\t\t\t<a href=";
-        // line 32
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("photosAct", array("id" => $this->getAttribute((isset($context["act"]) ? $context["act"] : $this->getContext($context, "act")), "idActivite", array()))), "html", null, true);
-        echo "><div class=\"inscription\"><h4>Photos</h4></div></a>
+\t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"col-md-2 text-center\">
-\t\t\t\t\t\t";
-        // line 35
+\t\t\t\t\t<div class=\"row\">
+\t\t\t\t\t\t<div class=\"col-md-4 col-md-offset-2\">
+\t\t\t\t\t\t\t<h4>Pour combien de personnes ?</h4>
+\t\t\t\t\t\t\t<p>";
+        // line 40
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["act"]) ? $context["act"] : $this->getContext($context, "act")), "inscritsMax", array()), "html", null, true);
+        echo " personnes Max.</p>
+\t\t\t\t\t\t\t<p>Places restantes : ";
+        // line 41
+        echo twig_escape_filter($this->env, ($this->getAttribute((isset($context["act"]) ? $context["act"] : $this->getContext($context, "act")), "inscritsMax", array()) - twig_length_filter($this->env, (isset($context["subs"]) ? $context["subs"] : $this->getContext($context, "subs")))), "html", null, true);
+        echo "</p>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t<h4>Pour qui ?</h4>
+\t\t\t\t\t\t\t<p>";
+        // line 45
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["act"]) ? $context["act"] : $this->getContext($context, "act")), "ageMin", array()), "html", null, true);
+        echo " ans Min.</p>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t\t\t<div class=\"row\">
+\t\t\t\t\t\t<div class=\"btn-group col-md-4 col-md-offset-5 text-center\">
+\t\t\t\t\t\t\t<a class=\"btn btn-default\" href=";
+        // line 51
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("photosAct", array("id" => $this->getAttribute((isset($context["act"]) ? $context["act"] : $this->getContext($context, "act")), "idActivite", array()))), "html", null, true);
+        echo ">
+\t\t\t\t\t\t\t\t<h4>Photos</h4>
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t";
+        // line 54
         if (($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "get", array(0 => "roleUser"), "method") == 1)) {
-            // line 36
-            echo "\t\t\t\t\t\t\t";
+            // line 55
+            echo "\t\t\t\t\t\t\t\t";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable((isset($context["subs"]) ? $context["subs"] : $this->getContext($context, "subs")));
             $context['_iterated'] = false;
             foreach ($context['_seq'] as $context["_key"] => $context["sub"]) {
                 if (($this->getAttribute($this->getAttribute($context["sub"], "idInscrit", array()), "idUser", array()) == $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "get", array(0 => "idUser"), "method"))) {
-                    // line 37
-                    echo "\t\t\t\t\t\t\t\t\t";
+                    // line 56
+                    echo "\t\t\t\t\t\t\t\t\t\t";
                     if (($this->getAttribute($this->getAttribute((isset($context["act"]) ? $context["act"] : $this->getContext($context, "act")), "etatAct", array()), "idEtat", array()) == 2)) {
-                        // line 38
-                        echo "\t\t\t\t\t\t\t\t\t\t<button class=\"inscription\">Voté</button>
-\t\t\t\t\t\t\t\t\t";
-                    } elseif (($this->getAttribute($this->getAttribute(                    // line 39
+                        // line 57
+                        echo "\t\t\t\t\t\t\t\t\t\t\t<h4>Voté</h4>
+\t\t\t\t\t\t\t\t\t\t";
+                    } elseif (($this->getAttribute($this->getAttribute(                    // line 58
 (isset($context["act"]) ? $context["act"] : $this->getContext($context, "act")), "etatAct", array()), "idEtat", array()) == 3)) {
-                        // line 40
-                        echo "\t\t\t\t\t\t\t\t\t\t<button class=\"inscription\">Inscrit</button>
-\t\t\t\t\t\t\t\t\t";
+                        // line 59
+                        echo "\t\t\t\t\t\t\t\t\t\t\t<h4>Inscrit</h4>
+\t\t\t\t\t\t\t\t\t\t";
                     }
-                    // line 42
-                    echo "\t\t\t\t\t\t\t";
+                    // line 61
+                    echo "\t\t\t\t\t\t\t\t";
                     $context['_iterated'] = true;
                 }
             }
             if (!$context['_iterated']) {
-                // line 43
-                echo "\t\t\t\t\t\t\t\t\t";
+                // line 62
+                echo "\t\t\t\t\t\t\t\t\t\t";
                 if (($this->getAttribute($this->getAttribute((isset($context["act"]) ? $context["act"] : $this->getContext($context, "act")), "etatAct", array()), "idEtat", array()) == 2)) {
-                    // line 44
-                    echo "\t\t\t\t\t\t\t\t\t<form action=\"\" method=\"POST\">
-\t\t\t\t\t\t\t\t\t\t<input class=\"inscription\" type=\"submit\" name=\"subAct\" value=\"Voter\">
-\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"info\" placeholder=\"Informations supplémentaires\" size=\"25\">
-\t\t\t\t\t\t\t\t\t</form>
-\t\t\t\t\t\t\t\t\t";
-                } elseif (($this->getAttribute($this->getAttribute(                // line 48
+                    // line 63
+                    echo "\t\t\t\t\t\t\t\t\t\t<form action=\"\" method=\"POST\">
+\t\t\t\t\t\t\t\t\t\t\t<input class=\"btn btn-default\" type=\"submit\" name=\"subAct\" value=\"Voter\">
+\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"info\" placeholder=\"Informations supplémentaires\" size=\"25\">
+\t\t\t\t\t\t\t\t\t\t</form>
+\t\t\t\t\t\t\t\t\t\t";
+                } elseif (($this->getAttribute($this->getAttribute(                // line 67
 (isset($context["act"]) ? $context["act"] : $this->getContext($context, "act")), "etatAct", array()), "idEtat", array()) == 3)) {
-                    // line 49
-                    echo "\t\t\t\t\t\t\t\t\t<form action=\"\" method=\"POST\">
-\t\t\t\t\t\t\t\t\t\t<input class=\"inscription\" type=\"submit\" name=\"subAct\" value=\"S'inscrire\">
-\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"info\" placeholder=\"Informations supplémentaires\" size=\"25\">
-\t\t\t\t\t\t\t\t\t</form>
-\t\t\t\t\t\t\t\t\t";
+                    // line 68
+                    echo "\t\t\t\t\t\t\t\t\t\t<form action=\"\" method=\"POST\">
+\t\t\t\t\t\t\t\t\t\t\t<input class=\"btn btn-default\" type=\"submit\" name=\"subAct\" value=\"S'inscrire\">
+\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"info\" placeholder=\"Informations supplémentaires\" size=\"25\">
+\t\t\t\t\t\t\t\t\t\t</form>
+\t\t\t\t\t\t\t\t\t\t";
                 }
-                // line 54
-                echo "\t\t\t\t\t\t\t";
+                // line 73
+                echo "\t\t\t\t\t\t\t\t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['sub'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 55
-            echo "\t\t\t\t\t\t";
-        } elseif (($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "get", array(0 => "roleUser"), "method") == 2)) {
-            // line 56
+            // line 74
             echo "\t\t\t\t\t\t\t";
+        } elseif (($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "get", array(0 => "roleUser"), "method") == 2)) {
+            // line 75
+            echo "\t\t\t\t\t\t\t\t";
             if (($this->getAttribute($this->getAttribute((isset($context["act"]) ? $context["act"] : $this->getContext($context, "act")), "etatAct", array()), "idEtat", array()) == 2)) {
-                // line 57
-                echo "\t\t\t\t\t\t\t\t<a href=\"";
+                // line 76
+                echo "\t\t\t\t\t\t\t\t\t<a class=\"btn btn-default\" href=\"";
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("subAct", array("id" => $this->getAttribute((isset($context["act"]) ? $context["act"] : $this->getContext($context, "act")), "idActivite", array()))), "html", null, true);
-                echo "\"><button class=\"inscription\">Votes</button></a>
-\t\t\t\t\t\t\t";
-            } elseif (($this->getAttribute($this->getAttribute(            // line 58
+                echo "\"><h4>Votes</h4></a>
+\t\t\t\t\t\t\t\t";
+            } elseif (($this->getAttribute($this->getAttribute(            // line 77
 (isset($context["act"]) ? $context["act"] : $this->getContext($context, "act")), "etatAct", array()), "idEtat", array()) == 3)) {
-                // line 59
-                echo "\t\t\t\t\t\t\t\t<a href=\"";
+                // line 78
+                echo "\t\t\t\t\t\t\t\t\t<a class=\"btn btn-default\" href=\"";
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("subAct", array("id" => $this->getAttribute((isset($context["act"]) ? $context["act"] : $this->getContext($context, "act")), "idActivite", array()))), "html", null, true);
-                echo "\"><button class=\"inscription\">Inscrits</button></a>
-\t\t\t\t\t\t\t";
+                echo "\"><h4>Inscrits</h4></a>
+\t\t\t\t\t\t\t\t";
             }
-            // line 61
-            echo "\t\t\t\t\t\t";
+            // line 80
+            echo "\t\t\t\t\t\t\t";
         }
-        // line 62
-        echo "\t\t\t\t\t</div>
+        // line 81
+        echo "\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
 \t\t</div>
 \t</div>
 \t<div class=\"espaceBas\"></div>
 </main>
 ";
         
-        $__internal_ac98ea43cc404f2dfc2b71c32b2f927f28b6d0a81342d214ae9f6faf95492812->leave($__internal_ac98ea43cc404f2dfc2b71c32b2f927f28b6d0a81342d214ae9f6faf95492812_prof);
+        $__internal_5e669d8dd881f4ee71bce39b2306ca088246dc456d0df276262eacec256ba631->leave($__internal_5e669d8dd881f4ee71bce39b2306ca088246dc456d0df276262eacec256ba631_prof);
 
         
-        $__internal_b60c8908507a4f7886bbe04cd23e8aa6e5590edf9645fa73461fde75517558cb->leave($__internal_b60c8908507a4f7886bbe04cd23e8aa6e5590edf9645fa73461fde75517558cb_prof);
+        $__internal_ee3055cc2f463c48f434f1a75dae575ba2f9bb964de2e392ab98d671b153fb08->leave($__internal_ee3055cc2f463c48f434f1a75dae575ba2f9bb964de2e392ab98d671b153fb08_prof);
 
     }
 
@@ -234,7 +263,7 @@ class __TwigTemplate_813b907beeca6e3685f29ff13b9b2a883aecb1e3991f5735b65afe0db89
 
     public function getDebugInfo()
     {
-        return array (  211 => 62,  208 => 61,  202 => 59,  200 => 58,  195 => 57,  192 => 56,  189 => 55,  183 => 54,  176 => 49,  174 => 48,  168 => 44,  165 => 43,  159 => 42,  155 => 40,  153 => 39,  150 => 38,  147 => 37,  140 => 36,  138 => 35,  132 => 32,  126 => 29,  119 => 25,  112 => 21,  105 => 17,  99 => 15,  94 => 13,  87 => 8,  78 => 7,  60 => 5,  42 => 3,  11 => 1,);
+        return array (  239 => 81,  236 => 80,  230 => 78,  228 => 77,  223 => 76,  220 => 75,  217 => 74,  211 => 73,  204 => 68,  202 => 67,  196 => 63,  193 => 62,  187 => 61,  183 => 59,  181 => 58,  178 => 57,  175 => 56,  168 => 55,  166 => 54,  160 => 51,  151 => 45,  144 => 41,  140 => 40,  131 => 34,  124 => 30,  117 => 26,  106 => 18,  99 => 15,  94 => 13,  87 => 8,  78 => 7,  60 => 5,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -262,52 +291,72 @@ class __TwigTemplate_813b907beeca6e3685f29ff13b9b2a883aecb1e3991f5735b65afe0db89
 \t\t\t\t\t<h2>{{act.nomActivite}}</h2>
 \t\t\t\t</div>
 \t\t\t\t<img class=\"imgAct\" src=\"{{asset('img/')}}{{couv.chemin}}\" alt=\"\">
-\t\t\t\t<div class=\"col-md-8 col-md-offset-2\">
-\t\t\t\t\t<h4>{{act.descriptionActivite}}</h4>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col-md-4 text-center\">
-\t\t\t\t\t<h4>Où ?</h4>
-\t\t\t\t\t<p>{{act.lieu}}</p>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col-md-4 text-center\">
-\t\t\t\t\t<h4>Quand ?</h4>
-\t\t\t\t\t<p>{{date.date|date(\"d/m/Y\")}}</p>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col-md-4 text-center\">
-\t\t\t\t\t<h4>Combien ?</h4>
-\t\t\t\t\t<p>{{act.prixActivite}}€</p>
-\t\t\t\t</div>
-\t\t\t\t\t<div class=\"col-md-2 col-md-offset-4 text-center\">
-\t\t\t\t\t\t<a href={{path('photosAct', {'id':act.idActivite})}}><div class=\"inscription\"><h4>Photos</h4></div></a>
+\t\t\t\t<div class=\"row\">
+\t\t\t\t\t<div class=\"col-md-8 col-md-offset-2\">
+\t\t\t\t\t\t<h4>{{act.descriptionActivite}}</h4>
 \t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"col-md-2 text-center\">
-\t\t\t\t\t\t{% if app.session.get('roleUser') == 1 %}
-\t\t\t\t\t\t\t{% for sub in subs if sub.idInscrit.idUser == app.session.get('idUser') %}
-\t\t\t\t\t\t\t\t\t{% if act.etatAct.idEtat == 2 %}
-\t\t\t\t\t\t\t\t\t\t<button class=\"inscription\">Voté</button>
-\t\t\t\t\t\t\t\t\t{% elseif act.etatAct.idEtat == 3 %}
-\t\t\t\t\t\t\t\t\t\t<button class=\"inscription\">Inscrit</button>
-\t\t\t\t\t\t\t\t\t{% endif %}
-\t\t\t\t\t\t\t{% else %}
-\t\t\t\t\t\t\t\t\t{% if act.etatAct.idEtat == 2 %}
-\t\t\t\t\t\t\t\t\t<form action=\"\" method=\"POST\">
-\t\t\t\t\t\t\t\t\t\t<input class=\"inscription\" type=\"submit\" name=\"subAct\" value=\"Voter\">
-\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"info\" placeholder=\"Informations supplémentaires\" size=\"25\">
-\t\t\t\t\t\t\t\t\t</form>
-\t\t\t\t\t\t\t\t\t{% elseif act.etatAct.idEtat == 3 %}
-\t\t\t\t\t\t\t\t\t<form action=\"\" method=\"POST\">
-\t\t\t\t\t\t\t\t\t\t<input class=\"inscription\" type=\"submit\" name=\"subAct\" value=\"S'inscrire\">
-\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"info\" placeholder=\"Informations supplémentaires\" size=\"25\">
-\t\t\t\t\t\t\t\t\t</form>
-\t\t\t\t\t\t\t\t\t{% endif %}
-\t\t\t\t\t\t\t{% endfor %}
-\t\t\t\t\t\t{% elseif app.session.get('roleUser') == 2 %}
-\t\t\t\t\t\t\t{% if act.etatAct.idEtat == 2 %}
-\t\t\t\t\t\t\t\t<a href=\"{{path('subAct', {'id' : act.idActivite})}}\"><button class=\"inscription\">Votes</button></a>
-\t\t\t\t\t\t\t{% elseif act.etatAct.idEtat == 3 %}
-\t\t\t\t\t\t\t\t<a href=\"{{path('subAct', {'id' : act.idActivite})}}\"><button class=\"inscription\">Inscrits</button></a>
+\t\t\t\t</div>
+\t\t\t\t<hr>
+\t\t\t\t<div class=\"text-center\">
+\t\t\t\t\t<div class=\"row\">
+\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t<h4>Où ?</h4>
+\t\t\t\t\t\t\t<p>{{act.lieu}}</p>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t<h4>Quand ?</h4>
+\t\t\t\t\t\t\t<p>{{date.date|date(\"d/m/Y\")}}</p>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t<h4>Combien ?</h4>
+\t\t\t\t\t\t\t<p>{{act.prixActivite}}€</p>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"row\">
+\t\t\t\t\t\t<div class=\"col-md-4 col-md-offset-2\">
+\t\t\t\t\t\t\t<h4>Pour combien de personnes ?</h4>
+\t\t\t\t\t\t\t<p>{{act.inscritsMax}} personnes Max.</p>
+\t\t\t\t\t\t\t<p>Places restantes : {{act.inscritsMax - subs|length}}</p>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t<h4>Pour qui ?</h4>
+\t\t\t\t\t\t\t<p>{{act.ageMin}} ans Min.</p>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t\t\t<div class=\"row\">
+\t\t\t\t\t\t<div class=\"btn-group col-md-4 col-md-offset-5 text-center\">
+\t\t\t\t\t\t\t<a class=\"btn btn-default\" href={{path('photosAct', {'id':act.idActivite})}}>
+\t\t\t\t\t\t\t\t<h4>Photos</h4>
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t{% if app.session.get('roleUser') == 1 %}
+\t\t\t\t\t\t\t\t{% for sub in subs if sub.idInscrit.idUser == app.session.get('idUser') %}
+\t\t\t\t\t\t\t\t\t\t{% if act.etatAct.idEtat == 2 %}
+\t\t\t\t\t\t\t\t\t\t\t<h4>Voté</h4>
+\t\t\t\t\t\t\t\t\t\t{% elseif act.etatAct.idEtat == 3 %}
+\t\t\t\t\t\t\t\t\t\t\t<h4>Inscrit</h4>
+\t\t\t\t\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t\t\t{% else %}
+\t\t\t\t\t\t\t\t\t\t{% if act.etatAct.idEtat == 2 %}
+\t\t\t\t\t\t\t\t\t\t<form action=\"\" method=\"POST\">
+\t\t\t\t\t\t\t\t\t\t\t<input class=\"btn btn-default\" type=\"submit\" name=\"subAct\" value=\"Voter\">
+\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"info\" placeholder=\"Informations supplémentaires\" size=\"25\">
+\t\t\t\t\t\t\t\t\t\t</form>
+\t\t\t\t\t\t\t\t\t\t{% elseif act.etatAct.idEtat == 3 %}
+\t\t\t\t\t\t\t\t\t\t<form action=\"\" method=\"POST\">
+\t\t\t\t\t\t\t\t\t\t\t<input class=\"btn btn-default\" type=\"submit\" name=\"subAct\" value=\"S'inscrire\">
+\t\t\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"info\" placeholder=\"Informations supplémentaires\" size=\"25\">
+\t\t\t\t\t\t\t\t\t\t</form>
+\t\t\t\t\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t\t\t{% endfor %}
+\t\t\t\t\t\t\t{% elseif app.session.get('roleUser') == 2 %}
+\t\t\t\t\t\t\t\t{% if act.etatAct.idEtat == 2 %}
+\t\t\t\t\t\t\t\t\t<a class=\"btn btn-default\" href=\"{{path('subAct', {'id' : act.idActivite})}}\"><h4>Votes</h4></a>
+\t\t\t\t\t\t\t\t{% elseif act.etatAct.idEtat == 3 %}
+\t\t\t\t\t\t\t\t\t<a class=\"btn btn-default\" href=\"{{path('subAct', {'id' : act.idActivite})}}\"><h4>Inscrits</h4></a>
+\t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t{% endif %}
-\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t</div>
 \t</div>

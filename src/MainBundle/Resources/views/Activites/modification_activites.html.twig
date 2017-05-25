@@ -1,13 +1,57 @@
-{% extends "::base.html.twig" %}
+{% extends "MainBundle::base.html.twig" %}
 
-{% block title %}MainBundle:Activites:modificationActivites{% endblock %}
+{% block title %}Produit{% endblock %}
 
 {% block navActivites %}class="active"{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Activites:modificationActivites page</h1>
-<h2>Vous voulez modifier l'activitée dont l'ID est {{activite}}</h2>
-{% for user in users %}
-<h3>{{user.nom}}&nbsp;{{user.prenom}}&nbsp;{{user.roleUser.role}}</h3>
-{% endfor %}
+<main>
+	<div class="container blank formulaire">
+		<div class="col-md-6 col-md-offset-3">
+			<form id="actForm" class="usefulForm" enctype="multipart/form-data" method="post" action="">
+				<div class="form-group">
+					<label class="control-label" for="Titre">Titre :</label>
+					<input class="form-control" type="text" name="titre" placeholder="Entrer un titre de l'activité" size="30"
+					{% if act.nomActivite is defined %}value="{{act.nomActivite}}"{% endif %} required>
+					<label class="control-label" for="Description">Description :</label>
+					<textarea class="form-control" name="desc" placeholder="Entrer un description de l'activité" required>{% if act.descriptionActivite is defined %}{{act.descriptionActivite}}{% endif %}</textarea>
+					<label class="control-label" for="imgActCouv">Image de couverture :</label>
+					{% if act.imgAct is defined %}
+						{% for img in act.imgAct if img.typeImg.idType == 1 %}
+							<img src="{{asset('img/')}}{{img.chemin}}" alt="image produit" title="{{act.nomActivite}}">
+						{% endfor %}
+					{% endif %}
+					<input class="form-control" type="file" name="imgActCouv" required>
+					<label class="control-label" for="Lieu">Lieu :</label>
+					<textarea class="form-control" name="lieu" placeholder="Entrer un lieu pour l'activité" required>{% if act.lieu is defined %}{{act.lieu}}{% endif %}</textarea>
+					<label class="control-label" for="Date">Date :</label>
+					<input class="form-control" type="datetime" name="date" placeholder="Entrer une date de l'activité"
+					{% if act.idDateAct is defined %}
+						{% for date in act.idDateAct if date.typeDate.idType == 2 %}
+							value="{{date.date|date('H:i:s d/m/Y')}}"
+						{% endfor %}
+					{% endif %} required>
+					<label class="control-label" for="Prix">Prix (€) :</label>
+					<input class="form-control" type="number" step="0,01" name="prix" placeholder="Entrer un prix" size="5"
+					{% if act.prixActivite is defined %}value="{{act.prixActivite}}"{% endif %} required>
+					<label class="control-label" for="Pers">Nombre de personnes maximum :</label>
+					<input class="form-control" type="number" name="sub" placeholder="Nb. max." size="5"
+					{% if act.inscritsMax is defined %}value="{{act.inscritsMax}}"{% endif %} required>
+					<label class="control-label" for="Age">Age minimum :</label>
+					<input class="form-control" type="number" name="age" placeholder="Age mini." size="2"
+					{% if act.ageMin is defined %}value="{{act.ageMin}}"{% endif %} required>
+				</div>
+			</form>
+			<div class="btn-group col-md-6 col-md-offset-4">
+			{% if act.idActivite is defined %}
+				<input form="actForm" type="submit" class="btn btn-primary" name="modAct" value="Modifier">
+				<input form="actForm" type="submit" class="btn btn-primary" name="delAct" value="Supprimer">
+			{% else %}
+				<input form="actForm" type="submit" class="btn btn-primary" name="addAct" value="Enregistrer">
+			{% endif %}	
+			</div>
+		</div>
+	</div>
+	<div class="espaceBas"></div>
+</main>
 {% endblock %}
