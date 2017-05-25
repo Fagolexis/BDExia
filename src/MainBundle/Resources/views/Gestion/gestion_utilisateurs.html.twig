@@ -37,8 +37,8 @@
 								<td>{{user.prenom}}</td>
 								<td>{{user.roleUser.role}}</td>
 								<td class="text-center"><a href="{{path('profil', {'id': user.idUser})}}"><button type="button" class="btn btn-default"><i class="fa fa-user"></i></button></a></td>
-									<td class="text-center"><button type="button" data-toggle="tooltip" title="Vous ne pouvez pas changer votre rôle" class="noclick btn"><i class="fa fa-minus"></i></button></td>
-									<td class="text-center"><button type="button" data-toggle="tooltip" title="Vous ne pouvez pas supprimer votre compte" class="btn"><i class="fa fa-minus"></i></button></td>
+									<td class="text-center"><button type="button" data-toggle="tooltip" title="Vous ne pouvez pas changer votre rôle" class="noclick btn btn-warning" disabled><i class="fa fa-arrow-down"></i></button></td>
+									<td class="text-center"><button type="button" data-toggle="tooltip" title="Vous ne pouvez pas supprimer votre compte" class="noclick btn btn-danger" disabled><i class="fa fa-ban"></i></button></td>
 							</tr>
 						{% else %}
 							<tr class="{% if user.roleUser.idRole == 2 %}info{% elseif user.roleUser.idRole == 3 %} danger{% endif %} user">
@@ -51,8 +51,8 @@
 								<td class="text-center"><a href="{{path('profil', {'id': user.idUser})}}"><button type="button" class="btn btn-default"><i class="fa fa-user"></i></button></a></td>
 								<input type="hidden" value="{{user.idUser}}" name="idUser">
 								{% if user.roleUser.idRole == 3 %}
-									<td class="text-center"><button type="button" data-toggle="tooltip" title="Vous ne pouvez pas changer le rôle d'un membre du CESI" class="noclick btn"><i class="fa fa-minus"></i></button></td>
-									<td class="text-center"><button type="button" data-toggle="tooltip" title="Vous ne pouvez pas supprimer un membre du CESI" class="btn"><i class="fa fa-minus"></i></button></td>
+									<td class="text-center"><button type="button" data-toggle="tooltip" title="Vous ne pouvez pas changer le rôle d'un membre du CESI" class="noclick btn btn-warning" disabled><i class="fa fa-arrow-down"></i></button></td>
+									<td class="text-center"><button type="button" data-toggle="tooltip" title="Vous ne pouvez pas supprimer un membre du CESI" class="noclick btn btn-danger" disabled><i class="fa fa-ban"></i></button></td>
 								{% elseif user.roleUser.idRole == 2 %}
 									<td class="text-center"><button type="submit" name="downUser" value="downUser" data-toggle="tooltip" title="Passer à étudiant" class="btn btn-warning"><i class="fa fa-arrow-down"></i></button></td>
 									<td class="text-center"><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#suppModal{{user.idUser}}"><i class="fa fa-ban"></i></button></td>

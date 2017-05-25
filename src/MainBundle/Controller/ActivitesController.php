@@ -8,6 +8,7 @@ use MainBundle\Model\ActiviteModel;
 use MainBundle\Model\ImgModel;
 use MainBundle\Model\DateModel;
 use Symfony\Component\HttpFoundation\Session\Session;
+use MainBundle\Entity\Commentaires;
 
 class ActivitesController extends DefaultController
 {
@@ -152,11 +153,21 @@ class ActivitesController extends DefaultController
         $act = $this->getDoctrine()->getRepository("MainBundle:Activites")->findOneByIdActivite($id);
         $photos = $act->getImgAct();
         $comment = array();
-        if($post->get('comAct')!=null) {
+        if($post->get('submitComm') != null && $comment = $post->get('Commentaire')) {
+            $comm = new Commentaires();
+            $idImg = $post->get('idImg');
+            $img = $this->getDoctrine()->getRepository('MainBundle:Photos')->findOneByIdImg($idImg);
+            $user = $this->getDoctrine()->getRepository('MainBundle:Users')->findOneByIdUser($Session->get('idUser'));
+            $comm->setImgComm($img)->setAuteurComm($user)->setCommentaire($comment);
+            $this->dbUpdate('persist', $comm);
         }
-        foreach($photos as $img) {
-            $comment[$img->getIdImg()] = $this->getDoctrine()->getRepository("MainBundle:Commentaires")->findByImgComm($img);
+        if($post->get('likePhoto')) {
+            $idImg = $post->get('idImg');
+            $img = $this->getDoctrine()->getRepository('MainBundle:Photos')->findOneByIdImg($idImg);
+            $likes = $img->getLikesUser();
+            var_dump($likes);
         }
+        $comment = $this->getDoctrine()->getRepository('MainBundle:Commentaires')->findAll();
         return $this->render('MainBundle:Activites:photos.html.twig', array(
             "act" => $act,
             "list" => $photos,

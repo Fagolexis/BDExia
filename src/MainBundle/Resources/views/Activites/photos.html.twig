@@ -17,7 +17,7 @@
                             <h2>{{img.auteurImg.prenom}} {{img.auteurImg.nom}}</h2>
                         </div>
                             <div class="photo-commentaire">
-                        {% for com in coms[img.idImg] %}
+                        {% for com in coms if com.imgComm.idImg == img.idImg %}
                             <div>
                                 <img class="avatar-comm" src="{% if com.auteurComm.avatarUser != NULL %}{{ asset('img/') ~ com.auteurComm.avatarUser.chemin}}{% else %}{{asset('img/avatar.jpg')}}{% endif %}" alt="avatar_{{com.auteurComm.prenom ~ com.auteurComm.nom}}">
                                 {{com.auteurComm.prenom}} {{com.auteurComm.nom}}<br>
@@ -26,8 +26,18 @@
                         {% endfor %}
                             <div>
                                 <form action="" method="post">
-                                    <textarea name="Commentaire" cols="30" rows="2"></textarea>
-                                    <input type="submit" name="submitComm" value=">">
+                                    <div class="input-group">
+                                        <input type="hidden" value="{{img.idImg}}" name="idImg">
+                                        <textarea class="form-control" name="Commentaire"></textarea>
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-default" type="submit" name="submitComm" value="Envoyer">
+                                                <i class="fa fa-paper-plane"></i>
+                                            </button>
+                                            <button class="btn btn-default" type="submit" name="likePhoto" value="Envoyer">
+                                                <i class="fa fa-heart"></i>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
                         </div>

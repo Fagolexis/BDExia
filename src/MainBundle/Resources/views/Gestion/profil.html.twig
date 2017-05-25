@@ -1,8 +1,62 @@
-{% extends "::base.html.twig" %}
+{% extends "MainBundle::base.html.twig" %}
 
-{% block title %}MainBundle:Connexion:profil{% endblock %}
+{% block title %}Inscription/Connexion{% endblock %}
+
+{% block navProfil %}class="active"{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Connexion:profil page</h1>
-<span>votre identifiant d'utilisateur est {{user.idUser}}</span>
+<main>
+	<div class="container">
+		<center>
+			<h1></h1>
+		</center>
+		{% if err is defined %}
+			<div class="alert alter-danger">
+				{{err}}
+			</div>
+		{% endif %}
+		<div class="blank formulaire">
+			<div class="col-md-offset-3 col-md-6">
+					<form id="insForm" class="usefulForm" action="" method="post">
+						<div class="form-group">
+							<label class="control-label" for="Nom">Nom :</label>
+							<input class="form-control" type="text" name="Nom" placeholder="Entrer votre nom de famille"
+							{% if user.nom is defined %}value="{{user.nom}}"{% endif %} {{attr}}>
+							<label class="control-label" for="Prenom">Prénom :</label>
+							<input class="form-control" type="text" name="Prenom" placeholder="Entrer votre prénom"
+							{% if user.prenom is defined %}value="{{user.prenom}}"{% endif %} {{attr}}>
+							<label class="control-label" for="Date">Date de naissance :</label>
+							<input class="form-control" type="date" name="Naissance"
+							{% if user.naissance is defined %}value="{{user.naissance|date('Y-m-d')}}"{% endif %} {{attr}}>
+							<label class="control-label" for="Promo">Promotion :</label>
+							<select class="form-control" name="Promo" {{attr2}}>
+								<option value="1"{% if user.promoUser.idPromo is defined and user.promoUser.idPromo == 1 %}selected{% endif %}>A1</option>
+								<option value="2"{% if user.promoUser.idPromo is defined and user.promoUser.idPromo == 2 %}selected{% endif %}>A2</option>
+								<option value="3"{% if user.promoUser.idPromo is defined and user.promoUser.idPromo == 3 %}selected{% endif %}>A3</option>
+								<option value="4"{% if user.promoUser.idPromo is defined and user.promoUser.idPromo == 4 %}selected{% endif %}>A4</option>
+								<option value="5"{% if user.promoUser.idPromo is defined and user.promoUser.idPromo == 5 %}selected{% endif %}>A5</option>
+							</select>
+							<label class="control-label" for="Avatar">Avatar :</label>
+							{% if user.avatar is defined %}<img src="{{user.avatar.chemin}}" alt="" />{% endif %}
+							<input class="form-control" type="file" name="Avatar" {{attr2}}>
+							<label class="control-label" for="Telephone">Numéro de téléphone :</label>
+							<input class="form-control" type="tel" name="Telephone" maxlength="10" placeholder="Entrer votre numéro de téléphone"
+							{% if user.telephone is defined %}value="{{user.telephone}}"{% endif %} {{attr2}}>
+							<label class="control-label" for="Email">Mail :</label>
+							<input class="form-control" type="email" name="Email" placeholder="Entrer votre adresse mail"
+							{% if user.mail is defined %}value="{{user.mail}}"{% endif %} {{attr}}>
+							<label class="control-label" for="Mdp">Mot de passe : </label><p>(Laissez vide si vous ne voulez pas changer)</p>
+							<input class="form-control" type="password" name="Mdp" placeholder="Entrer votre mot de passe" {{attr2}}>
+							<div class="btn-group col-md-6 col-md-offset-4">
+								<input class="btn btn-primary" type="submit" name="saveProfil" value="Enregistrer">
+								<input class="btn btn-primary" type="submit" name="discard" value="Annuler">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+  </div>
+  <div class="espaceBas"></div>
+</main>
 {% endblock %}

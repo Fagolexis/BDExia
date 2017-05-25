@@ -100,20 +100,20 @@ class ConnexionController extends DefaultController
 				else {
 					$errorMessage = 'Cette adrresse mail est déjà utilisée.';
 		    		return $this->render('MainBundle:Connexion:connexion.html.twig', array(
-		    		'errormessage' => $errorMessage
+		    		'err' => $errorMessage
 		        	)); 
 				}  		
 			}
 			else {
 				$errorMessage = 'Inscription non valide.';
 		    	return $this->render('MainBundle:Connexion:connexion.html.twig', array(
-		    	'errormessage' => $errorMessage
+		    	'err' => $errorMessage
 		       	)); 
 			}
 		}
 		else {
 			return $this->render('MainBundle:Connexion:connexion.html.twig', array(
-		    	'errormessage' => $errorMessage
+		    	'err' => $errorMessage
 		       	)); 
 		}
 	}

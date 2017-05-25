@@ -7,9 +7,11 @@
 {% block body %}
 <main>
 	<div class="container">
-		<center>
-		<h3>{{errormessage}}</h3>
-		</center>
+		{% if err is defined %}
+			<div class="alert alter-danger">
+				{{err}}
+			</div>
+		{% endif %}
 		<ul class="nav nav-pills">
 			<li class="active"><a href="#cnxTab" data-toggle="tab">Connexion</a></li>
 			<li><a href="#insTab" data-toggle="tab">Inscription</a></li>
