@@ -2,22 +2,90 @@
 
 {% block title %}MainBundle:Gestion:gestionUtilisateurs{% endblock %}
 
+{% block navAdmin %}class="active"{% endblock %}
+
 {% block body %}
 <main>
-	<div class="container blank admin">
-		<div class="col-md-8">
-			{% for user in list %}
-				<div class="user">
-					<p>{{user.idUser}} - </p>
-					<img class="user-img" src="{{asset('img/')}}
-					{% if user.avatarUser != "" %}{{user.avatarUser}}{% else %}avatar.jpg{% endif %}" alt="avatar utilisateur" title="{{user.nom ~ user.prenom}}">
-					<p>{{user.nom}}</p>
-					<p>{{user.prenom}}</p>
-					<p> - </p>
-					<p>{{user.roleUser.role}}</p>
-				</div>
-			{% endfor %}
+	<div class="container">
+		{% if err is defined %}
+			<div class="alert alter-danger">
+				{{err}}
+			</div>
+		{% endif %}
+		<div class="blank admin">
+			<div class="col-md-8 col-md-offset-2">
+				<table class="table table-hover">
+					<thead>
+						<th>Identifiant</th>
+						<th>Avatar</th>
+						<th>Nom</th>
+						<th>Prénom</th>
+						<th>Rôle</th>
+						<th>Voir le profil</th>
+						<th>Changer le rôle</th>
+						<th>Supprimer l'utilisateur</th>
+					</thead>
+					<tbody>
+					{% for user in list %}
+						<form action="" method="post">
+						{% if user.idUser == app.session.get('idUser') %}
+							<tr class="success user">
+								<td>{{user.idUser}}</td>
+								<td><img class="user-img" src="{{asset('img/')}}
+								{% if user.avatarUser != "" %}{{user.avatarUser}}{% else %}avatar.jpg{% endif %}" alt="avatar utilisateur" title="{{user.nom ~ user.prenom}}"></td>
+								<td>{{user.nom}}</td>
+								<td>{{user.prenom}}</td>
+								<td>{{user.roleUser.role}}</td>
+								<td class="text-center"><a href="{{path('profil', {'id': user.idUser})}}"><button type="button" class="btn btn-default"><i class="fa fa-user"></i></button></a></td>
+									<td class="text-center"><button type="button" data-toggle="tooltip" title="Vous ne pouvez pas changer votre rôle" class="noclick btn"><i class="fa fa-minus"></i></button></td>
+									<td class="text-center"><button type="button" data-toggle="tooltip" title="Vous ne pouvez pas supprimer votre compte" class="btn"><i class="fa fa-minus"></i></button></td>
+							</tr>
+						{% else %}
+							<tr class="{% if user.roleUser.idRole == 2 %}info{% elseif user.roleUser.idRole == 3 %} danger{% endif %} user">
+								<td>{{user.idUser}}</td>
+								<td><img class="user-img" src="{{asset('img/')}}
+								{% if user.avatarUser != "" %}{{user.avatarUser}}{% else %}avatar.jpg{% endif %}" alt="avatar utilisateur" title="{{user.nom ~ user.prenom}}"></td>
+								<td>{{user.nom}}</td>
+								<td>{{user.prenom}}</td>
+								<td>{{user.roleUser.role}}</td>
+								<td class="text-center"><a href="{{path('profil', {'id': user.idUser})}}"><button type="button" class="btn btn-default"><i class="fa fa-user"></i></button></a></td>
+								<input type="hidden" value="{{user.idUser}}" name="idUser">
+								{% if user.roleUser.idRole == 3 %}
+									<td class="text-center"><button type="button" data-toggle="tooltip" title="Vous ne pouvez pas changer le rôle d'un membre du CESI" class="noclick btn"><i class="fa fa-minus"></i></button></td>
+									<td class="text-center"><button type="button" data-toggle="tooltip" title="Vous ne pouvez pas supprimer un membre du CESI" class="btn"><i class="fa fa-minus"></i></button></td>
+								{% elseif user.roleUser.idRole == 2 %}
+									<td class="text-center"><button type="submit" name="downUser" value="downUser" data-toggle="tooltip" title="Passer à étudiant" class="btn btn-warning"><i class="fa fa-arrow-down"></i></button></td>
+									<td class="text-center"><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#suppModal{{user.idUser}}"><i class="fa fa-ban"></i></button></td>
+								{% else %}
+									<td class="text-center"><button type="submit" name="upUser" value="upUser" data-toggle="tooltip" title="Passer à BDE" class="btn btn-primary"><i class="fa fa-arrow-up"></i></button></td>
+									<td class="text-center"><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#suppModal{{user.idUser}}"><i class="fa fa-ban"></i></button></td>
+								{% endif %}
+							</tr>
+							<div class="modal fade" id="suppModal{{user.idUser}}" role="dialog">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+											<h4 class="modal-title">Suppression d'utilisateur</h4>
+										</div>
+										<div class="modal-body text-center">
+											<h3>Êtes-vous sûr de vouloir supprimer {{user.prenom}} {{user.nom}} ?</h3>
+											<h5>Un mail sera envoyé pour prévenir l'utilisateur.</h5>
+										</div>
+										<div class="modal-footer">
+											<input type="submit" name="delUser" value="Confirmer" class="btn btn-danger">
+										</div>
+									</div>
+								</div>
+							</div>
+						{% endif %}
+						</form>
+					{% endfor %}
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</div>
 </main>
+
 {% endblock %}
