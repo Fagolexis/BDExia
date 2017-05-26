@@ -106,9 +106,15 @@ class ActivitesController extends DefaultController
         }
 
         $post = $request->request;
+        echo "post";
         $user = $this->getDoctrine()->getRepository("MainBundle:Users")->findOneByIdUser($Session->get('idUser'));
+        echo "user";
         $act = $this->getDoctrine()->getRepository("MainBundle:Activites")->findOneByIdActivite($id);
+        echo "act";
+        var_dump($act->getIdActivite());
+        var_dump($act->getEtatAct()->getIdEtat());
         $subs = $this->getDoctrine()->getRepository("MainBundle:Inscrits")->findBy(array('inscritAct' => $act->getIdActivite(), 'inscritChoix' => $act->getEtatAct()->getIdEtat()-1));
+        echo "subs";
         $img_t = $act->getImgAct();
         $date_t = $act->getIdDateAct();
         $couv;

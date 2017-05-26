@@ -61,14 +61,14 @@ class ConnexionController extends DefaultController
 		    	else {
 					$errorMessage = 'Mauvais mot de passe.';
 					return $this->render('MainBundle:Connexion:connexion.html.twig', array(
-					'errormessage' => $errorMessage
+					'err' => $errorMessage
 			    	)); 
 		    	}	
 		    }
 			else {
 		    	$errorMessage = 'Cet utilisateur n\'existe pas.';
 				return $this->render('MainBundle:Connexion:connexion.html.twig', array(
-		    	'errormessage' => $errorMessage
+		    	'err' => $errorMessage
 				)); 
 			}
 	    }

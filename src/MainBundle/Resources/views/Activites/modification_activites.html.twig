@@ -15,8 +15,8 @@
 		{% endif %}
     </div>
 	<div class="container blank formulaire">
-		{% if err is defined %}
-			<div class="alert alter-danger">
+		{% if err is defined and err != "" %}
+			<div class="alert alert-danger">
 				{{err}}
 			</div>
 		{% endif %}
