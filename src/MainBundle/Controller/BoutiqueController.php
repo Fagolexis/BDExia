@@ -93,6 +93,9 @@ class BoutiqueController extends DefaultController
             $qt = $post->get('Quantite');
             $id = $post->get('id');
             $cart = $Session->get('cart');
+            if(empty($cart[$id])) {
+                $cart[$id] = null;
+            }
             $cart[$id] = (isset($qt)) ? $cart[$id]+$qt : $qt;
             $Session->set('cart', $cart);
         }

@@ -29,15 +29,14 @@
 			      		</div>
 			    	</div>
 			  	</div>
-			  	
+			  	{% else %}
+			  	<h4>Vous n'avez pas encore choisi de produit !</h4>
+			  	{% endfor %}
 				<div class="row">
 					<div class="col-md-2 col-md-offset-9">
 						<button class="inscription"><h4>Commander</h4></button>
 					</div>
 				</div>
-			  	{% else %}
-			  	<h4>Vous n'avez pas encore choisi de produit !</h4>
-			  	{% endfor %}
 			</div>
 		</div>
 	<div class="espaceBas"></div>
