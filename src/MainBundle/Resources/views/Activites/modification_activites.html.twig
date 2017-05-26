@@ -1,12 +1,25 @@
 {% extends "MainBundle::base.html.twig" %}
 
-{% block title %}Produit{% endblock %}
+{% block title %}Modification de l'activité{% endblock %}
 
 {% block navActivites %}class="active"{% endblock %}
 
 {% block body %}
 <main>
+	<div class="container-fluid text-center header-title">
+		{% if act is defined %}
+			<h1>Modification de</h1>
+			<h2>{{act.nomActivite}}</h2>
+		{% else %}
+		<h1>Création d'une activité</h1>
+		{% endif %}
+    </div>
 	<div class="container blank formulaire">
+		{% if err is defined %}
+			<div class="alert alter-danger">
+				{{err}}
+			</div>
+		{% endif %}
 		<div class="col-md-6 col-md-offset-3">
 			<form id="actForm" class="usefulForm" enctype="multipart/form-data" method="post" action="">
 				<div class="form-group">
@@ -21,7 +34,14 @@
 							<img src="{{asset('img/')}}{{img.chemin}}" alt="image produit" title="{{act.nomActivite}}">
 						{% endfor %}
 					{% endif %}
-					<input class="form-control" type="file" name="imgActCouv" required>
+					<div class="input-group">
+						<label class="input-group-btn">
+	                        <span class="btn btn-primary">
+	                            Parcourir &hellip; <input type="file" style="display: none;" name="imgActCouv" accept=".png, .jpg" required>
+	                        </span>
+	                    </label>
+	                </div>
+                    <input type="text" class="form-control" readonly>
 					<label class="control-label" for="Lieu">Lieu :</label>
 					<textarea class="form-control" name="lieu" placeholder="Entrer un lieu pour l'activité" required>{% if act.lieu is defined %}{{act.lieu}}{% endif %}</textarea>
 					<label class="control-label" for="Date">Date :</label>
@@ -48,7 +68,8 @@
 				<input form="actForm" type="submit" class="btn btn-primary" name="delAct" value="Supprimer">
 			{% else %}
 				<input form="actForm" type="submit" class="btn btn-primary" name="addAct" value="Enregistrer">
-			{% endif %}	
+			{% endif %}
+				<button class="btn btn-primary"><a href="{{path('listAct')}}">Annuler</a></button>
 			</div>
 		</div>
 	</div>

@@ -1,17 +1,16 @@
 {% extends "MainBundle::base.html.twig" %}
 
-{% block title %}Produit{% endblock %}
+{% block title %}{{prod.nomProduit}}{% endblock %}
 
 {% block navBoutique %}class="active"{% endblock %}
 
 {% block body %}
 <main>
 	<div class="container">
-		<div class="col-md-2 col-md-offset-10 cart">
-		    <a href="{{path('cart')}}">
-		        <i class="fa fa-cart-arrow-down"></i>
-		        <p>Panier : {{app.session.get('cart')|length}}</p>
-		    </a>
+		<div class="row barShop">
+			<div class="col-md-4 col-md-offset-8 cart">
+			    <a href="{{path('cart')}}"><button class="btn btn-default">Voir mon panier <span>{{app.session.get('cart')|length}}</span> <i class="fa fa-cart-arrow-down"></i></button></a>
+			</div>
 		</div>
 		<div class="blank">
 			<div class="row">
@@ -42,12 +41,19 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-2 col-md-offset-10">
+				<div class="col-md-4 col-md-offset-8">
 					<form id="buyForm" action="" method="post" enctype="multipart/form-data">
-						<input type="number" name="Quantite" min="1" value="1" size="4" required>
 						<input type="hidden" name="id" value="{{prod.idProduit}}">
-						<input class="btn btn-default" type="submit" name="buyProd" value="Acheter">
+						<div class="input-group">
+							<input class="form-control" type="number" name="Quantite" placeholder="Quantité" min="1" value="1" required>
+							<span class="input-group-btn">
+								<input class="btn btn-default" type="submit" name="buyProd" value="Acheter">
+							</span>
+						</div>
 					</form>
+					{% if app.session.get('roleUser') == 3 %}
+						<a href="{{path('modProd', {'id': prod.idProduit})}}"><button class="btn btn-primary">Modifier le produit <i class="fa fa-plus"></i></button></a>
+					{% endif %}
 				</div>
 			</div>
 		</div>

@@ -1,11 +1,14 @@
 {% extends "MainBundle::base.html.twig" %}
 
-{% block title %}MainBundle:Gestion:gestionUtilisateurs{% endblock %}
+{% block title %}Liste des utilisateurs{% endblock %}
 
 {% block navAdmin %}class="active"{% endblock %}
 
 {% block body %}
 <main>
+	<div class="header-title container-fluid text-center">
+		<h1>Liste des utilisateurs</h1>
+    </div>
 	<div class="container">
 		{% if err is defined %}
 			<div class="alert alter-danger">
@@ -32,7 +35,7 @@
 							<tr class="success user">
 								<td>{{user.idUser}}</td>
 								<td><img class="user-img" src="{{asset('img/')}}
-								{% if user.avatarUser != "" %}{{user.avatarUser}}{% else %}avatar.jpg{% endif %}" alt="avatar utilisateur" title="{{user.nom ~ user.prenom}}"></td>
+								{% if user.avatarUser != "" %}{{user.avatarUser.chemin}}{% else %}avatar.jpg{% endif %}" alt="avatar utilisateur" title="{{user.nom ~ user.prenom}}"></td>
 								<td>{{user.nom}}</td>
 								<td>{{user.prenom}}</td>
 								<td>{{user.roleUser.role}}</td>

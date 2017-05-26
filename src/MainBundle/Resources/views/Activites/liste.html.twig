@@ -1,17 +1,23 @@
 {% extends "MainBundle::base.html.twig" %}
 
-{% block title %}Activités{% endblock %}
+{% block title %}Liste des activités{% endblock %}
 
 {% block navActivites %}class="active"{% endblock %}
 
 {% block body %}
 <main>
+    <div class="container-fluid text-center header-title">
+        <h1>Liste des activités</h1>
+    </div>
     <div class="container">
         <ul class="nav nav-pills">
             <li class="active"><a href="#subTab" data-toggle="tab">Soumises</a></li>
             <li><a href="#propTab" data-toggle="tab">Proposées</a></li>
             <li><a href="#confTab" data-toggle="tab">Confirmées</a></li>
             <li><a href="#compTab" data-toggle="tab">Effectuées</a></li>
+            {% if app.session.get('roleUser') == 2 %}
+                <li><a href="{{path('addAct')}}">Créer</a></li>
+            {% endif %}
         </ul>
         <div class="text-center blank">
             <div class="tab-content clearfix">

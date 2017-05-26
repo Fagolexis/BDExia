@@ -23,79 +23,117 @@ class __TwigTemplate_eb7e6a2b8b2b843c79d0d22cac8029ace72c878c919ef30a241410722fd
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_dfc944b6258fc743c276e5a2dd00ac3b3cc0ad6c6bfcbb5f0d33028b99eb84e9 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_dfc944b6258fc743c276e5a2dd00ac3b3cc0ad6c6bfcbb5f0d33028b99eb84e9->enter($__internal_dfc944b6258fc743c276e5a2dd00ac3b3cc0ad6c6bfcbb5f0d33028b99eb84e9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Activites:photos.html.twig"));
+        $__internal_75ebfafaaa72ea450949f2d64e774a0fb0d5124bd7d16ba449203ff5a60bac93 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_75ebfafaaa72ea450949f2d64e774a0fb0d5124bd7d16ba449203ff5a60bac93->enter($__internal_75ebfafaaa72ea450949f2d64e774a0fb0d5124bd7d16ba449203ff5a60bac93_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Activites:photos.html.twig"));
 
-        $__internal_5729c8feb9f1595c70966f5d6818780babb54b27af0542f199fb1cf94a301586 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5729c8feb9f1595c70966f5d6818780babb54b27af0542f199fb1cf94a301586->enter($__internal_5729c8feb9f1595c70966f5d6818780babb54b27af0542f199fb1cf94a301586_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Activites:photos.html.twig"));
+        $__internal_191e2e4076c11f5f7f6935ad6b6d8a6ca56433613d37eae5dd181c032ff0d512 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_191e2e4076c11f5f7f6935ad6b6d8a6ca56433613d37eae5dd181c032ff0d512->enter($__internal_191e2e4076c11f5f7f6935ad6b6d8a6ca56433613d37eae5dd181c032ff0d512_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Activites:photos.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_dfc944b6258fc743c276e5a2dd00ac3b3cc0ad6c6bfcbb5f0d33028b99eb84e9->leave($__internal_dfc944b6258fc743c276e5a2dd00ac3b3cc0ad6c6bfcbb5f0d33028b99eb84e9_prof);
+        $__internal_75ebfafaaa72ea450949f2d64e774a0fb0d5124bd7d16ba449203ff5a60bac93->leave($__internal_75ebfafaaa72ea450949f2d64e774a0fb0d5124bd7d16ba449203ff5a60bac93_prof);
 
         
-        $__internal_5729c8feb9f1595c70966f5d6818780babb54b27af0542f199fb1cf94a301586->leave($__internal_5729c8feb9f1595c70966f5d6818780babb54b27af0542f199fb1cf94a301586_prof);
+        $__internal_191e2e4076c11f5f7f6935ad6b6d8a6ca56433613d37eae5dd181c032ff0d512->leave($__internal_191e2e4076c11f5f7f6935ad6b6d8a6ca56433613d37eae5dd181c032ff0d512_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_46e8303082367a97926b0c012dc22069c57f6522147632cae46e20f3855c9c79 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_46e8303082367a97926b0c012dc22069c57f6522147632cae46e20f3855c9c79->enter($__internal_46e8303082367a97926b0c012dc22069c57f6522147632cae46e20f3855c9c79_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_4b12600e58229995bdc81d45dd72c366781f91b2bdd9bf8a6862863483c3eff2 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_4b12600e58229995bdc81d45dd72c366781f91b2bdd9bf8a6862863483c3eff2->enter($__internal_4b12600e58229995bdc81d45dd72c366781f91b2bdd9bf8a6862863483c3eff2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_33c92612145b36cbacaebaca061f9abbe9fc37c4d44ee5d7b5698b4ad3c013f4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_33c92612145b36cbacaebaca061f9abbe9fc37c4d44ee5d7b5698b4ad3c013f4->enter($__internal_33c92612145b36cbacaebaca061f9abbe9fc37c4d44ee5d7b5698b4ad3c013f4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_a0746378fd6547a9bc76985bba9928c902e8db156c09644d79f4b86eaf8df72b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a0746378fd6547a9bc76985bba9928c902e8db156c09644d79f4b86eaf8df72b->enter($__internal_a0746378fd6547a9bc76985bba9928c902e8db156c09644d79f4b86eaf8df72b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Activité";
         
-        $__internal_33c92612145b36cbacaebaca061f9abbe9fc37c4d44ee5d7b5698b4ad3c013f4->leave($__internal_33c92612145b36cbacaebaca061f9abbe9fc37c4d44ee5d7b5698b4ad3c013f4_prof);
+        $__internal_a0746378fd6547a9bc76985bba9928c902e8db156c09644d79f4b86eaf8df72b->leave($__internal_a0746378fd6547a9bc76985bba9928c902e8db156c09644d79f4b86eaf8df72b_prof);
 
         
-        $__internal_46e8303082367a97926b0c012dc22069c57f6522147632cae46e20f3855c9c79->leave($__internal_46e8303082367a97926b0c012dc22069c57f6522147632cae46e20f3855c9c79_prof);
+        $__internal_4b12600e58229995bdc81d45dd72c366781f91b2bdd9bf8a6862863483c3eff2->leave($__internal_4b12600e58229995bdc81d45dd72c366781f91b2bdd9bf8a6862863483c3eff2_prof);
 
     }
 
     // line 5
     public function block_navActivites($context, array $blocks = array())
     {
-        $__internal_bb453f8ec0c11d25f68295aac20708906fb194a4cf4eb1e39d4702e1b1ba71c4 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_bb453f8ec0c11d25f68295aac20708906fb194a4cf4eb1e39d4702e1b1ba71c4->enter($__internal_bb453f8ec0c11d25f68295aac20708906fb194a4cf4eb1e39d4702e1b1ba71c4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navActivites"));
+        $__internal_2b50182f320179cdb82895cf4efe9d9eeee69ad4b4c416581f183fc617ba1a9c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_2b50182f320179cdb82895cf4efe9d9eeee69ad4b4c416581f183fc617ba1a9c->enter($__internal_2b50182f320179cdb82895cf4efe9d9eeee69ad4b4c416581f183fc617ba1a9c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navActivites"));
 
-        $__internal_042fc62f7735485bb3d5eb4f00ef895e612ccd4f1c6ae2f8ccfd0e1cc1ed2b52 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_042fc62f7735485bb3d5eb4f00ef895e612ccd4f1c6ae2f8ccfd0e1cc1ed2b52->enter($__internal_042fc62f7735485bb3d5eb4f00ef895e612ccd4f1c6ae2f8ccfd0e1cc1ed2b52_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navActivites"));
+        $__internal_114f7fbe55b319a0c7eddccc57df5b5c12d55f5f3e0bc5fcf855dc02609db030 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_114f7fbe55b319a0c7eddccc57df5b5c12d55f5f3e0bc5fcf855dc02609db030->enter($__internal_114f7fbe55b319a0c7eddccc57df5b5c12d55f5f3e0bc5fcf855dc02609db030_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navActivites"));
 
         echo "class=\"active\"";
         
-        $__internal_042fc62f7735485bb3d5eb4f00ef895e612ccd4f1c6ae2f8ccfd0e1cc1ed2b52->leave($__internal_042fc62f7735485bb3d5eb4f00ef895e612ccd4f1c6ae2f8ccfd0e1cc1ed2b52_prof);
+        $__internal_114f7fbe55b319a0c7eddccc57df5b5c12d55f5f3e0bc5fcf855dc02609db030->leave($__internal_114f7fbe55b319a0c7eddccc57df5b5c12d55f5f3e0bc5fcf855dc02609db030_prof);
 
         
-        $__internal_bb453f8ec0c11d25f68295aac20708906fb194a4cf4eb1e39d4702e1b1ba71c4->leave($__internal_bb453f8ec0c11d25f68295aac20708906fb194a4cf4eb1e39d4702e1b1ba71c4_prof);
+        $__internal_2b50182f320179cdb82895cf4efe9d9eeee69ad4b4c416581f183fc617ba1a9c->leave($__internal_2b50182f320179cdb82895cf4efe9d9eeee69ad4b4c416581f183fc617ba1a9c_prof);
 
     }
 
     // line 7
     public function block_body($context, array $blocks = array())
     {
-        $__internal_6640f28429a70fa6b4d665ffe87a94bf44b490aec77970914ecf8e140fbf2396 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_6640f28429a70fa6b4d665ffe87a94bf44b490aec77970914ecf8e140fbf2396->enter($__internal_6640f28429a70fa6b4d665ffe87a94bf44b490aec77970914ecf8e140fbf2396_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_110ea991448b5d470b555735c477f41427dcc84d60d2851b80f25c47621830b4 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_110ea991448b5d470b555735c477f41427dcc84d60d2851b80f25c47621830b4->enter($__internal_110ea991448b5d470b555735c477f41427dcc84d60d2851b80f25c47621830b4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_74844b621b085068b5f378056e7e10b7f4f12a673123ff0b2b069669b03c8699 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_74844b621b085068b5f378056e7e10b7f4f12a673123ff0b2b069669b03c8699->enter($__internal_74844b621b085068b5f378056e7e10b7f4f12a673123ff0b2b069669b03c8699_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_f23c35516f3fee0e5f855a9dfd9f27206a3e27ea5691599cdaf79c886c940f23 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f23c35516f3fee0e5f855a9dfd9f27206a3e27ea5691599cdaf79c886c940f23->enter($__internal_f23c35516f3fee0e5f855a9dfd9f27206a3e27ea5691599cdaf79c886c940f23_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 8
         echo "
 <main>
+    <div class=\"container-fluid text-center header-title\">
+        <h2>Les photos de</h2>
+        <h1>";
+        // line 12
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["act"]) ? $context["act"] : $this->getContext($context, "act")), "nomActivite", array()), "html", null, true);
+        echo "</h1>
+    </div>
     <div class=\"container\">
         ";
-        // line 11
+        // line 15
+        if (array_key_exists("err", $context)) {
+            // line 16
+            echo "            <div class=\"alert alter-danger\">
+                ";
+            // line 17
+            echo twig_escape_filter($this->env, (isset($context["err"]) ? $context["err"] : $this->getContext($context, "err")), "html", null, true);
+            echo "
+            </div>
+        ";
+        }
+        // line 20
+        echo "        <div class=\"row barShop\">
+                <div class=\"col-md-4 col-md-offset-4 text-center\">
+                    <form enctype=\"multipart/form-data\" action=\"\" method=\"post\">
+                        <h4>Ajouter une nouvelle photo</h4>
+                        <div class=\"input-group\">
+                            <label class=\"input-group-btn\">
+                                <span class=\"btn btn-default\">
+                                    Parcourir &hellip; <input type=\"file\" style=\"display: none;\" name=\"imgFile\" accept=\".png, .jpg\">
+                                </span>
+                            </label>
+                            <input type=\"text\" class=\"form-control\" readonly>
+                            <span class=\"input-group-btn\">
+                                <input class=\"btn btn-primary\" type=\"submit\" name=\"addPhoto\">
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        ";
+        // line 38
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["list"]) ? $context["list"] : $this->getContext($context, "list")));
         foreach ($context['_seq'] as $context["_key"] => $context["img"]) {
-            // line 12
+            // line 39
             echo "            <div class=\"row photos\">
                     <img class=\"col col-md-7\" src=\"";
-            // line 13
+            // line 40
             echo twig_escape_filter($this->env, ($this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/") . $this->getAttribute($context["img"], "chemin", array())), "html", null, true);
             echo "\" alt=\"photo_";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["act"]) ? $context["act"] : $this->getContext($context, "act")), "idActivite", array()), "html", null, true);
@@ -105,7 +143,7 @@ class __TwigTemplate_eb7e6a2b8b2b843c79d0d22cac8029ace72c878c919ef30a241410722fd
                     <div class=\"photo-details col-md-5\">
                         <div class=\"auteur-photo\">
                             <img class=\"avatar-comm\" src=\"";
-            // line 16
+            // line 43
             if (($this->getAttribute($this->getAttribute($context["img"], "auteurImg", array()), "avatarUser", array()) != null)) {
                 echo twig_escape_filter($this->env, ($this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/") . $this->getAttribute($this->getAttribute($this->getAttribute($context["img"], "auteurImg", array()), "avatarUser", array()), "chemin", array())), "html", null, true);
             } else {
@@ -115,7 +153,7 @@ class __TwigTemplate_eb7e6a2b8b2b843c79d0d22cac8029ace72c878c919ef30a241410722fd
             echo twig_escape_filter($this->env, ($this->getAttribute($this->getAttribute($context["img"], "auteurImg", array()), "prenom", array()) . $this->getAttribute($this->getAttribute($context["img"], "auteurImg", array()), "nom", array())), "html", null, true);
             echo "\">
                             <h2>";
-            // line 17
+            // line 44
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["img"], "auteurImg", array()), "prenom", array()), "html", null, true);
             echo " ";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["img"], "auteurImg", array()), "nom", array()), "html", null, true);
@@ -123,15 +161,15 @@ class __TwigTemplate_eb7e6a2b8b2b843c79d0d22cac8029ace72c878c919ef30a241410722fd
                         </div>
                             <div class=\"photo-commentaire\">
                         ";
-            // line 20
+            // line 47
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable((isset($context["coms"]) ? $context["coms"] : $this->getContext($context, "coms")));
             foreach ($context['_seq'] as $context["_key"] => $context["com"]) {
                 if (($this->getAttribute($this->getAttribute($context["com"], "imgComm", array()), "idImg", array()) == $this->getAttribute($context["img"], "idImg", array()))) {
-                    // line 21
+                    // line 48
                     echo "                            <div>
                                 <img class=\"avatar-comm\" src=\"";
-                    // line 22
+                    // line 49
                     if (($this->getAttribute($this->getAttribute($context["com"], "auteurComm", array()), "avatarUser", array()) != null)) {
                         echo twig_escape_filter($this->env, ($this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/") . $this->getAttribute($this->getAttribute($this->getAttribute($context["com"], "auteurComm", array()), "avatarUser", array()), "chemin", array())), "html", null, true);
                     } else {
@@ -141,13 +179,13 @@ class __TwigTemplate_eb7e6a2b8b2b843c79d0d22cac8029ace72c878c919ef30a241410722fd
                     echo twig_escape_filter($this->env, ($this->getAttribute($this->getAttribute($context["com"], "auteurComm", array()), "prenom", array()) . $this->getAttribute($this->getAttribute($context["com"], "auteurComm", array()), "nom", array())), "html", null, true);
                     echo "\">
                                 ";
-                    // line 23
+                    // line 50
                     echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["com"], "auteurComm", array()), "prenom", array()), "html", null, true);
                     echo " ";
                     echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["com"], "auteurComm", array()), "nom", array()), "html", null, true);
                     echo "<br>
                                 <p class=\"text-comm\">";
-                    // line 24
+                    // line 51
                     echo twig_escape_filter($this->env, $this->getAttribute($context["com"], "commentaire", array()), "html", null, true);
                     echo "</p>
                             </div>
@@ -157,12 +195,12 @@ class __TwigTemplate_eb7e6a2b8b2b843c79d0d22cac8029ace72c878c919ef30a241410722fd
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['com'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 27
+            // line 54
             echo "                            <div>
                                 <form action=\"\" method=\"post\">
                                     <div class=\"input-group\">
                                         <input type=\"hidden\" value=\"";
-            // line 30
+            // line 57
             echo twig_escape_filter($this->env, $this->getAttribute($context["img"], "idImg", array()), "html", null, true);
             echo "\" name=\"idImg\">
                                         <textarea class=\"form-control\" name=\"Commentaire\"></textarea>
@@ -171,26 +209,26 @@ class __TwigTemplate_eb7e6a2b8b2b843c79d0d22cac8029ace72c878c919ef30a241410722fd
                                                 <i class=\"fa fa-paper-plane\"></i>
                                             </button>
                                             ";
-            // line 36
+            // line 63
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["img"], "likesUser", array()));
             $context['_iterated'] = false;
             foreach ($context['_seq'] as $context["_key"] => $context["like"]) {
-                // line 37
+                // line 64
                 echo "                                                ";
                 if (($this->getAttribute($context["like"], "idUser", array()) == $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "get", array(0 => "idUser"), "method"))) {
-                    // line 38
+                    // line 65
                     echo "                                                <button class=\"btn btn-default\" data-toggle=\"tooltip\" title=\"Aimée\" type=\"submit\" name=\"likePhoto\" value=\"Envoyer\">
                                                     <i class=\"fa fa-heart-o\"></i>
                                                 </button>
                                                 ";
                 }
-                // line 42
+                // line 69
                 echo "                                            ";
                 $context['_iterated'] = true;
             }
             if (!$context['_iterated']) {
-                // line 43
+                // line 70
                 echo "                                                <button class=\"btn btn-default\" data-toggle=\"tooltip\" title=\"Aimer\" type=\"submit\" name=\"likePhoto\" value=\"Envoyer\">
                                                 <i class=\"fa fa-heart\"></i>
                                                 </button>
@@ -199,7 +237,7 @@ class __TwigTemplate_eb7e6a2b8b2b843c79d0d22cac8029ace72c878c919ef30a241410722fd
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['like'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 47
+            // line 74
             echo "                                        </div>
                                     </div>
                                 </form>
@@ -212,16 +250,16 @@ class __TwigTemplate_eb7e6a2b8b2b843c79d0d22cac8029ace72c878c919ef30a241410722fd
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['img'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 55
+        // line 82
         echo "    </div>
     <div class=\"espaceBas\"></div>
 </main>
 ";
         
-        $__internal_74844b621b085068b5f378056e7e10b7f4f12a673123ff0b2b069669b03c8699->leave($__internal_74844b621b085068b5f378056e7e10b7f4f12a673123ff0b2b069669b03c8699_prof);
+        $__internal_f23c35516f3fee0e5f855a9dfd9f27206a3e27ea5691599cdaf79c886c940f23->leave($__internal_f23c35516f3fee0e5f855a9dfd9f27206a3e27ea5691599cdaf79c886c940f23_prof);
 
         
-        $__internal_6640f28429a70fa6b4d665ffe87a94bf44b490aec77970914ecf8e140fbf2396->leave($__internal_6640f28429a70fa6b4d665ffe87a94bf44b490aec77970914ecf8e140fbf2396_prof);
+        $__internal_110ea991448b5d470b555735c477f41427dcc84d60d2851b80f25c47621830b4->leave($__internal_110ea991448b5d470b555735c477f41427dcc84d60d2851b80f25c47621830b4_prof);
 
     }
 
@@ -237,7 +275,7 @@ class __TwigTemplate_eb7e6a2b8b2b843c79d0d22cac8029ace72c878c919ef30a241410722fd
 
     public function getDebugInfo()
     {
-        return array (  216 => 55,  203 => 47,  194 => 43,  189 => 42,  183 => 38,  180 => 37,  175 => 36,  166 => 30,  161 => 27,  151 => 24,  145 => 23,  135 => 22,  132 => 21,  127 => 20,  119 => 17,  109 => 16,  99 => 13,  96 => 12,  92 => 11,  87 => 8,  78 => 7,  60 => 5,  42 => 3,  11 => 1,);
+        return array (  254 => 82,  241 => 74,  232 => 70,  227 => 69,  221 => 65,  218 => 64,  213 => 63,  204 => 57,  199 => 54,  189 => 51,  183 => 50,  173 => 49,  170 => 48,  165 => 47,  157 => 44,  147 => 43,  137 => 40,  134 => 39,  130 => 38,  110 => 20,  104 => 17,  101 => 16,  99 => 15,  93 => 12,  87 => 8,  78 => 7,  60 => 5,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -259,7 +297,34 @@ class __TwigTemplate_eb7e6a2b8b2b843c79d0d22cac8029ace72c878c919ef30a241410722fd
 {% block body %}
 
 <main>
+    <div class=\"container-fluid text-center header-title\">
+        <h2>Les photos de</h2>
+        <h1>{{act.nomActivite}}</h1>
+    </div>
     <div class=\"container\">
+        {% if err is defined %}
+            <div class=\"alert alter-danger\">
+                {{err}}
+            </div>
+        {% endif %}
+        <div class=\"row barShop\">
+                <div class=\"col-md-4 col-md-offset-4 text-center\">
+                    <form enctype=\"multipart/form-data\" action=\"\" method=\"post\">
+                        <h4>Ajouter une nouvelle photo</h4>
+                        <div class=\"input-group\">
+                            <label class=\"input-group-btn\">
+                                <span class=\"btn btn-default\">
+                                    Parcourir &hellip; <input type=\"file\" style=\"display: none;\" name=\"imgFile\" accept=\".png, .jpg\">
+                                </span>
+                            </label>
+                            <input type=\"text\" class=\"form-control\" readonly>
+                            <span class=\"input-group-btn\">
+                                <input class=\"btn btn-primary\" type=\"submit\" name=\"addPhoto\">
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
         {% for img in list  %}
             <div class=\"row photos\">
                     <img class=\"col col-md-7\" src=\"{{ asset('img/') ~ img.chemin}}\" alt=\"photo_{{act.idActivite}}_{{img.auteurImg.prenom ~ img.auteurImg.nom}}\">

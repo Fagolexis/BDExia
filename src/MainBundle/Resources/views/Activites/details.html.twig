@@ -1,6 +1,6 @@
 {% extends "MainBundle::base.html.twig" %}
 
-{% block title %}Activité{% endblock %}
+{% block title %}{{act.nomActivite}}{% endblock %}
 
 {% block navActivites %}class="active"{% endblock %}
 
@@ -72,6 +72,7 @@
 										{% endif %}
 								{% endfor %}
 							{% elseif app.session.get('roleUser') == 2 %}
+								<a class="btn btn-default" href="{{path('modAct', {'id' : act.idActivite})}}"><h4>Modifier</h4></a>
 								{% if act.etatAct.idEtat == 2 %}
 									<a class="btn btn-default" href="{{path('subAct', {'id' : act.idActivite})}}"><h4>Votes</h4></a>
 								{% elseif act.etatAct.idEtat == 3 %}

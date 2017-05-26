@@ -129,9 +129,10 @@ class GestionController extends DefaultController
             if($user->getAvatarUser() != null) {
                 if(isset($Avatar) && !empty($Avatar) && $Avatar != $user->getAvatarUser()->getChemin()) {
                     $img = $user->getAvatarUser();
-                    $img->setChemin(saveImg($Avatar));
-                    $this->dbUpdate('up', $img);
+                    $file = saveImg($Avatar);
+                    $img->setChemin($file);
                     $user->setAvatarUser($img);
+                    $this->dbUpdate('up');
                 }
             }
             else {
@@ -140,13 +141,14 @@ class GestionController extends DefaultController
                     $dM = new DateModel();
                     $type = $this->getDoctrine()->getRepository('MainBundle:Types')->findOneByIdType(1);
                     $date = $dM->currentDate($type);
+                    $this->dbUpdate('persist', $date);
                     $chemin = $this->saveImg($Avatar);
                     $img = $iM->createImg($type,$chemin,$date,$user);
                     $this->dbUpdate('persist', $img);
                     $user->setAvatarUser($img);
+                    $this->dbUpdate('up');
                 }
             }
-            
             if(isset($Phone) && !empty($Phone) && $Phone != $user->getTelephone()) {
                 $user->setTelephone($Phone);
             }

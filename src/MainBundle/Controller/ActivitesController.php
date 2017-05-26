@@ -34,7 +34,7 @@ class ActivitesController extends DefaultController
     }
 
     /**
-     * @Route("/activites/creation", name="createtAct")
+     * @Route("/activites/creation", name="addAct")
      */
     public function createAction(Request $request)
     {
@@ -161,7 +161,7 @@ class ActivitesController extends DefaultController
             $comm->setImgComm($img)->setAuteurComm($user)->setCommentaire($comment);
             $this->dbUpdate('persist', $comm);
         }
-        if($post->get('likePhoto')) {
+        if($post->get('likePhoto') != null) {
             $idImg = $post->get('idImg');
             $img = $this->getDoctrine()->getRepository('MainBundle:Photos')->findOneByIdImg($idImg);
             $likes = $img->getLikesUser();
@@ -180,6 +180,22 @@ class ActivitesController extends DefaultController
                     }
                 }
             }
+        }
+        if($post->get('addPhoto') != null) {
+            $file = $request->files->get('imgFile');
+            $chemin = $this->saveImg($file);
+            $im = new ImgModel();
+            $dm = new DateModel();
+            $type = $this->getDoctrine()->getRepository('MainBundle:Types')->findOneByIdType(2);
+            $typem = $this->getDoctrine()->getRepository('MainBundle:Types')->findOneByIdType(1);
+            $auteur = $this->getDoctrine()->getRepository('MainBundle:Users')->findOneByIdUser($Session->get('idUser'));
+            $date = $dm->currentDate($typem);
+            $this->dbUpdate('persist', $date);
+            $img = $im->createImg($type,$chemin,$date,$auteur);
+            $this->dbUpdate('persist', $img);
+            $act->addImgAct($img);
+            $img->addIdImgAct($act);
+            $this->dbUpdate('up');
         }
         $comment = $this->getDoctrine()->getRepository('MainBundle:Commentaires')->findAll();
         return $this->render('MainBundle:Activites:photos.html.twig', array(
@@ -203,7 +219,8 @@ class ActivitesController extends DefaultController
             $act = $act = $this->getDoctrine()->getRepository("MainBundle:Activites")->findOneByIdActivite($id);
             $inscrits = $this->getDoctrine()->getRepository("MainBundle:Inscrits")->findBy(array('inscritAct' => $id, 'inscritChoix' => $act->getIdActivite()));
             return $this->render('MainBundle:Activites:inscrits.html.twig', array(
-                "list"=>$inscrits
+                "list"=>$inscrits,
+                "act" => $act
             ));
         }
         else {

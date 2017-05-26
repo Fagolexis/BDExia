@@ -6,28 +6,28 @@
 
 {% block body %}
 <main>
+    <div class="container-fluid text-center header-title">
+        <h1>Liste des produits</h1>
+    </div>
     <div class="container blank">
-		<div class="col-md-12 barShop">
-			<div class="col-md-6">
-				<form action="" method="post">	
-					<input type="input" name="srch" placeholder="Rechercher un produit">
-					<button class="btn btn-default" type="submit" name="srchProd" id="srchProd">
-						<i class="fa fa-search"></i>
-					</button>
+		<div class="row barShop">
+			<div class="col-md-4">
+				<form action="" method="post">
+					<div class="input-group">
+						<input class="form-control" type="text" name="srch" placeholder="Rechercher un produit">
+						<span class="input-group-btn">
+							<button type="submit" name="srchProd" id="srchProd" class="btn btn-default"><i class="fa fa-search"></i></button>
+						</span>
+					</div>
 				</form>
-				{% if app.session.get('roleUser') == 3 %}.
-					<a href="{{path('addProd')}}">
-						<button class="inscription">
-							Créer un produit
-						</button>
-					</a>
-				{% endif %}
 			</div>
-			<div class="col-md-6 cart">
-				<a href="{{path('cart')}}">
-			        <i class="fa fa-cart-arrow-down"></i>
-			        <p>Panier : {{app.session.get('cart')|length}}</p>
-			    </a>
+			<div class="col-md-4 text-center">
+			{% if app.session.get('roleUser') == 3 %}.
+				<a href="{{path('addProd')}}"><button class="btn btn-primary">Créer un produit <i class="fa fa-plus"></i></button></a>
+			{% endif %}
+			</div>
+			<div class="col-md-4 cart">
+			    <a href="{{path('cart')}}"><button class="btn btn-default">Voir mon panier <span>{{app.session.get('cart')|length}}</span> <i class="fa fa-cart-arrow-down"></i></button></a>
 			</div>
 		</div>
 			<div class="row">

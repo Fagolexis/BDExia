@@ -6,6 +6,10 @@
 
 {% block body %}
 <main>
+	<div class="container-fluid text-center header-title">
+		<h1>Liste des inscrits pour</h1>
+		<h2>{{act.nomActivite}}</h2>
+    </div>
 	<div class="container">
 		{% set i = 0 %}
 		{% for sub in list %}

@@ -1,15 +1,16 @@
 {% extends "MainBundle::base.html.twig" %}
 
-{% block title %}Inscription/Connexion{% endblock %}
+{% block title %}{{user.prenom}} {{user.nom}}{% endblock %}
 
 {% block navProfil %}class="active"{% endblock %}
 
 {% block body %}
 <main>
+	<div class="header-title container-fluid text-center">
+		<h2>Profil de :</h2>
+		<h1>{{user.prenom}} {{user.nom}}</h1>
+    </div>
 	<div class="container">
-		<center>
-			<h1></h1>
-		</center>
 		{% if err is defined %}
 			<div class="alert alter-danger">
 				{{err}}
@@ -17,7 +18,7 @@
 		{% endif %}
 		<div class="blank formulaire">
 			<div class="col-md-offset-3 col-md-6">
-					<form id="insForm" class="usefulForm" action="" method="post">
+					<form id="insForm" class="usefulForm" action="" method="post" enctype="multipart/form-data">
 						<div class="form-group">
 							<label class="control-label" for="Nom">Nom :</label>
 							<input class="form-control" type="text" name="Nom" placeholder="Entrer votre nom de famille"
@@ -38,7 +39,14 @@
 							</select>
 							<label class="control-label" for="Avatar">Avatar :</label>
 							{% if user.avatar is defined %}<img src="{{user.avatar.chemin}}" alt="" />{% endif %}
-							<input class="form-control" type="file" name="Avatar" {{attr2}}>
+							<div class="input-group">
+								<label class="input-group-btn">
+			                        <span class="btn btn-primary">
+			                            Parcourir &hellip; <input type="file" style="display: none;" name="Avatar" accept=".png, .jpg"  {{attr2}}>
+			                        </span>
+			                    </label>
+			                </div>
+			                <input type="text" class="form-control" readonly>
 							<label class="control-label" for="Telephone">Numéro de téléphone :</label>
 							<input class="form-control" type="tel" name="Telephone" maxlength="10" placeholder="Entrer votre numéro de téléphone"
 							{% if user.telephone is defined %}value="{{user.telephone}}"{% endif %} {{attr2}}>

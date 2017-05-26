@@ -17,6 +17,11 @@ nav {
 	box-shadow: 0px 0px 10px #888888;
 }
 
+.header-title {
+	text-shadow: 0px 2px 6px #888888;
+	margin-bottom: 25px;
+}
+
 hr {
 	border: none;
 	height: 1px;
@@ -184,11 +189,6 @@ footer p {
 .info > div{
 	margin-top:10px;
 }
-
-span{
-	padding: 10px;
-}
-
 .nomActivity{
 	background-color: #C2242A;
 	border-color: #A10509;
@@ -364,25 +364,17 @@ p {
 	color: #C2242A;
 }
 
-.barshop {
-	display: flex;
+.barShop {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
-.cart, .cart p, .cart i {
-	text-align: center;
-	font-size: 24px;
+.cart {
+	text-align: right;
 }
 
-.cart a {
-	float: right;
-}
-
-.cart i, .searchProd i {
-	font-size: 32px;
-}
-
-.cart a:hover {
-	text-decoration: none;
+.cart span {
+	font-weight: bold;
 }
 
 .searchProd, .searchProd p, .searchProd i {
@@ -414,7 +406,6 @@ p {
 
 #buyForm, #buyForm * {
 	text-align: right;
-	margin: 5px;
 }
 
 .usefulForm img {
@@ -444,4 +435,29 @@ p {
 
 .noclick:hover {
 	cursor: not-allowed;
+}
+
+.btn > a {
+	text-decoration: inherit;
+	color: inherit;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
 }

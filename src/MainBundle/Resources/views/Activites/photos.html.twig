@@ -7,7 +7,34 @@
 {% block body %}
 
 <main>
+    <div class="container-fluid text-center header-title">
+        <h2>Les photos de</h2>
+        <h1>{{act.nomActivite}}</h1>
+    </div>
     <div class="container">
+        {% if err is defined %}
+            <div class="alert alter-danger">
+                {{err}}
+            </div>
+        {% endif %}
+        <div class="row barShop">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <form enctype="multipart/form-data" action="" method="post">
+                        <h4>Ajouter une nouvelle photo</h4>
+                        <div class="input-group">
+                            <label class="input-group-btn">
+                                <span class="btn btn-default">
+                                    Parcourir &hellip; <input type="file" style="display: none;" name="imgFile" accept=".png, .jpg">
+                                </span>
+                            </label>
+                            <input type="text" class="form-control" readonly>
+                            <span class="input-group-btn">
+                                <input class="btn btn-primary" type="submit" name="addPhoto">
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
         {% for img in list  %}
             <div class="row photos">
                     <img class="col col-md-7" src="{{ asset('img/') ~ img.chemin}}" alt="photo_{{act.idActivite}}_{{img.auteurImg.prenom ~ img.auteurImg.nom}}">

@@ -23,92 +23,90 @@ class __TwigTemplate_e60e4bda6d381807643f63c59188ec764ba1a9a091dd17881704521f046
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_fec4f0e1b342456aca68bb4d2d05b50977470b003bb9acf282622f7843d56c47 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_fec4f0e1b342456aca68bb4d2d05b50977470b003bb9acf282622f7843d56c47->enter($__internal_fec4f0e1b342456aca68bb4d2d05b50977470b003bb9acf282622f7843d56c47_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Boutique:show.html.twig"));
+        $__internal_6121a44af5c4858aca7646618a18da050496fbac96fc94f142b2ab8be03844b3 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_6121a44af5c4858aca7646618a18da050496fbac96fc94f142b2ab8be03844b3->enter($__internal_6121a44af5c4858aca7646618a18da050496fbac96fc94f142b2ab8be03844b3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Boutique:show.html.twig"));
 
-        $__internal_51a5ce9c059d0d43fdd0eca3c05dccb3eae8e0b95318d78551a4907219d3d479 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_51a5ce9c059d0d43fdd0eca3c05dccb3eae8e0b95318d78551a4907219d3d479->enter($__internal_51a5ce9c059d0d43fdd0eca3c05dccb3eae8e0b95318d78551a4907219d3d479_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Boutique:show.html.twig"));
+        $__internal_2a41ea90e5533ee2133d7b2c565d8bdd6cb8461cffbdc7e4396bbccc356f98ed = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2a41ea90e5533ee2133d7b2c565d8bdd6cb8461cffbdc7e4396bbccc356f98ed->enter($__internal_2a41ea90e5533ee2133d7b2c565d8bdd6cb8461cffbdc7e4396bbccc356f98ed_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MainBundle:Boutique:show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_fec4f0e1b342456aca68bb4d2d05b50977470b003bb9acf282622f7843d56c47->leave($__internal_fec4f0e1b342456aca68bb4d2d05b50977470b003bb9acf282622f7843d56c47_prof);
+        $__internal_6121a44af5c4858aca7646618a18da050496fbac96fc94f142b2ab8be03844b3->leave($__internal_6121a44af5c4858aca7646618a18da050496fbac96fc94f142b2ab8be03844b3_prof);
 
         
-        $__internal_51a5ce9c059d0d43fdd0eca3c05dccb3eae8e0b95318d78551a4907219d3d479->leave($__internal_51a5ce9c059d0d43fdd0eca3c05dccb3eae8e0b95318d78551a4907219d3d479_prof);
+        $__internal_2a41ea90e5533ee2133d7b2c565d8bdd6cb8461cffbdc7e4396bbccc356f98ed->leave($__internal_2a41ea90e5533ee2133d7b2c565d8bdd6cb8461cffbdc7e4396bbccc356f98ed_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_3d24023600b25edf1031568be1b6ea16af6b5cd6c58a0bcdad67a8451ca1a343 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_3d24023600b25edf1031568be1b6ea16af6b5cd6c58a0bcdad67a8451ca1a343->enter($__internal_3d24023600b25edf1031568be1b6ea16af6b5cd6c58a0bcdad67a8451ca1a343_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_c6e03c6c63164664743a4558fa0f8e5bb4bf0387abcf149cbbcc156c1c8f74ea = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_c6e03c6c63164664743a4558fa0f8e5bb4bf0387abcf149cbbcc156c1c8f74ea->enter($__internal_c6e03c6c63164664743a4558fa0f8e5bb4bf0387abcf149cbbcc156c1c8f74ea_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_30a3a64d2b9e2e8fe35a0ae8c4e28ad5ad670a068f4aee1f3595ab2e2ee1766c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_30a3a64d2b9e2e8fe35a0ae8c4e28ad5ad670a068f4aee1f3595ab2e2ee1766c->enter($__internal_30a3a64d2b9e2e8fe35a0ae8c4e28ad5ad670a068f4aee1f3595ab2e2ee1766c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_3cb764892725308f5370978354c9ac8951981535cd91277648fbef719d5b7c03 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3cb764892725308f5370978354c9ac8951981535cd91277648fbef719d5b7c03->enter($__internal_3cb764892725308f5370978354c9ac8951981535cd91277648fbef719d5b7c03_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Produit";
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["prod"]) ? $context["prod"] : $this->getContext($context, "prod")), "nomProduit", array()), "html", null, true);
         
-        $__internal_30a3a64d2b9e2e8fe35a0ae8c4e28ad5ad670a068f4aee1f3595ab2e2ee1766c->leave($__internal_30a3a64d2b9e2e8fe35a0ae8c4e28ad5ad670a068f4aee1f3595ab2e2ee1766c_prof);
+        $__internal_3cb764892725308f5370978354c9ac8951981535cd91277648fbef719d5b7c03->leave($__internal_3cb764892725308f5370978354c9ac8951981535cd91277648fbef719d5b7c03_prof);
 
         
-        $__internal_3d24023600b25edf1031568be1b6ea16af6b5cd6c58a0bcdad67a8451ca1a343->leave($__internal_3d24023600b25edf1031568be1b6ea16af6b5cd6c58a0bcdad67a8451ca1a343_prof);
+        $__internal_c6e03c6c63164664743a4558fa0f8e5bb4bf0387abcf149cbbcc156c1c8f74ea->leave($__internal_c6e03c6c63164664743a4558fa0f8e5bb4bf0387abcf149cbbcc156c1c8f74ea_prof);
 
     }
 
     // line 5
     public function block_navBoutique($context, array $blocks = array())
     {
-        $__internal_3a4a5a4e7d67f590d7336a780c25d030d00aa6902e72b59569d1dc259cb08013 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_3a4a5a4e7d67f590d7336a780c25d030d00aa6902e72b59569d1dc259cb08013->enter($__internal_3a4a5a4e7d67f590d7336a780c25d030d00aa6902e72b59569d1dc259cb08013_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navBoutique"));
+        $__internal_05447eb1090558b5f5adb8e38ee7985fa3f09ddb144f0cc49e5d1a29fad95f0c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_05447eb1090558b5f5adb8e38ee7985fa3f09ddb144f0cc49e5d1a29fad95f0c->enter($__internal_05447eb1090558b5f5adb8e38ee7985fa3f09ddb144f0cc49e5d1a29fad95f0c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navBoutique"));
 
-        $__internal_3116134f3d86c495f4b18937906a0384fa79e5659d420c0d26e6404fc4a80c5f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3116134f3d86c495f4b18937906a0384fa79e5659d420c0d26e6404fc4a80c5f->enter($__internal_3116134f3d86c495f4b18937906a0384fa79e5659d420c0d26e6404fc4a80c5f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navBoutique"));
+        $__internal_ebf6d0b24fc8fa99be04c8f9b2f9627f33a33eab15fed75c3f2b6918d3cfc8c7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ebf6d0b24fc8fa99be04c8f9b2f9627f33a33eab15fed75c3f2b6918d3cfc8c7->enter($__internal_ebf6d0b24fc8fa99be04c8f9b2f9627f33a33eab15fed75c3f2b6918d3cfc8c7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "navBoutique"));
 
         echo "class=\"active\"";
         
-        $__internal_3116134f3d86c495f4b18937906a0384fa79e5659d420c0d26e6404fc4a80c5f->leave($__internal_3116134f3d86c495f4b18937906a0384fa79e5659d420c0d26e6404fc4a80c5f_prof);
+        $__internal_ebf6d0b24fc8fa99be04c8f9b2f9627f33a33eab15fed75c3f2b6918d3cfc8c7->leave($__internal_ebf6d0b24fc8fa99be04c8f9b2f9627f33a33eab15fed75c3f2b6918d3cfc8c7_prof);
 
         
-        $__internal_3a4a5a4e7d67f590d7336a780c25d030d00aa6902e72b59569d1dc259cb08013->leave($__internal_3a4a5a4e7d67f590d7336a780c25d030d00aa6902e72b59569d1dc259cb08013_prof);
+        $__internal_05447eb1090558b5f5adb8e38ee7985fa3f09ddb144f0cc49e5d1a29fad95f0c->leave($__internal_05447eb1090558b5f5adb8e38ee7985fa3f09ddb144f0cc49e5d1a29fad95f0c_prof);
 
     }
 
     // line 7
     public function block_body($context, array $blocks = array())
     {
-        $__internal_fd65926b19ee5318e5a6b7709aba20d34998d1d39366884d8245d1366beeee61 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_fd65926b19ee5318e5a6b7709aba20d34998d1d39366884d8245d1366beeee61->enter($__internal_fd65926b19ee5318e5a6b7709aba20d34998d1d39366884d8245d1366beeee61_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_f74194e5de694f41d15338867975885f314444366a35341195658f013e29dc09 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_f74194e5de694f41d15338867975885f314444366a35341195658f013e29dc09->enter($__internal_f74194e5de694f41d15338867975885f314444366a35341195658f013e29dc09_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_dff0c481e2d46331ab3467cd07c7f1c6d57855c426cbd3a05463a9fe039028a7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_dff0c481e2d46331ab3467cd07c7f1c6d57855c426cbd3a05463a9fe039028a7->enter($__internal_dff0c481e2d46331ab3467cd07c7f1c6d57855c426cbd3a05463a9fe039028a7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_5df716f832e1c7b46d9cb48856f3216b68c92042d4b828bf8422289950768af6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5df716f832e1c7b46d9cb48856f3216b68c92042d4b828bf8422289950768af6->enter($__internal_5df716f832e1c7b46d9cb48856f3216b68c92042d4b828bf8422289950768af6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 8
         echo "<main>
 \t<div class=\"container\">
-\t\t<div class=\"col-md-2 col-md-offset-10 cart\">
-\t\t    <a href=\"";
-        // line 11
+\t\t<div class=\"row barShop\">
+\t\t\t<div class=\"col-md-4 col-md-offset-8 cart\">
+\t\t\t    <a href=\"";
+        // line 12
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("cart");
-        echo "\">
-\t\t        <i class=\"fa fa-cart-arrow-down\"></i>
-\t\t        <p>Panier : ";
-        // line 13
+        echo "\"><button class=\"btn btn-default\">Voir mon panier <span>";
         echo twig_escape_filter($this->env, twig_length_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "get", array(0 => "cart"), "method")), "html", null, true);
-        echo "</p>
-\t\t    </a>
+        echo "</span> <i class=\"fa fa-cart-arrow-down\"></i></button></a>
+\t\t\t</div>
 \t\t</div>
 \t\t<div class=\"blank\">
 \t\t\t<div class=\"row\">
 \t\t\t\t<div class=\"col-md-3 imgProduit\">
 \t\t\t      \t<img src=\"
 \t\t\t      \t";
-        // line 20
+        // line 19
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["prod"]) ? $context["prod"] : $this->getContext($context, "prod")), "imgProd", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["img"]) {
             if (($this->getAttribute($this->getAttribute($context["img"], "typeImg", array()), "idType", array()) == 1)) {
-                // line 21
+                // line 20
                 echo "\t\t\t    \t\t";
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("img/"), "html", null, true);
                 echo twig_escape_filter($this->env, $this->getAttribute($context["img"], "chemin", array()), "html", null, true);
@@ -119,7 +117,7 @@ class __TwigTemplate_e60e4bda6d381807643f63c59188ec764ba1a9a091dd17881704521f046
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['img'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 23
+        // line 22
         echo "\t\t\t    \t\" alt=\"image produit\" title=\"";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["prod"]) ? $context["prod"] : $this->getContext($context, "prod")), "nomProduit", array()), "html", null, true);
         echo "\">
@@ -132,15 +130,15 @@ class __TwigTemplate_e60e4bda6d381807643f63c59188ec764ba1a9a091dd17881704521f046
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"caracProd\">
 \t\t\t\t\t\t<p>";
-        // line 32
+        // line 31
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["prod"]) ? $context["prod"] : $this->getContext($context, "prod")), "idProduit", array()), "html", null, true);
         echo "</p>
 \t\t\t\t\t\t<p>";
-        // line 33
+        // line 32
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["prod"]) ? $context["prod"] : $this->getContext($context, "prod")), "nomProduit", array()), "html", null, true);
         echo "</p>
 \t\t\t\t\t\t<p>";
-        // line 34
+        // line 33
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["prod"]) ? $context["prod"] : $this->getContext($context, "prod")), "prixProduit", array()), "html", null, true);
         echo "&nbsp;€</p>
 \t\t\t\t\t</div>
@@ -149,23 +147,37 @@ class __TwigTemplate_e60e4bda6d381807643f63c59188ec764ba1a9a091dd17881704521f046
 \t\t\t\t\t<!-- texte de description du produit -->
 \t\t\t\t\t<p>
 \t\t\t\t\t\t";
-        // line 40
+        // line 39
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["prod"]) ? $context["prod"] : $this->getContext($context, "prod")), "descriptionProduit", array()), "html", null, true);
         echo "
 \t\t\t\t\t</p>\t\t\t\t
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t\t<div class=\"row\">
-\t\t\t\t<div class=\"col-md-2 col-md-offset-10\">
+\t\t\t\t<div class=\"col-md-4 col-md-offset-8\">
 \t\t\t\t\t<form id=\"buyForm\" action=\"\" method=\"post\" enctype=\"multipart/form-data\">
-\t\t\t\t\t\t<input type=\"number\" name=\"Quantite\" min=\"1\" value=\"1\" size=\"4\" required>
 \t\t\t\t\t\t<input type=\"hidden\" name=\"id\" value=\"";
-        // line 48
+        // line 46
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["prod"]) ? $context["prod"] : $this->getContext($context, "prod")), "idProduit", array()), "html", null, true);
         echo "\">
-\t\t\t\t\t\t<input class=\"btn btn-default\" type=\"submit\" name=\"buyProd\" value=\"Acheter\">
+\t\t\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t\t\t<input class=\"form-control\" type=\"number\" name=\"Quantite\" placeholder=\"Quantité\" min=\"1\" value=\"1\" required>
+\t\t\t\t\t\t\t<span class=\"input-group-btn\">
+\t\t\t\t\t\t\t\t<input class=\"btn btn-default\" type=\"submit\" name=\"buyProd\" value=\"Acheter\">
+\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t</div>
 \t\t\t\t\t</form>
-\t\t\t\t</div>
+\t\t\t\t\t";
+        // line 54
+        if (($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "get", array(0 => "roleUser"), "method") == 3)) {
+            // line 55
+            echo "\t\t\t\t\t\t<a href=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("modProd", array("id" => $this->getAttribute((isset($context["prod"]) ? $context["prod"] : $this->getContext($context, "prod")), "idProduit", array()))), "html", null, true);
+            echo "\"><button class=\"btn btn-primary\">Modifier le produit <i class=\"fa fa-plus\"></i></button></a>
+\t\t\t\t\t";
+        }
+        // line 57
+        echo "\t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
 \t</div>
@@ -173,10 +185,10 @@ class __TwigTemplate_e60e4bda6d381807643f63c59188ec764ba1a9a091dd17881704521f046
 </main>
 ";
         
-        $__internal_dff0c481e2d46331ab3467cd07c7f1c6d57855c426cbd3a05463a9fe039028a7->leave($__internal_dff0c481e2d46331ab3467cd07c7f1c6d57855c426cbd3a05463a9fe039028a7_prof);
+        $__internal_5df716f832e1c7b46d9cb48856f3216b68c92042d4b828bf8422289950768af6->leave($__internal_5df716f832e1c7b46d9cb48856f3216b68c92042d4b828bf8422289950768af6_prof);
 
         
-        $__internal_fd65926b19ee5318e5a6b7709aba20d34998d1d39366884d8245d1366beeee61->leave($__internal_fd65926b19ee5318e5a6b7709aba20d34998d1d39366884d8245d1366beeee61_prof);
+        $__internal_f74194e5de694f41d15338867975885f314444366a35341195658f013e29dc09->leave($__internal_f74194e5de694f41d15338867975885f314444366a35341195658f013e29dc09_prof);
 
     }
 
@@ -192,7 +204,7 @@ class __TwigTemplate_e60e4bda6d381807643f63c59188ec764ba1a9a091dd17881704521f046
 
     public function getDebugInfo()
     {
-        return array (  164 => 48,  153 => 40,  144 => 34,  140 => 33,  136 => 32,  123 => 23,  112 => 21,  107 => 20,  97 => 13,  92 => 11,  87 => 8,  78 => 7,  60 => 5,  42 => 3,  11 => 1,);
+        return array (  180 => 57,  174 => 55,  172 => 54,  161 => 46,  151 => 39,  142 => 33,  138 => 32,  134 => 31,  121 => 22,  110 => 20,  105 => 19,  93 => 12,  87 => 8,  78 => 7,  60 => 5,  42 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -207,18 +219,17 @@ class __TwigTemplate_e60e4bda6d381807643f63c59188ec764ba1a9a091dd17881704521f046
     {
         return new Twig_Source("{% extends \"MainBundle::base.html.twig\" %}
 
-{% block title %}Produit{% endblock %}
+{% block title %}{{prod.nomProduit}}{% endblock %}
 
 {% block navBoutique %}class=\"active\"{% endblock %}
 
 {% block body %}
 <main>
 \t<div class=\"container\">
-\t\t<div class=\"col-md-2 col-md-offset-10 cart\">
-\t\t    <a href=\"{{path('cart')}}\">
-\t\t        <i class=\"fa fa-cart-arrow-down\"></i>
-\t\t        <p>Panier : {{app.session.get('cart')|length}}</p>
-\t\t    </a>
+\t\t<div class=\"row barShop\">
+\t\t\t<div class=\"col-md-4 col-md-offset-8 cart\">
+\t\t\t    <a href=\"{{path('cart')}}\"><button class=\"btn btn-default\">Voir mon panier <span>{{app.session.get('cart')|length}}</span> <i class=\"fa fa-cart-arrow-down\"></i></button></a>
+\t\t\t</div>
 \t\t</div>
 \t\t<div class=\"blank\">
 \t\t\t<div class=\"row\">
@@ -249,12 +260,19 @@ class __TwigTemplate_e60e4bda6d381807643f63c59188ec764ba1a9a091dd17881704521f046
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t\t<div class=\"row\">
-\t\t\t\t<div class=\"col-md-2 col-md-offset-10\">
+\t\t\t\t<div class=\"col-md-4 col-md-offset-8\">
 \t\t\t\t\t<form id=\"buyForm\" action=\"\" method=\"post\" enctype=\"multipart/form-data\">
-\t\t\t\t\t\t<input type=\"number\" name=\"Quantite\" min=\"1\" value=\"1\" size=\"4\" required>
 \t\t\t\t\t\t<input type=\"hidden\" name=\"id\" value=\"{{prod.idProduit}}\">
-\t\t\t\t\t\t<input class=\"btn btn-default\" type=\"submit\" name=\"buyProd\" value=\"Acheter\">
+\t\t\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t\t\t<input class=\"form-control\" type=\"number\" name=\"Quantite\" placeholder=\"Quantité\" min=\"1\" value=\"1\" required>
+\t\t\t\t\t\t\t<span class=\"input-group-btn\">
+\t\t\t\t\t\t\t\t<input class=\"btn btn-default\" type=\"submit\" name=\"buyProd\" value=\"Acheter\">
+\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t</div>
 \t\t\t\t\t</form>
+\t\t\t\t\t{% if app.session.get('roleUser') == 3 %}
+\t\t\t\t\t\t<a href=\"{{path('modProd', {'id': prod.idProduit})}}\"><button class=\"btn btn-primary\">Modifier le produit <i class=\"fa fa-plus\"></i></button></a>
+\t\t\t\t\t{% endif %}
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>

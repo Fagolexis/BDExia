@@ -111,9 +111,9 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'MainBundle\\Controller\\ActivitesController::indexAction',  '_route' => 'listAct',);
             }
 
-            // createtAct
+            // addAct
             if ($pathinfo === '/activites/creation') {
-                return array (  '_controller' => 'MainBundle\\Controller\\ActivitesController::createAction',  '_route' => 'createtAct',);
+                return array (  '_controller' => 'MainBundle\\Controller\\ActivitesController::createAction',  '_route' => 'addAct',);
             }
 
             // showAct
@@ -159,9 +159,9 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'MainBundle\\Controller\\BoutiqueController::cartAction',  '_route' => 'cart',);
             }
 
-            // main_boutique_mod
-            if (preg_match('#^/boutique/(?P<id>[^/]++)/modification$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'main_boutique_mod')), array (  '_controller' => 'MainBundle\\Controller\\BoutiqueController::modAction',));
+            // modProd
+            if (preg_match('#^/boutique/(?P<id>\\d+)/modification$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'modProd')), array (  '_controller' => 'MainBundle\\Controller\\BoutiqueController::modAction',));
             }
 
         }

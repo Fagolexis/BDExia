@@ -1,11 +1,15 @@
 {% extends "MainBundle::base.html.twig" %}
 
-{% block title %}Panier{% endblock %}
+{% block title %}Votre panier{% endblock %}
 
 {% block navBoutique %}class="active"{% endblock %}
 
 {% block body %}
 <main>
+	<div class="header-title container-fluid text-center">
+		<h1>Votre panier</h1>
+		<h2>{{app.session.get('cart')|length}} articles</h2>
+    </div>
     <div class="container text-center carrousel blank">
 			<div class="row">
 				{% for prod in produits %}
@@ -25,13 +29,16 @@
 			      		</div>
 			    	</div>
 			  	</div>
-			  	{% endfor %}
-			</div>
-			<div class="row">
+			  	
+				<div class="row">
 					<div class="col-md-2 col-md-offset-9">
-						<button class="inscription"><h4>Acheter</h4></button>
+						<button class="inscription"><h4>Commander</h4></button>
 					</div>
 				</div>
+			  	{% else %}
+			  	<h4>Vous n'avez pas encore choisi de produit !</h4>
+			  	{% endfor %}
+			</div>
 		</div>
 	<div class="espaceBas"></div>
 </main>

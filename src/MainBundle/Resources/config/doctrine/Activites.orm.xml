@@ -2,8 +2,8 @@
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
   <entity name="MainBundle\Entity\Activites" table="activites">
     <indexes>
-      <index name="FK_ACTIVITE_A_UN_AUTEUR" columns="AUTEUR_ACT"/>
       <index name="FK_ACTIVITE_A_UN_ETAT" columns="ETAT_ACT"/>
+      <index name="FK_ACTIVITE_A_UN_AUTEUR" columns="AUTEUR_ACT"/>
     </indexes>
     <id name="idActivite" type="integer" column="ID_ACTIVITE">
       <generator strategy="IDENTITY"/>
