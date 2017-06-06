@@ -33,24 +33,32 @@
 						{% for img in act.imgAct if img.typeImg.idType == 1 %}
 							<img src="{{asset('img/')}}{{img.chemin}}" alt="image produit" title="{{act.nomActivite}}">
 						{% endfor %}
+						<input type="file" accept=".png, .jpg" name="imgActCouv">
+					{% else %}
+						<input type="file" accept=".png, .jpg" name="imgActCouv" required>
 					{% endif %}
-	                <input type="file" accept=".png, .jpg" name="imgActCouv" required>
 					<label class="control-label" for="Lieu">Lieu :</label>
 					<textarea class="form-control" name="lieu" placeholder="Entrer un lieu pour l'activité" required>{% if act.lieu is defined %}{{act.lieu}}{% endif %}</textarea>
 					<label class="control-label" for="Date">Date :</label>
 					<input class="form-control" type="date" name="date" placeholder="jj/mm/aaaa"
 					{% if act.idDateAct is defined %}
 						{% for date in act.idDateAct if date.typeDate.idType == 2 %}
-							value="{{date.date|date('d/m/Y')}}"
+							value="{{date.date|date('Y-m-d')}}"
 						{% endfor %}
-					{% endif %} required>
+						>
+					{% else %}
+						required>
+					{% endif %}
 					<label class="control-label" for="Heure">Heure :</label>
 					<input class="form-control" type="time" name="time" placeholder="hh:mm:ss"
 					{% if act.idDateAct is defined %}
 						{% for date in act.idDateAct if date.typeDate.idType == 2 %}
 							value="{{date.date|date('H:i:s')}}"
 						{% endfor %}
-					{% endif %} required>
+						>
+					{% else %}
+						required>
+					{% endif %}
 					<label class="control-label" for="Prix">Prix (€) :</label>
 					<input class="form-control" type="number" step="0,01" name="prix" placeholder="Entrer un prix" size="5"
 					{% if act.prixActivite is defined %}value="{{act.prixActivite}}"{% endif %} required>

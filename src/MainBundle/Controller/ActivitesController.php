@@ -240,12 +240,85 @@ class ActivitesController extends DefaultController
         if($Session->get('idUser') == null) {
             return $this->forward('MainBundle:Connexion:connexion');
         }
+
+        $post = $request->request;
         
         if(2 == $Session->get('roleUser')) {
+            if($post->get('delAct')!=null) {
+                $act = $this->getDoctrine()->getRepository("MainBundle:Activites")->findOneByIdActivite($id);
+                $this->dbUpdate("remove", $act);
+                return $this->forward('MainBundle:Boutique:index');
+            }
+            elseif($post->get('modAct')!=null) {
+                $bm = new ActiviteModel();
+                $im = new ImgModel();
+                $dm = new DateModel();
+
+
+                $act = $this->getDoctrine()->getRepository('MainBundle:Activites')->findOneByIdActivite($id);
+
+                $nom = $post->get('titre');
+                if($nom != $act->getNomActivite()){ $act->setNomActivite($nom); }
+                $desc = $post->get('desc');
+                if($desc != $act->getDescriptionActivite()){ $act->setDescriptionActivite($desc); }
+                $img = $request->files->get('imgActCouv');
+                $lieu = $post->get('lieu');
+                if($lieu != $act->getLieu()){ $act->setLieu($lieu); }
+                $prix = $post->get('prix');
+                if($prix != $act->getPrixActivite()){ $act->setPrixActivite($prix); }
+                $date = $post->get('date');
+                $time = $post->get('time');
+                $dateDT = new \DateTime($date.$time);
+                $age = $post->get('age');
+                if($age != $act->getAgeMin()){ $act->setAgeMin($age); }
+                $sub = $post->get('sub');
+                if($sub != $act->getInscritsMax()){ $act->setInscritsMax($sub); }
+
+
+                $user = $this->getDoctrine()->getRepository("MainBundle:Users")->findOneByIdUser($Session->get('idUser'));
+                $type = $this->getDoctrine()->getRepository('MainBundle:Types')->findOneByIdType(1);
+                $typeD = $this->getDoctrine()->getRepository('MainBundle:Types')->findOneByIdType(2);
+
+                if(!empty($img)) {
+                    $chemin = $this->saveImg($img);
+                    $date = $dm->currentDate($type);
+                    $this->dbUpdate('persist', $date);
+                    $img = $im->createImg($type,$chemin,$date,$user);
+                    $this->dbUpdate('persist', $img);
+                    foreach ($prod->getImgAct() as $imgsAct) {
+                        if($imgsAct->getTypeImg()->getIdType() == 1) {
+                            $imgAct = $imgsAct;
+                        }
+                    }
+                    $imgAct->removeIdImgAct($act);
+                    $act->removeImgAct($imgAct);
+                    $act->addImgAct($img);
+                    $img->addIdImgAct($act);
+                    $this->dbUpdate('up');
+                }
+
+                foreach ($act->getIdDateAct() as $key => $dates) {
+                    if($dates->getTypeDate()->getIdType() == 2) {
+                        $oldDate = $dates;
+                    }
+                }
+                if(!empty($dateDT) && $dateDT->format('Y-m-d H:i:s') != $oldDate->getDate()->format('Y-m-d H:i:s')) {
+                    $date = $dm->createDate($typeD, $dateDT);
+                    $this->dbUpdate('persist', $date);
+                    $oldDate->removeDateAct($act);
+                    $act->removeIdDateAct($oldDate);
+                    $act->addIdDateAct($date);
+                    $date->addDateAct($act);
+                    $this->dbUpdate('up');
+                }
+                return $this->forward("MainBundle:Activites:show", array(
+                    'id' => $id
+                ));
+            }
             $act = $this->getDoctrine()->getRepository('MainBundle:Activites')->findOneByIdActivite($id);
             return $this->render('MainBundle:Activites:modification_activites.html.twig', array(
                 'act' => $act
-        ));
+            ));
         }
         else {
             return $this->forward("MainBundle:Activites:index");

@@ -142,46 +142,56 @@ class BoutiqueController extends DefaultController
         }
 
         $post = $request->request;
-        if($post->get('delProd')!=null) {
-            $prod = $this->getDoctrine()->getRepository("MainBundle:Boutique")->findOneByIdProduit($id);
-            $this->dbUpdate("remove", $prod);
-            return $this->forward('MainBundle:Boutique:index');
-        }
-        elseif($post->get('modProd')!=null) {
-            $bm = new BoutiqueModel();
-            $im = new ImgModel();
-            $dm = new DateModel();
-
-            $nom = $post->get('nom');
-            $desc = $post->get('desc');
-            $img = $request->files->get('prodImg');
-            $prix = $post->get('prix');
-            $stock = $post->get('stock');
-
-            $chemin = $this->saveImg($img);
-            $prod = $this->getDoctrine()->getRepository('MainBundle:Boutique')->findOneByIdProduit($id);
-            $user = $this->getDoctrine()->getRepository("MainBundle:Users")->findOneByIdUser($Session->get('idUser'));
-            $type = $this->getDoctrine()->getRepository('MainBundle:Types')->findOneByIdType(1);
-            $date = $dm->currentDate($type);
-            $this->dbUpdate('persist', $date);
-            $img = $im->createImg($type,$chemin,$date,$user);
-            $this->dbUpdate('persist', $img);
-            foreach ($prod->getImgProd() as $imgsProd) {
-                if($imgsProd->getTypeImg()->getIdType() == 1) {
-                    $imgProd = $imgsProd;
-                }
+        if(3 == $Session->get('roleUser')) {
+            if($post->get('delProd')!=null) {
+                $prod = $this->getDoctrine()->getRepository("MainBundle:Boutique")->findOneByIdProduit($id);
+                $this->dbUpdate("remove", $prod);
+                return $this->forward('MainBundle:Boutique:index');
             }
-            $imgProd->removeIdImgProd($prod);
-            $prod->removeImgProd($imgProd);
-            $prod->addImgProd($img);
-            $img->addIdImgProd($prod);
-            $this->dbUpdate('up');
-            $idImg = $img->getIdImg();
-            return $this->forward("MainBundle:Boutique:show", array(
-                'id' => $id,
-                "produit" => $prod));
+            elseif($post->get('modProd')!=null) {
+                $bm = new BoutiqueModel();
+                $im = new ImgModel();
+                $dm = new DateModel();
+
+
+                $prod = $this->getDoctrine()->getRepository('MainBundle:Boutique')->findOneByIdProduit($id);
+
+                $nom = $post->get('nom');
+                if($nom != $prod->getNomProduit()){ $prod->setNomProduit($nom); }
+                $desc = $post->get('desc');
+                if($desc != $prod->getdescriptionProduit()){ $prod->setdescriptionProduit($desc); }
+                $img = $request->files->get('prodImg');
+                $prix = $post->get('prix');
+                if($prix != $prod->getPrixProduit()){ $prod->setPrixProduit($prix); }
+                $stock = $post->get('stock');
+                if($stock != $prod->getStock()){ $prod->setStock($stock); }
+                $this->dbUpdate('up');
+
+                if(!empty($img)) {
+                    $chemin = $this->saveImg($img);
+                    $prod = $this->getDoctrine()->getRepository('MainBundle:Boutique')->findOneByIdProduit($id);
+                    $user = $this->getDoctrine()->getRepository("MainBundle:Users")->findOneByIdUser($Session->get('idUser'));
+                    $type = $this->getDoctrine()->getRepository('MainBundle:Types')->findOneByIdType(1);
+                    $date = $dm->currentDate($type);
+                    $this->dbUpdate('persist', $date);
+                    $img = $im->createImg($type,$chemin,$date,$user);
+                    $this->dbUpdate('persist', $img);
+                    foreach ($prod->getImgProd() as $imgsProd) {
+                        if($imgsProd->getTypeImg()->getIdType() == 1) {
+                            $imgProd = $imgsProd;
+                        }
+                    }
+                    $imgProd->removeIdImgProd($prod);
+                    $prod->removeImgProd($imgProd);
+                    $prod->addImgProd($img);
+                    $img->addIdImgProd($prod);
+                }
+                return $this->forward("MainBundle:Boutique:show", array(
+                    'id' => $id
+                ));
+            }
         }
-        
+
         $product = $this->getDoctrine()->getRepository("MainBundle:Boutique")->findOneByIdProduit($id);
         return $this->render('MainBundle:Boutique:modif_produit.html.twig', array(
             "produit" => $product
