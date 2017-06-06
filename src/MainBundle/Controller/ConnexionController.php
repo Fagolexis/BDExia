@@ -10,6 +10,8 @@ use Symfony\Component\Routing\RouteCollection;
 use MainBundle\Model\UserModel;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Cookie;
+use MainBundle\Model\ImgModel;
+use MainBundle\Model\DateModel;
 
 class ConnexionController extends DefaultController
 {
@@ -73,14 +75,14 @@ class ConnexionController extends DefaultController
 			}
 	    }
 	    elseif($post->get('submitInscription')!=null) {
-		   	$NomUser = $request->request->get('Nom');
-			$PrenomUser = $request->request->get('Prenom');
-		   	$EmailUser = $request->request->get('Email');
-			$PswrdUser = $request->request->get('Mdp');
-			$DateUser = $request->request->get('Naissance');
-			$PromoUser = $request->request->get('Promo');
-		   	$AvatarUser = $request->request->get('Avatar');
-		   	$PhoneUser = $request->request->get('Telephone');
+		   	$NomUser = $post->get('Nom');
+			$PrenomUser = $post->get('Prenom');
+		   	$EmailUser = $post->get('Email');
+			$PswrdUser = $post->get('Mdp');
+			$DateUser = $post->get('Naissance');
+			$PromoUser = $post->get('Promo');
+		   	$AvatarUser = $request->files->get('Avatar');
+		   	$PhoneUser = $post->get('Telephone');
 			if (isset($NomUser) && isset($PrenomUser) && isset($EmailUser) && isset($PswrdUser) && isset($DateUser)) {
 				$user = $this->getDoctrine()->getRepository('MainBundle:Users')->findOneByMail($EmailUser);
 				if(!isset($user)) {
@@ -88,9 +90,23 @@ class ConnexionController extends DefaultController
 		    		$em = $this->getDoctrine()->getManager();
 		    		$promoUser = $em->getRepository('MainBundle:Promotions')->find($PromoUser);
 		    		$roleUser = $em->getRepository('MainBundle:RolesUsers')->find(1);
+
 		    		$uM = new UserModel();
 		    		$newUser = $uM->createUser($NomUser,$PrenomUser,$EmailUser,$PswrdUser, new \DateTime($DateUser),$PhoneUser,$promoUser,$roleUser);
 					$this->dbUpdate("persist", $newUser);
+					if(!empty($AvatarUser)) {
+						$iM = new ImgModel();
+	                    $dM = new DateModel();
+	                    $type = $this->getDoctrine()->getRepository('MainBundle:Types')->findOneByIdType(1);
+	                    $date = $dM->currentDate($type);
+	                    $this->dbUpdate('persist', $date);
+	                    $chemin = $this->saveImg($AvatarUser);
+	                    $img = $iM->createImg($type,$chemin,$date,$user);
+	                    $this->dbUpdate('persist', $img);
+	                    $newUser->setAvatarUser($img);
+					}
+
+                    $this->dbUpdate('up');
 	    			$Session->start();
 	    			$Session->set('idUser', $newUser->getIdUser());
 	    			$Session->set('roleUser', $newUser->getRoleUser()->getIdRole());
@@ -98,7 +114,7 @@ class ConnexionController extends DefaultController
 				    return $this->forward("MainBundle:Connexion:index");
 		    	} 
 				else {
-					$errorMessage = 'Cette adrresse mail est déjà utilisée.';
+					$errorMessage = 'Cette adresse mail est déjà utilisée.';
 		    		return $this->render('MainBundle:Connexion:connexion.html.twig', array(
 		    		'err' => $errorMessage
 		        	)); 

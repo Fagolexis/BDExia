@@ -129,7 +129,7 @@ class GestionController extends DefaultController
             if($user->getAvatarUser() != null) {
                 if(isset($Avatar) && !empty($Avatar) && $Avatar != $user->getAvatarUser()->getChemin()) {
                     $img = $user->getAvatarUser();
-                    $file = saveImg($Avatar);
+                    $file = $this->saveImg($Avatar);
                     $img->setChemin($file);
                     $user->setAvatarUser($img);
                     $this->dbUpdate('up');

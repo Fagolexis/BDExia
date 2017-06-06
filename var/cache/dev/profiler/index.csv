@@ -4532,3 +4532,10 @@ ea6943,::1,POST,http://bdexiadev/utilisateurs,1496743866,,500
 058ad1,::1,GET,http://bdexiadev/,1496743921,,200
 e52a8d,::1,GET,http://bdexiadev/utilisateurs,1496743924,,200
 59b7d3,::1,POST,http://bdexiadev/utilisateurs,1496743945,,200
+ed234f,::1,GET,http://localhost/exia/bdexia/web/,1496754368,ffbe08,200
+ffbe08,::1,GET,http://localhost/exia/bdexia/web/,1496754368,,200
+4b06bf,::1,POST,http://localhost/exia/bdexia/web/,1496754404,d83b6b,200
+d83b6b,::1,POST,http://localhost/exia/bdexia/web/,1496754404,04a0e5,200
+04a0e5,::1,POST,http://localhost/exia/bdexia/web/,1496754404,,200
+bcd85e,::1,GET,http://localhost/exia/bdexia/web/utilisateurs/25,1496754408,,200
+eb519a,::1,POST,http://localhost/exia/bdexia/web/utilisateurs/25,1496754416,,200
