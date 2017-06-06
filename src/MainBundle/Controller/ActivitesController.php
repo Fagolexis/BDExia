@@ -45,7 +45,7 @@ class ActivitesController extends DefaultController
 
         if(2 == $Session->get('roleUser')) {
             $post = $request->request;
-            if($post->get('addActForm')!=null) {
+            if($post->get('addAct')!=null) {
                 $am = new ActiviteModel();
                 $im = new ImgModel();
                 $dm = new DateModel();
@@ -61,8 +61,7 @@ class ActivitesController extends DefaultController
                 $prix = $post->get('prix');
                 $sub = $post->get('sub');
                 $chemin = $this->saveImg($img);
-                //Cookie
-                $user = $this->getDoctrine()->getRepository("MainBundle:Users")->findOneByIdUser(4);
+                $user = $this->getDoctrine()->getRepository("MainBundle:Users")->findOneByIdUser($Session->get('idUser'));
                 if(1 == $user->getRoleUser()->getIdRole()) {
                     $etat = $this->getDoctrine()->getRepository("MainBundle:EtatsActivites")->findOneByIdEtat(1);
                 }else {
@@ -72,7 +71,8 @@ class ActivitesController extends DefaultController
                 $act = $am->createActivite($titre,$desc,$prix,$lieu,$sub,$age,$user,$etat);
 
                 $type = $this->getDoctrine()->getRepository("MainBundle:Types")->findOneByIdType(1);
-                $date = $dm->createDate($type,$dateDT);
+                $typeD = $this->getDoctrine()->getRepository("MainBundle:Types")->findOneByIdType(2);
+                $date = $dm->createDate($typeD,$dateDT);
                 $currdate = $dm->currentDate($type);
                 $this->dbUpdate('persist', $currdate);
                 $img = $im->createImg($type,$chemin,$currdate,$user);
@@ -80,11 +80,16 @@ class ActivitesController extends DefaultController
                 $this->dbUpdate('persist', $act);
                 $this->dbUpdate('persist', $date);
                 $this->dbUpdate('persist', $img);
+                $img->addIdImgAct($act);
+                $date->addDateAct($act);
+                $currdate->addDateAct($act);
+                $act->addImgAct($img);
+                $act->addIdDateAct($date);
+                $act->addIdDateAct($currdate);
+                $this->dbUpdate('up');
                 $idAct = $act->getIdActivite();
                 $idImg = $img->getIdImg();
                 $idDate = $date->getIdDate();
-                $this->insert($am->addImg($act, $img));
-                $this->insert($am->addDate($act, $date));
                 return $this->forward("MainBundle:Activites:show", array(
                     "id" => $idAct));
             }
@@ -106,24 +111,16 @@ class ActivitesController extends DefaultController
         }
 
         $post = $request->request;
-        echo "post";
         $user = $this->getDoctrine()->getRepository("MainBundle:Users")->findOneByIdUser($Session->get('idUser'));
-        echo "user";
         $act = $this->getDoctrine()->getRepository("MainBundle:Activites")->findOneByIdActivite($id);
-        echo "act";
-        var_dump($act->getIdActivite());
-        var_dump($act->getEtatAct()->getIdEtat());
         $subs = $this->getDoctrine()->getRepository("MainBundle:Inscrits")->findBy(array('inscritAct' => $act->getIdActivite(), 'inscritChoix' => $act->getEtatAct()->getIdEtat()-1));
-        echo "subs";
         $img_t = $act->getImgAct();
         $date_t = $act->getIdDateAct();
-        $couv;
         foreach ($img_t as $img) {
             if($img->getTypeImg()->getIdType() == 1) {
                 $couv = $img;
             }
         }
-        $date;
         foreach ($date_t as $dat) {
             if($dat->getTypeDate()->getIdType() == 2) {
                 $date = $dat;

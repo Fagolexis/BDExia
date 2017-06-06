@@ -1,6 +1,6 @@
 {% extends "MainBundle::base.html.twig" %}
 
-{% block title %}Modification de l'activité{% endblock %}
+{% block title %}{% if act is defined %}{{act.nomActivite}}{% else %}Création d'une actvité{% endif %}{% endblock %}
 
 {% block navActivites %}class="active"{% endblock %}
 
@@ -34,21 +34,21 @@
 							<img src="{{asset('img/')}}{{img.chemin}}" alt="image produit" title="{{act.nomActivite}}">
 						{% endfor %}
 					{% endif %}
-					<div class="input-group">
-						<label class="input-group-btn">
-	                        <span class="btn btn-primary">
-	                            Parcourir &hellip; <input type="file" style="display: none;" name="imgActCouv" accept=".png, .jpg" required>
-	                        </span>
-	                    </label>
-	                </div>
-                    <input type="text" class="form-control" readonly>
+	                <input type="file" accept=".png, .jpg" name="imgActCouv" required>
 					<label class="control-label" for="Lieu">Lieu :</label>
 					<textarea class="form-control" name="lieu" placeholder="Entrer un lieu pour l'activité" required>{% if act.lieu is defined %}{{act.lieu}}{% endif %}</textarea>
 					<label class="control-label" for="Date">Date :</label>
-					<input class="form-control" type="datetime" name="date" placeholder="Entrer une date de l'activité"
+					<input class="form-control" type="date" name="date" placeholder="jj/mm/aaaa"
 					{% if act.idDateAct is defined %}
 						{% for date in act.idDateAct if date.typeDate.idType == 2 %}
-							value="{{date.date|date('H:i:s d/m/Y')}}"
+							value="{{date.date|date('d/m/Y')}}"
+						{% endfor %}
+					{% endif %} required>
+					<label class="control-label" for="Heure">Heure :</label>
+					<input class="form-control" type="time" name="time" placeholder="hh:mm:ss"
+					{% if act.idDateAct is defined %}
+						{% for date in act.idDateAct if date.typeDate.idType == 2 %}
+							value="{{date.date|date('H:i:s')}}"
 						{% endfor %}
 					{% endif %} required>
 					<label class="control-label" for="Prix">Prix (€) :</label>

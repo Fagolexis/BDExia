@@ -1,6 +1,6 @@
 {% extends "MainBundle::base.html.twig" %}
 
-{% block title %}{{prod.nomProduit}}{% endblock %}
+{% block title %}{% if produit is defined %}{{produit.nomProduit}}{% else %}Création d'un produit{% endif %}{% endblock %}
 
 {% block navBoutique %}class="active"{% endblock %}
 

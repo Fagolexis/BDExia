@@ -12,6 +12,9 @@
 				<div class="col-md-5 col-md-offset-2">
 					<h2>{{act.nomActivite}}</h2>
 				</div>
+				<div class="col-md-5 col-md-offset-2">
+					<h6>{% for date in act.idDateAct if date.typeDate.idType == 1 %}({{date.date|date("d/m/Y")}}){% endfor %}</h2>
+				</div>
 				<img class="imgAct" src="{{asset('img/')}}{{couv.chemin}}" alt="">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
@@ -27,7 +30,7 @@
 						</div>
 						<div class="col-md-4">
 							<h4>Quand ?</h4>
-							<p>{{date.date|date("d/m/Y")}}</p>
+							<p>{{date.date|date("d/m/Y H:i:s")}}</p>
 						</div>
 						<div class="col-md-4">
 							<h4>Combien ?</h4>

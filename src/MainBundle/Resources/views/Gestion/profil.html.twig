@@ -38,15 +38,8 @@
 								<option value="5"{% if user.promoUser.idPromo is defined and user.promoUser.idPromo == 5 %}selected{% endif %}>A5</option>
 							</select>
 							<label class="control-label" for="Avatar">Avatar :</label>
-							{% if user.avatar is defined %}<img src="{{user.avatar.chemin}}" alt="" />{% endif %}
-							<div class="input-group">
-								<label class="input-group-btn">
-			                        <span class="btn btn-primary">
-			                            Parcourir &hellip; <input type="file" style="display: none;" name="Avatar" accept=".png, .jpg"  {{attr2}}>
-			                        </span>
-			                    </label>
-			                </div>
-			                <input type="text" class="form-control" readonly>
+							<img src="{{asset('img/')}}{% if user.avatarUser is defined and user.avatarUser != NULL %}{{user.avatarUser.chemin}}{% else %}avatar.jpg{% endif %}" alt="" />
+							<input type="file" accept=".png, .jpg" name="Avatar" required>
 							<label class="control-label" for="Telephone">Numéro de téléphone :</label>
 							<input class="form-control" type="tel" name="Telephone" maxlength="10" placeholder="Entrer votre numéro de téléphone"
 							{% if user.telephone is defined %}value="{{user.telephone}}"{% endif %} {{attr2}}>

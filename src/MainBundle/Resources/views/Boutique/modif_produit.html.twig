@@ -1,6 +1,6 @@
 {% extends "MainBundle::base.html.twig" %}
 
-{% block title %}{{produit.nomProduit}}{% endblock %}
+{% block title %}{% if produit is defined %}{{produit.nomProduit}}{% else %}Création d'un produit{% endif %}{% endblock %}
 
 {% block navBoutique %}class="active"{% endblock %}
 
@@ -29,7 +29,7 @@
 					<label class="control-label" for="Description">Description :</label>
 					<textarea class="form-control" name="desc" placeholder="Entrer un description de produit" required>{% if produit.descriptionProduit is defined %}{{produit.descriptionProduit}}{% endif %}</textarea>
 					<label class="control-label" for="Prix">Prix (€) :</label>
-					<input class="form-control" type="number" step="0,01" name="prix" placeholder="Entrer un prix" size="5"
+					<input class="form-control" type="number" step="any" name="prix" placeholder="Entrer un prix" size="5"
 					{% if produit.prixProduit is defined %}value="{{produit.prixProduit}}"{% endif %} required>
 					<label class="control-label" for="Stock">Stock :</label>
 					<input class="form-control" type="number" name="stock" placeholder="Entrer un stock" size="5"
@@ -39,14 +39,16 @@
 						{% for img in produit.imgProd if img.typeImg.idType == 1 %}
 							<img src="{{asset('img/')}}{{img.chemin}}" alt="image produit" title="{{produit.nomProduit}}">
 						{% endfor %}
+						<input class="form-control" type="file" name="prodImg">
+					{% else %}
+						<input class="form-control" type="file" name="prodImg" required>
 					{% endif %}
-					<input class="form-control" type="file" name="prodImg" required>
 				</div>
 			</form>
 			<div class="btn-group col-md-6 col-md-offset-4">
 			{% if produit.idProduit is defined %}
 				<input form="prodForm" type="submit" class="btn btn-primary" name="modProd" value="Modifier">
-				<input form="prodForm" type="submit" class="btn btn-primary" name="addProd" value="Supprimer">
+				<input form="prodForm" type="submit" class="btn btn-primary" name="delProd" value="Supprimer">
 			{% else %}
 				<input form="prodForm" type="submit" class="btn btn-primary" name="addProd" value="Enregistrer">
 			{% endif %}	

@@ -48,16 +48,17 @@
 	<div class="container">
 		<div class="activite blank">
 			{% for act in prop %}
-				<div class="col-md-4">
-					<img src="" alt="" class="imgAct">
-				</div>
-				<div class="col-md-8">
-					<h2>{{act.nomActivite}}</h2>
-					{% for date in act.idDateAct if date.typeDate.idType == 1 %}
-						<p>{{date.date|date("d/m/Y")}}</p>
-					{% else %}
+				<div class="row">
+					<div class="col-md-4">
+						<img src="{{asset('img/')}}{% for img in act.imgAct if img.typeImg.idType == 1 %}{{img.chemin}}{% endfor %}" alt="" class="imgAct">
+					</div>
+					<div class="col-md-8">
+						<h2>{{act.nomActivite}}</h2>
+						{% for date in act.idDateAct if date.typeDate.idType == 1 %}
+							<p>({{date.date|date("d/m/Y")}})</p>
+						{% endfor %}
 						<p>{{act.descriptionActivite}}</p>
-					{% endfor %}
+					</div>
 				</div>
 			{% endfor %}
 		</div>

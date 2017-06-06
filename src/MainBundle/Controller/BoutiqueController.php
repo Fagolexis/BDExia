@@ -65,10 +65,12 @@ class BoutiqueController extends DefaultController
                 $this->dbUpdate('persist', $prod);
                 $this->dbUpdate('persist', $date);
                 $this->dbUpdate('persist', $img);
-                $this->insert($bm->addImg($prod, $img));
-                $idImg = $img->getIdImg();
+                $prod->addImgProd($img);
+                $img->addIdImgProd($prod);
+                $this->dbUpdate('up');
+                $id = $prod->getIdProduit();
                 return $this->forward("MainBundle:Boutique:show", array(
-                    "id" => $idImg));
+                    "id" => $id));
             }
             return $this->render('MainBundle:Boutique:modif_produit.html.twig');
         }
